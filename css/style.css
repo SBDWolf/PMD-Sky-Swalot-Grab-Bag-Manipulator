@@ -239,6 +239,10 @@ select:disabled {
   text-align: left;
 }
 
+.manip-table td.zero {
+  color: var(--bad);
+}
+
 .total {
   margin: 14px 0 0;
   font-size: 1.05rem;

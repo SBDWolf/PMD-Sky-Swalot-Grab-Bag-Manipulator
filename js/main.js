@@ -250,6 +250,7 @@ function renderResults(result, table, ms) {
     for (const v of [s.partner, Math.floor(s.turn / 4), s.turn % 4, itemName(s.itemId)]) {
       const td = document.createElement("td");
       td.textContent = String(v);
+      if (typeof v === "number" && v === 0) td.classList.add("zero");
       tr.appendChild(td);
     }
     tbody.appendChild(tr);
