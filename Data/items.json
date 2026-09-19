@@ -1,0 +1,4417 @@
+{
+  "0": {
+    "name": "Nothing"
+  },
+  "1": {
+    "name": "Stick"
+  },
+  "2": {
+    "name": "Iron Thorn"
+  },
+  "3": {
+    "name": "Silver Spike"
+  },
+  "4": {
+    "name": "Gold Fang"
+  },
+  "5": {
+    "name": "Cacnea Spike"
+  },
+  "6": {
+    "name": "Corsola Twig"
+  },
+  "7": {
+    "name": "Gravelerock"
+  },
+  "8": {
+    "name": "Geo Pebble",
+    "icon": "Data/icons/geo_pebbles.png"
+  },
+  "9": {
+    "name": "Gold Thorn"
+  },
+  "10": {
+    "name": "Rare Fossil"
+  },
+  "11": {
+    "name": "$$$"
+  },
+  "12": {
+    "name": "$$$"
+  },
+  "13": {
+    "name": "No-Slip Cap"
+  },
+  "14": {
+    "name": "Y-Ray Specs"
+  },
+  "15": {
+    "name": "Gaggle Specs"
+  },
+  "16": {
+    "name": "Mobile Scarf"
+  },
+  "17": {
+    "name": "Heal Ribbon",
+    "icon": "Data/icons/scarf.png"
+  },
+  "18": {
+    "name": "Twist Band"
+  },
+  "19": {
+    "name": "Scope Lens",
+    "icon": "Data/icons/scope_lens.png"
+  },
+  "20": {
+    "name": "Patsy Band"
+  },
+  "21": {
+    "name": "No-Stick Cap"
+  },
+  "22": {
+    "name": "Pierce Band"
+  },
+  "23": {
+    "name": "Joy Ribbon"
+  },
+  "24": {
+    "name": "X-Ray Specs"
+  },
+  "25": {
+    "name": "Persim Band",
+    "icon": "Data/icons/scarf.png"
+  },
+  "26": {
+    "name": "Power Band",
+    "icon": "Data/icons/scarf.png"
+  },
+  "27": {
+    "name": "Pecha Scarf",
+    "icon": "Data/icons/scarf.png"
+  },
+  "28": {
+    "name": "Insomniscope",
+    "icon": "Data/icons/insomniscope.png"
+  },
+  "29": {
+    "name": "Warp Scarf",
+    "icon": "Data/icons/scarf.png"
+  },
+  "30": {
+    "name": "Tight Belt"
+  },
+  "31": {
+    "name": "Sneak Scarf",
+    "icon": "Data/icons/scarf.png"
+  },
+  "32": {
+    "name": "Gold Ribbon",
+    "icon": "Data/icons/scarf.png"
+  },
+  "33": {
+    "name": "Goggle Specs"
+  },
+  "34": {
+    "name": "Diet Ribbon"
+  },
+  "35": {
+    "name": "Trap Scarf"
+  },
+  "36": {
+    "name": "Racket Band",
+    "icon": "Data/icons/scarf.png"
+  },
+  "37": {
+    "name": "Def. Scarf"
+  },
+  "38": {
+    "name": "Stamina Band",
+    "icon": "Data/icons/scarf.png"
+  },
+  "39": {
+    "name": "Plain Ribbon"
+  },
+  "40": {
+    "name": "Special Band",
+    "icon": "Data/icons/scarf.png"
+  },
+  "41": {
+    "name": "Zinc Band",
+    "icon": "Data/icons/scarf.png"
+  },
+  "42": {
+    "name": "Detect Band"
+  },
+  "43": {
+    "name": "Space Globe"
+  },
+  "44": {
+    "name": "Dodge Scarf"
+  },
+  "45": {
+    "name": "Bounce Band"
+  },
+  "46": {
+    "name": "Curve Band"
+  },
+  "47": {
+    "name": "Whiff Specs"
+  },
+  "48": {
+    "name": "No-Aim Scope"
+  },
+  "49": {
+    "name": "Lockon Specs"
+  },
+  "50": {
+    "name": "Munch Belt"
+  },
+  "51": {
+    "name": "Pass Scarf"
+  },
+  "52": {
+    "name": "Weather Band"
+  },
+  "53": {
+    "name": "Friend Bow"
+  },
+  "54": {
+    "name": "Beauty Scarf"
+  },
+  "55": {
+    "name": "Sun Ribbon"
+  },
+  "56": {
+    "name": "Lunar Ribbon"
+  },
+  "57": {
+    "name": "Golden Mask"
+  },
+  "58": {
+    "name": "Amber Tear"
+  },
+  "59": {
+    "name": "Icy Flute"
+  },
+  "60": {
+    "name": "Fiery Drum"
+  },
+  "61": {
+    "name": "Terra Cymbal"
+  },
+  "62": {
+    "name": "Aqua-Monica"
+  },
+  "63": {
+    "name": "Rock Horn"
+  },
+  "64": {
+    "name": "Grass Cornet"
+  },
+  "65": {
+    "name": "Sky Melodica"
+  },
+  "66": {
+    "name": "Miracle Chest"
+  },
+  "67": {
+    "name": "Wonder Chest"
+  },
+  "68": {
+    "name": "IQ Booster"
+  },
+  "69": {
+    "name": "Heal Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "70": {
+    "name": "Oran Berry",
+    "icon": "Data/icons/oran_berry.png"
+  },
+  "71": {
+    "name": "Sitrus Berry",
+    "icon": "Data/icons/sitrus_berry.png"
+  },
+  "72": {
+    "name": "Eyedrop Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "73": {
+    "name": "Reviver Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "74": {
+    "name": "Blinker Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "75": {
+    "name": "Doom Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "76": {
+    "name": "X-Eye Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "77": {
+    "name": "Life Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "78": {
+    "name": "Rawst Berry",
+    "icon": "Data/icons/rawst_berry.png"
+  },
+  "79": {
+    "name": "Hunger Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "80": {
+    "name": "Quick Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "81": {
+    "name": "Pecha Berry",
+    "icon": "Data/icons/pecha_berry.png"
+  },
+  "82": {
+    "name": "Cheri Berry",
+    "icon": "Data/icons/cheri_berry.png"
+  },
+  "83": {
+    "name": "Totter Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "84": {
+    "name": "Sleep Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "85": {
+    "name": "Plain Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "86": {
+    "name": "Warp Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "87": {
+    "name": "Blast Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "88": {
+    "name": "Ginseng",
+    "icon": "Data/icons/medicine.png"
+  },
+  "89": {
+    "name": "Joy Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "90": {
+    "name": "Chesto Berry",
+    "icon": "Data/icons/chesto_berry.png"
+  },
+  "91": {
+    "name": "Stun Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "92": {
+    "name": "Gabite Scale"
+  },
+  "93": {
+    "name": "Golden Seed"
+  },
+  "94": {
+    "name": "Vile Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "95": {
+    "name": "Pure Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "96": {
+    "name": "Violent Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "97": {
+    "name": "Vanish Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "98": {
+    "name": "$$$"
+  },
+  "99": {
+    "name": "Max Elixir",
+    "icon": "Data/icons/medicine.png"
+  },
+  "100": {
+    "name": "Protein",
+    "icon": "Data/icons/medicine.png"
+  },
+  "101": {
+    "name": "Calcium",
+    "icon": "Data/icons/medicine.png"
+  },
+  "102": {
+    "name": "Iron",
+    "icon": "Data/icons/medicine.png"
+  },
+  "103": {
+    "name": "Nectar"
+  },
+  "104": {
+    "name": "Dropeye Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "105": {
+    "name": "Reviser Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "106": {
+    "name": "Slip Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "107": {
+    "name": "Via Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "108": {
+    "name": "Zinc",
+    "icon": "Data/icons/medicine.png"
+  },
+  "109": {
+    "name": "Apple",
+    "icon": "Data/icons/apple.png"
+  },
+  "110": {
+    "name": "Big Apple",
+    "icon": "Data/icons/apple.png"
+  },
+  "111": {
+    "name": "Grimy Food"
+  },
+  "112": {
+    "name": "Huge Apple",
+    "icon": "Data/icons/apple.png"
+  },
+  "113": {
+    "name": "$$$"
+  },
+  "114": {
+    "name": "$$$"
+  },
+  "115": {
+    "name": "Golden Apple"
+  },
+  "116": {
+    "name": "Mix Elixir"
+  },
+  "117": {
+    "name": "Oren Berry"
+  },
+  "118": {
+    "name": "Dough Seed",
+    "icon": "Data/icons/seed.png"
+  },
+  "119": {
+    "name": "White Gummi",
+    "icon": "Data/icons/clear_white_gummi.png"
+  },
+  "120": {
+    "name": "Red Gummi",
+    "icon": "Data/icons/red_gummi.png"
+  },
+  "121": {
+    "name": "Blue Gummi",
+    "icon": "Data/icons/blue_gummi.png"
+  },
+  "122": {
+    "name": "Grass Gummi",
+    "icon": "Data/icons/grass_gummi.png"
+  },
+  "123": {
+    "name": "Yellow Gummi",
+    "icon": "Data/icons/gold_yellow_gummi.png"
+  },
+  "124": {
+    "name": "Clear Gummi",
+    "icon": "Data/icons/clear_white_gummi.png"
+  },
+  "125": {
+    "name": "Orange Gummi",
+    "icon": "Data/icons/orange_gummi.png"
+  },
+  "126": {
+    "name": "Pink Gummi",
+    "icon": "Data/icons/pink_gummi.png"
+  },
+  "127": {
+    "name": "Brown Gummi",
+    "icon": "Data/icons/brown_gummi.png"
+  },
+  "128": {
+    "name": "Sky Gummi",
+    "icon": "Data/icons/sky_gummi.png"
+  },
+  "129": {
+    "name": "Gold Gummi",
+    "icon": "Data/icons/gold_yellow_gummi.png"
+  },
+  "130": {
+    "name": "Green Gummi",
+    "icon": "Data/icons/green_gummi.png"
+  },
+  "131": {
+    "name": "Gray Gummi",
+    "icon": "Data/icons/gray_gummi.png"
+  },
+  "132": {
+    "name": "Purple Gummi",
+    "icon": "Data/icons/purple_gummi.png"
+  },
+  "133": {
+    "name": "Royal Gummi",
+    "icon": "Data/icons/royal_gummi.png"
+  },
+  "134": {
+    "name": "Black Gummi",
+    "icon": "Data/icons/black_gummi.png"
+  },
+  "135": {
+    "name": "Silver Gummi",
+    "icon": "Data/icons/silver_gummi.png"
+  },
+  "136": {
+    "name": "Wonder Gummi"
+  },
+  "137": {
+    "name": "Gravelyrock"
+  },
+  "138": {
+    "name": "$$$"
+  },
+  "139": {
+    "name": "Upgrade"
+  },
+  "140": {
+    "name": "King's Rock"
+  },
+  "141": {
+    "name": "Thunderstone"
+  },
+  "142": {
+    "name": "Deepseascale"
+  },
+  "143": {
+    "name": "Deepseatooth"
+  },
+  "144": {
+    "name": "Sun Stone"
+  },
+  "145": {
+    "name": "Moon Stone"
+  },
+  "146": {
+    "name": "Fire Stone"
+  },
+  "147": {
+    "name": "Water Stone"
+  },
+  "148": {
+    "name": "Metal Coat"
+  },
+  "149": {
+    "name": "Leaf Stone"
+  },
+  "150": {
+    "name": "Dragon Scale"
+  },
+  "151": {
+    "name": "Link Cable"
+  },
+  "152": {
+    "name": "Dubious Disc"
+  },
+  "153": {
+    "name": "Protector"
+  },
+  "154": {
+    "name": "Reaper Cloth"
+  },
+  "155": {
+    "name": "Razor Fang"
+  },
+  "156": {
+    "name": "Razor Claw"
+  },
+  "157": {
+    "name": "Electirizer"
+  },
+  "158": {
+    "name": "Magmarizer"
+  },
+  "159": {
+    "name": "Oval Stone"
+  },
+  "160": {
+    "name": "Dawn Stone"
+  },
+  "161": {
+    "name": "Shiny Stone"
+  },
+  "162": {
+    "name": "Dusk Stone"
+  },
+  "163": {
+    "name": "Coronet Rock"
+  },
+  "164": {
+    "name": "Mossy Rock"
+  },
+  "165": {
+    "name": "Frozen Rock"
+  },
+  "166": {
+    "name": "$$$"
+  },
+  "167": {
+    "name": "Gone Pebble"
+  },
+  "168": {
+    "name": "Wander Gummi"
+  },
+  "169": {
+    "name": "Prize Ticket"
+  },
+  "170": {
+    "name": "Silver Ticket"
+  },
+  "171": {
+    "name": "Gold Ticket"
+  },
+  "172": {
+    "name": "Prism Ticket"
+  },
+  "173": {
+    "name": "Mystery Part"
+  },
+  "174": {
+    "name": "Secret Slab"
+  },
+  "175": {
+    "name": "$$$"
+  },
+  "176": {
+    "name": "$$$"
+  },
+  "177": {
+    "name": "$$$"
+  },
+  "178": {
+    "name": "Wonder Egg"
+  },
+  "179": {
+    "name": "Gracidea"
+  },
+  "180": {
+    "name": "Sky Gift"
+  },
+  "181": {
+    "name": "$$$"
+  },
+  "182": {
+    "name": "Key"
+  },
+  "183": {
+    "name": "Pok\u00e9"
+  },
+  "184": {
+    "name": "$$$"
+  },
+  "185": {
+    "name": "$$$"
+  },
+  "186": {
+    "name": "Lost Loot"
+  },
+  "187": {
+    "name": "Used TM"
+  },
+  "188": {
+    "name": "Focus Punch TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "189": {
+    "name": "Dragon Claw TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "190": {
+    "name": "Water Pulse TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "191": {
+    "name": "Calm Mind TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "192": {
+    "name": "Roar TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "193": {
+    "name": "Toxic TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "194": {
+    "name": "Hail TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "195": {
+    "name": "Bulk Up TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "196": {
+    "name": "Bullet Seed TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "197": {
+    "name": "Hidden Power TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "198": {
+    "name": "$$$"
+  },
+  "199": {
+    "name": "Taunt TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "200": {
+    "name": "Ice Beam TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "201": {
+    "name": "Blizzard TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "202": {
+    "name": "Hyper Beam TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "203": {
+    "name": "Light Screen TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "204": {
+    "name": "Protect TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "205": {
+    "name": "$$$"
+  },
+  "206": {
+    "name": "Giga Drain TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "207": {
+    "name": "Safeguard TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "208": {
+    "name": "Frustration TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "209": {
+    "name": "SolarBeam TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "210": {
+    "name": "Iron Tail TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "211": {
+    "name": "Thunderbolt TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "212": {
+    "name": "Thunder TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "213": {
+    "name": "Earthquake TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "214": {
+    "name": "Return TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "215": {
+    "name": "Dig TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "216": {
+    "name": "Psychic TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "217": {
+    "name": "Shadow Ball TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "218": {
+    "name": "Brick Break TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "219": {
+    "name": "$$$"
+  },
+  "220": {
+    "name": "Reflect TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "221": {
+    "name": "Shock Wave TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "222": {
+    "name": "Flamethrower TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "223": {
+    "name": "Sludge Bomb TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "224": {
+    "name": "$$$"
+  },
+  "225": {
+    "name": "Fire Blast TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "226": {
+    "name": "$$$"
+  },
+  "227": {
+    "name": "Aerial Ace TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "228": {
+    "name": "Torment TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "229": {
+    "name": "Facade TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "230": {
+    "name": "Secret Power TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "231": {
+    "name": "Rest TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "232": {
+    "name": "Attract TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "233": {
+    "name": "Thief TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "234": {
+    "name": "Steel Wing TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "235": {
+    "name": "Skill Swap TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "236": {
+    "name": "$$$"
+  },
+  "237": {
+    "name": "Overheat TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "238": {
+    "name": "Roost TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "239": {
+    "name": "Focus Blast TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "240": {
+    "name": "Energy Ball TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "241": {
+    "name": "False Swipe TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "242": {
+    "name": "Brine TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "243": {
+    "name": "Fling TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "244": {
+    "name": "Charge Beam TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "245": {
+    "name": "Endure TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "246": {
+    "name": "Dragon Pulse TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "247": {
+    "name": "Drain Punch TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "248": {
+    "name": "Will-O-Wisp TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "249": {
+    "name": "Silver Wind TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "250": {
+    "name": "Embargo TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "251": {
+    "name": "Explosion TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "252": {
+    "name": "Shadow Claw TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "253": {
+    "name": "Payback TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "254": {
+    "name": "Recycle TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "255": {
+    "name": "Giga Impact TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "256": {
+    "name": "Rock Polish TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "257": {
+    "name": "Wide Slash TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "258": {
+    "name": "$$$"
+  },
+  "259": {
+    "name": "$$$"
+  },
+  "260": {
+    "name": "Vacuum-Cut TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "261": {
+    "name": "Dive TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "262": {
+    "name": "Flash TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "263": {
+    "name": "Stone Edge TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "264": {
+    "name": "Avalanche TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "265": {
+    "name": "Thunder Wave TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "266": {
+    "name": "Gyro Ball TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "267": {
+    "name": "Swords Dance TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "268": {
+    "name": "Stealth Rock TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "269": {
+    "name": "Psych Up TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "270": {
+    "name": "Captivate TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "271": {
+    "name": "Dark Pulse TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "272": {
+    "name": "Rock Slide TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "273": {
+    "name": "X-Scissor TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "274": {
+    "name": "Sleep Talk TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "275": {
+    "name": "Natural Gift TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "276": {
+    "name": "Poison Jab TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "277": {
+    "name": "Dream Eater TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "278": {
+    "name": "Grass Knot TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "279": {
+    "name": "Swagger TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "280": {
+    "name": "Pluck TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "281": {
+    "name": "U-turn TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "282": {
+    "name": "Substitute TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "283": {
+    "name": "Flash Cannon TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "284": {
+    "name": "Trick Room TM",
+    "icon": "Data/icons/tm.png"
+  },
+  "285": {
+    "name": "Cut HM"
+  },
+  "286": {
+    "name": "Fly HM"
+  },
+  "287": {
+    "name": "Surf HM"
+  },
+  "288": {
+    "name": "Strength HM"
+  },
+  "289": {
+    "name": "Defog HM"
+  },
+  "290": {
+    "name": "Rock Smash HM"
+  },
+  "291": {
+    "name": "Waterfall HM"
+  },
+  "292": {
+    "name": "Rock Climb HM"
+  },
+  "293": {
+    "name": "$$$"
+  },
+  "294": {
+    "name": "$$$"
+  },
+  "295": {
+    "name": "$$$"
+  },
+  "296": {
+    "name": "$$$"
+  },
+  "297": {
+    "name": "$$$"
+  },
+  "298": {
+    "name": "$$$"
+  },
+  "299": {
+    "name": "$$$"
+  },
+  "300": {
+    "name": "$$$"
+  },
+  "301": {
+    "name": "Hail Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "302": {
+    "name": "Sunny Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "303": {
+    "name": "Rainy Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "304": {
+    "name": "Evasion Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "305": {
+    "name": "Sandy Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "306": {
+    "name": "Rocky Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "307": {
+    "name": "Snatch Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "308": {
+    "name": "See-Trap Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "309": {
+    "name": "Mug Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "310": {
+    "name": "Rebound Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "311": {
+    "name": "Lob Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "312": {
+    "name": "Switcher Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "313": {
+    "name": "Blowback Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "314": {
+    "name": "Warp Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "315": {
+    "name": "Transfer Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "316": {
+    "name": "Slow Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "317": {
+    "name": "Quick Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "318": {
+    "name": "Luminous Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "319": {
+    "name": "Petrify Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "320": {
+    "name": "Stayaway Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "321": {
+    "name": "Pounce Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "322": {
+    "name": "Trawl Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "323": {
+    "name": "Cleanse Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "324": {
+    "name": "$$$"
+  },
+  "325": {
+    "name": "Decoy Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "326": {
+    "name": "Slumber Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "327": {
+    "name": "Totter Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "328": {
+    "name": "Two-Edge Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "329": {
+    "name": "Silence Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "330": {
+    "name": "Escape Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "331": {
+    "name": "Scanner Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "332": {
+    "name": "Radar Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "333": {
+    "name": "Drought Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "334": {
+    "name": "Trapbust Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "335": {
+    "name": "Rollcall Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "336": {
+    "name": "Invisify Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "337": {
+    "name": "One-Shot Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "338": {
+    "name": "Identify Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "339": {
+    "name": "$$$"
+  },
+  "340": {
+    "name": "Shocker Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "341": {
+    "name": "Sizebust Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "342": {
+    "name": "One-Room Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "343": {
+    "name": "Fill-In Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "344": {
+    "name": "Trapper Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "345": {
+    "name": "$$$"
+  },
+  "346": {
+    "name": "Itemizer Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "347": {
+    "name": "Hurl Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "348": {
+    "name": "Mobile Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "349": {
+    "name": "$$$"
+  },
+  "350": {
+    "name": "Stairs Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "351": {
+    "name": "Longtoss Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "352": {
+    "name": "Pierce Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "353": {
+    "name": "$$$"
+  },
+  "354": {
+    "name": "Spurn Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "355": {
+    "name": "Foe-Hold Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "356": {
+    "name": "All-Mach Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "357": {
+    "name": "Foe-Fear Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "358": {
+    "name": "All-Hit Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "359": {
+    "name": "Foe-Seal Orb",
+    "icon": "Data/icons/orb.png"
+  },
+  "360": {
+    "name": "$$$"
+  },
+  "361": {
+    "name": "$$$"
+  },
+  "362": {
+    "name": "Link Box",
+    "icon": "Data/icons/link_box.png"
+  },
+  "363": {
+    "name": "$$$"
+  },
+  "364": {
+    "name": "Gorgeous Box"
+  },
+  "365": {
+    "name": "Gorgeous Box"
+  },
+  "366": {
+    "name": "Gorgeous Box"
+  },
+  "367": {
+    "name": "Heavy Box"
+  },
+  "368": {
+    "name": "Heavy Box"
+  },
+  "369": {
+    "name": "Heavy Box"
+  },
+  "370": {
+    "name": "Shiny Box"
+  },
+  "371": {
+    "name": "Shiny Box"
+  },
+  "372": {
+    "name": "Shiny Box"
+  },
+  "373": {
+    "name": "Nifty Box"
+  },
+  "374": {
+    "name": "Nifty Box"
+  },
+  "375": {
+    "name": "Nifty Box"
+  },
+  "376": {
+    "name": "Dainty Box"
+  },
+  "377": {
+    "name": "Dainty Box"
+  },
+  "378": {
+    "name": "Dainty Box"
+  },
+  "379": {
+    "name": "Glittery Box"
+  },
+  "380": {
+    "name": "Glittery Box"
+  },
+  "381": {
+    "name": "Glittery Box"
+  },
+  "382": {
+    "name": "Pretty Box"
+  },
+  "383": {
+    "name": "Pretty Box"
+  },
+  "384": {
+    "name": "Pretty Box"
+  },
+  "385": {
+    "name": "Deluxe Box"
+  },
+  "386": {
+    "name": "Deluxe Box"
+  },
+  "387": {
+    "name": "Deluxe Box"
+  },
+  "388": {
+    "name": "Light Box"
+  },
+  "389": {
+    "name": "Light Box"
+  },
+  "390": {
+    "name": "Light Box"
+  },
+  "391": {
+    "name": "Cute Box"
+  },
+  "392": {
+    "name": "Cute Box"
+  },
+  "393": {
+    "name": "Cute Box"
+  },
+  "394": {
+    "name": "Hard Box"
+  },
+  "395": {
+    "name": "Hard Box"
+  },
+  "396": {
+    "name": "Hard Box"
+  },
+  "397": {
+    "name": "Sinister Box"
+  },
+  "398": {
+    "name": "Sinister Box"
+  },
+  "399": {
+    "name": "Sinister Box"
+  },
+  "400": {
+    "name": "A-Stone"
+  },
+  "401": {
+    "name": "B-Stone"
+  },
+  "402": {
+    "name": "C-Stone"
+  },
+  "403": {
+    "name": "D-Stone"
+  },
+  "404": {
+    "name": "E-Stone"
+  },
+  "405": {
+    "name": "F-Stone"
+  },
+  "406": {
+    "name": "G-Stone"
+  },
+  "407": {
+    "name": "H-Stone"
+  },
+  "408": {
+    "name": "I-Stone"
+  },
+  "409": {
+    "name": "J-Stone"
+  },
+  "410": {
+    "name": "K-Stone"
+  },
+  "411": {
+    "name": "L-Stone"
+  },
+  "412": {
+    "name": "M-Stone"
+  },
+  "413": {
+    "name": "N-Stone"
+  },
+  "414": {
+    "name": "O-Stone"
+  },
+  "415": {
+    "name": "P-Stone"
+  },
+  "416": {
+    "name": "Q-Stone"
+  },
+  "417": {
+    "name": "R-Stone"
+  },
+  "418": {
+    "name": "S-Stone"
+  },
+  "419": {
+    "name": "T-Stone"
+  },
+  "420": {
+    "name": "U-Stone"
+  },
+  "421": {
+    "name": "V-Stone"
+  },
+  "422": {
+    "name": "W-Stone"
+  },
+  "423": {
+    "name": "X-Stone"
+  },
+  "424": {
+    "name": "Y-Stone"
+  },
+  "425": {
+    "name": "Z-Stone"
+  },
+  "426": {
+    "name": "!-Stone"
+  },
+  "427": {
+    "name": "?-Stone"
+  },
+  "428": {
+    "name": "Silver Bow"
+  },
+  "429": {
+    "name": "Brown Bow"
+  },
+  "430": {
+    "name": "Red Bow"
+  },
+  "431": {
+    "name": "Pink Bow"
+  },
+  "432": {
+    "name": "Orange Bow"
+  },
+  "433": {
+    "name": "Yellow Bow"
+  },
+  "434": {
+    "name": "Lime Bow"
+  },
+  "435": {
+    "name": "Green Bow"
+  },
+  "436": {
+    "name": "Viridian Bow"
+  },
+  "437": {
+    "name": "Minty Bow"
+  },
+  "438": {
+    "name": "Sky Blue Bow"
+  },
+  "439": {
+    "name": "Blue Bow"
+  },
+  "440": {
+    "name": "Cobalt Bow"
+  },
+  "441": {
+    "name": "Purple Bow"
+  },
+  "442": {
+    "name": "Violet Bow"
+  },
+  "443": {
+    "name": "Fuchsia Bow"
+  },
+  "444": {
+    "name": "Prism Ruff"
+  },
+  "445": {
+    "name": "Aqua Collar"
+  },
+  "446": {
+    "name": "Volt Collar"
+  },
+  "447": {
+    "name": "Fire Collar"
+  },
+  "448": {
+    "name": "Light Collar"
+  },
+  "449": {
+    "name": "Dusk Collar"
+  },
+  "450": {
+    "name": "Virid Collar"
+  },
+  "451": {
+    "name": "Icy Collar"
+  },
+  "452": {
+    "name": "Pep Sash"
+  },
+  "453": {
+    "name": "Counter Ruff"
+  },
+  "454": {
+    "name": "Victory Belt"
+  },
+  "455": {
+    "name": "Power Bangle"
+  },
+  "456": {
+    "name": "Thundershard"
+  },
+  "457": {
+    "name": "Fallen Star"
+  },
+  "458": {
+    "name": "Fluff Dust"
+  },
+  "459": {
+    "name": "Egg Shard"
+  },
+  "460": {
+    "name": "Heroic Medal"
+  },
+  "461": {
+    "name": "Chic Shard"
+  },
+  "462": {
+    "name": "Yellow Jewel"
+  },
+  "463": {
+    "name": "Red Jewel"
+  },
+  "464": {
+    "name": "Blue Jewel"
+  },
+  "465": {
+    "name": "Laugh Dust"
+  },
+  "466": {
+    "name": "Guard Sand"
+  },
+  "467": {
+    "name": "Purple Jewel"
+  },
+  "468": {
+    "name": "White Jewel"
+  },
+  "469": {
+    "name": "Brave Dust"
+  },
+  "470": {
+    "name": "Heal Dew"
+  },
+  "471": {
+    "name": "Marine Cache"
+  },
+  "472": {
+    "name": "Freeze Veil"
+  },
+  "473": {
+    "name": "Thunder Veil"
+  },
+  "474": {
+    "name": "Fire Veil"
+  },
+  "475": {
+    "name": "Havoc Robe"
+  },
+  "476": {
+    "name": "Life Ring"
+  },
+  "477": {
+    "name": "Bolt Fang"
+  },
+  "478": {
+    "name": "Flare Fang"
+  },
+  "479": {
+    "name": "Aqua Mantle"
+  },
+  "480": {
+    "name": "Silver Veil"
+  },
+  "481": {
+    "name": "Rainbow Veil"
+  },
+  "482": {
+    "name": "Chrono Veil"
+  },
+  "483": {
+    "name": "Rock Sash"
+  },
+  "484": {
+    "name": "Ice Sash"
+  },
+  "485": {
+    "name": "Steel Sash"
+  },
+  "486": {
+    "name": "Heart Brooch"
+  },
+  "487": {
+    "name": "Eon Veil"
+  },
+  "488": {
+    "name": "Seabed Veil"
+  },
+  "489": {
+    "name": "Terra Ring"
+  },
+  "490": {
+    "name": "SkyHigh Veil"
+  },
+  "491": {
+    "name": "Wish Mantle"
+  },
+  "492": {
+    "name": "Revive Robe"
+  },
+  "493": {
+    "name": "Shadow Veil"
+  },
+  "494": {
+    "name": "Plasma Veil"
+  },
+  "495": {
+    "name": "Edify Robe"
+  },
+  "496": {
+    "name": "Charity Robe"
+  },
+  "497": {
+    "name": "Hope Robe"
+  },
+  "498": {
+    "name": "Time Shield"
+  },
+  "499": {
+    "name": "Air Blade"
+  },
+  "500": {
+    "name": "Searing Ring"
+  },
+  "501": {
+    "name": "Ancient Ring"
+  },
+  "502": {
+    "name": "Nether Veil"
+  },
+  "503": {
+    "name": "Lunar Veil"
+  },
+  "504": {
+    "name": "Tidal Cape"
+  },
+  "505": {
+    "name": "Eclipse Robe"
+  },
+  "506": {
+    "name": "White Silk"
+  },
+  "507": {
+    "name": "Normal Dust"
+  },
+  "508": {
+    "name": "White Gem"
+  },
+  "509": {
+    "name": "Joy Globe"
+  },
+  "510": {
+    "name": "Red Silk"
+  },
+  "511": {
+    "name": "Fire Dust"
+  },
+  "512": {
+    "name": "Fiery Gem"
+  },
+  "513": {
+    "name": "Fiery Globe"
+  },
+  "514": {
+    "name": "Blue Silk"
+  },
+  "515": {
+    "name": "Water Dust"
+  },
+  "516": {
+    "name": "Aqua Gem"
+  },
+  "517": {
+    "name": "Aqua Globe"
+  },
+  "518": {
+    "name": "Grass Silk"
+  },
+  "519": {
+    "name": "Grass Dust"
+  },
+  "520": {
+    "name": "Grass Gem"
+  },
+  "521": {
+    "name": "Soothe Globe"
+  },
+  "522": {
+    "name": "Yellow Silk"
+  },
+  "523": {
+    "name": "Thunder Dust"
+  },
+  "524": {
+    "name": "Thunder Gem"
+  },
+  "525": {
+    "name": "Volt Globe"
+  },
+  "526": {
+    "name": "Clear Silk"
+  },
+  "527": {
+    "name": "Icy Dust"
+  },
+  "528": {
+    "name": "Icy Gem"
+  },
+  "529": {
+    "name": "Icy Globe"
+  },
+  "530": {
+    "name": "Orange Silk"
+  },
+  "531": {
+    "name": "Courage Dust"
+  },
+  "532": {
+    "name": "Fight Gem"
+  },
+  "533": {
+    "name": "Power Globe"
+  },
+  "534": {
+    "name": "Pink Silk"
+  },
+  "535": {
+    "name": "Poison Dust"
+  },
+  "536": {
+    "name": "Poison Gem"
+  },
+  "537": {
+    "name": "Poison Globe"
+  },
+  "538": {
+    "name": "Brown Silk"
+  },
+  "539": {
+    "name": "Ground Dust"
+  },
+  "540": {
+    "name": "Earth Gem"
+  },
+  "541": {
+    "name": "Terra Globe"
+  },
+  "542": {
+    "name": "Sky Silk"
+  },
+  "543": {
+    "name": "Sky Dust"
+  },
+  "544": {
+    "name": "Sky Gem"
+  },
+  "545": {
+    "name": "Sky Globe"
+  },
+  "546": {
+    "name": "Gold Silk"
+  },
+  "547": {
+    "name": "Psyche Dust"
+  },
+  "548": {
+    "name": "Psyche Gem"
+  },
+  "549": {
+    "name": "Psyche Globe"
+  },
+  "550": {
+    "name": "Green Silk"
+  },
+  "551": {
+    "name": "Wonder Dust"
+  },
+  "552": {
+    "name": "Guard Gem"
+  },
+  "553": {
+    "name": "Defend Globe"
+  },
+  "554": {
+    "name": "Gray Silk"
+  },
+  "555": {
+    "name": "Rock Dust"
+  },
+  "556": {
+    "name": "Stone Gem"
+  },
+  "557": {
+    "name": "Rock Globe"
+  },
+  "558": {
+    "name": "Purple Silk"
+  },
+  "559": {
+    "name": "Shady Dust"
+  },
+  "560": {
+    "name": "Shadow Gem"
+  },
+  "561": {
+    "name": "Nether Globe"
+  },
+  "562": {
+    "name": "Royal Silk"
+  },
+  "563": {
+    "name": "Dragon Dust"
+  },
+  "564": {
+    "name": "Dragon Gem"
+  },
+  "565": {
+    "name": "Dragon Globe"
+  },
+  "566": {
+    "name": "Black Silk"
+  },
+  "567": {
+    "name": "Dark Dust"
+  },
+  "568": {
+    "name": "Dark Gem"
+  },
+  "569": {
+    "name": "Dusk Globe"
+  },
+  "570": {
+    "name": "Iron Silk"
+  },
+  "571": {
+    "name": "Steel Dust"
+  },
+  "572": {
+    "name": "Metal Gem"
+  },
+  "573": {
+    "name": "Steel Globe"
+  },
+  "574": {
+    "name": "Bulba-Claw"
+  },
+  "575": {
+    "name": "Bulba-Fang"
+  },
+  "576": {
+    "name": "Grass-Guard"
+  },
+  "577": {
+    "name": "Leafy Tie"
+  },
+  "578": {
+    "name": "Ivy-Claw"
+  },
+  "579": {
+    "name": "Ivy-Fang"
+  },
+  "580": {
+    "name": "Ivy-Crest"
+  },
+  "581": {
+    "name": "Plant Torc"
+  },
+  "582": {
+    "name": "Venus-Claw"
+  },
+  "583": {
+    "name": "Venus-Fang"
+  },
+  "584": {
+    "name": "Venus-Seal"
+  },
+  "585": {
+    "name": "Solar Sash"
+  },
+  "586": {
+    "name": "Char-Claw"
+  },
+  "587": {
+    "name": "Char-Fang"
+  },
+  "588": {
+    "name": "Fiery Heart"
+  },
+  "589": {
+    "name": "Heat Armlet"
+  },
+  "590": {
+    "name": "Charme-Claw"
+  },
+  "591": {
+    "name": "Charme-Fang"
+  },
+  "592": {
+    "name": "Charme-Crest"
+  },
+  "593": {
+    "name": "Kindle Scarf"
+  },
+  "594": {
+    "name": "Chariz-Claw"
+  },
+  "595": {
+    "name": "Chariz-Fang"
+  },
+  "596": {
+    "name": "Chariz-Seal"
+  },
+  "597": {
+    "name": "Flame Bangle"
+  },
+  "598": {
+    "name": "Squirt-Foam"
+  },
+  "599": {
+    "name": "Squirt-Card"
+  },
+  "600": {
+    "name": "Water-Guard"
+  },
+  "601": {
+    "name": "Aqua Tie"
+  },
+  "602": {
+    "name": "Wartor-Claw"
+  },
+  "603": {
+    "name": "Wartor-Fang"
+  },
+  "604": {
+    "name": "Wartor-Crest"
+  },
+  "605": {
+    "name": "BubbleBangle"
+  },
+  "606": {
+    "name": "Blasto-Claw"
+  },
+  "607": {
+    "name": "Blasto-Card"
+  },
+  "608": {
+    "name": "Blasto-Seal"
+  },
+  "609": {
+    "name": "Hydro Band"
+  },
+  "610": {
+    "name": "Pichu Hair"
+  },
+  "611": {
+    "name": "Pichu Card"
+  },
+  "612": {
+    "name": "Express Tag"
+  },
+  "613": {
+    "name": "Shocker Cape"
+  },
+  "614": {
+    "name": "Pikachu Hair"
+  },
+  "615": {
+    "name": "Pikachu Card"
+  },
+  "616": {
+    "name": "Volt Charm"
+  },
+  "617": {
+    "name": "Volt Torc"
+  },
+  "618": {
+    "name": "Raichu Hair"
+  },
+  "619": {
+    "name": "Raichu Card"
+  },
+  "620": {
+    "name": "Raichu Crest"
+  },
+  "621": {
+    "name": "Zapper Scarf"
+  },
+  "622": {
+    "name": "Meowth Claw"
+  },
+  "623": {
+    "name": "Meowth Fang"
+  },
+  "624": {
+    "name": "Coin Charm"
+  },
+  "625": {
+    "name": "Bling Ruff"
+  },
+  "626": {
+    "name": "Persian Claw"
+  },
+  "627": {
+    "name": "Persian Fang"
+  },
+  "628": {
+    "name": "Insight Rock"
+  },
+  "629": {
+    "name": "Noble Scarf"
+  },
+  "630": {
+    "name": "Chiko-Claw"
+  },
+  "631": {
+    "name": "Chiko-Card"
+  },
+  "632": {
+    "name": "Dawn Jewel"
+  },
+  "633": {
+    "name": "Fresh Bow"
+  },
+  "634": {
+    "name": "Bayleef Claw"
+  },
+  "635": {
+    "name": "Bayleef Card"
+  },
+  "636": {
+    "name": "Bayleef Seal"
+  },
+  "637": {
+    "name": "Spice Bow"
+  },
+  "638": {
+    "name": "Megani-Claw"
+  },
+  "639": {
+    "name": "Megani-Card"
+  },
+  "640": {
+    "name": "Shiny Charm"
+  },
+  "641": {
+    "name": "Bright Veil"
+  },
+  "642": {
+    "name": "Cynda-Hair"
+  },
+  "643": {
+    "name": "Cynda-Claw"
+  },
+  "644": {
+    "name": "Blazing Rock"
+  },
+  "645": {
+    "name": "Storm Sash"
+  },
+  "646": {
+    "name": "Quila-Hair"
+  },
+  "647": {
+    "name": "Quila-Card"
+  },
+  "648": {
+    "name": "Quila-Crest"
+  },
+  "649": {
+    "name": "Volcano Torc"
+  },
+  "650": {
+    "name": "Typhlo-Gasp"
+  },
+  "651": {
+    "name": "Typhlo-Fang"
+  },
+  "652": {
+    "name": "Typhlo-Seal"
+  },
+  "653": {
+    "name": "Blast Bangle"
+  },
+  "654": {
+    "name": "Totodi-Dew"
+  },
+  "655": {
+    "name": "Totodi-Fang"
+  },
+  "656": {
+    "name": "Water Heart"
+  },
+  "657": {
+    "name": "Wash Bow"
+  },
+  "658": {
+    "name": "Croco-Fang"
+  },
+  "659": {
+    "name": "Croco-Card"
+  },
+  "660": {
+    "name": "Swirl Rock"
+  },
+  "661": {
+    "name": "Anger Scarf"
+  },
+  "662": {
+    "name": "Feral-Claw"
+  },
+  "663": {
+    "name": "Feral-Fang"
+  },
+  "664": {
+    "name": "Feral-Crest"
+  },
+  "665": {
+    "name": "Hydro Jaw"
+  },
+  "666": {
+    "name": "Treeck-Thorn"
+  },
+  "667": {
+    "name": "Treeck-Card"
+  },
+  "668": {
+    "name": "Forest Ore"
+  },
+  "669": {
+    "name": "Guard Ring"
+  },
+  "670": {
+    "name": "Grovy-Shoot"
+  },
+  "671": {
+    "name": "Grovy-Card"
+  },
+  "672": {
+    "name": "Jungle-Tag"
+  },
+  "673": {
+    "name": "Grass Blade"
+  },
+  "674": {
+    "name": "Scept-Claw"
+  },
+  "675": {
+    "name": "Scept-Card"
+  },
+  "676": {
+    "name": "Scept-Seal"
+  },
+  "677": {
+    "name": "Drain Bangle"
+  },
+  "678": {
+    "name": "Torchic Hair"
+  },
+  "679": {
+    "name": "Torchic Card"
+  },
+  "680": {
+    "name": "Hot Pebble"
+  },
+  "681": {
+    "name": "Fire Cape"
+  },
+  "682": {
+    "name": "Combus-Sweat"
+  },
+  "683": {
+    "name": "Combus-Claw"
+  },
+  "684": {
+    "name": "Charge Tag"
+  },
+  "685": {
+    "name": "Gutsy Band"
+  },
+  "686": {
+    "name": "Blazi-Claw"
+  },
+  "687": {
+    "name": "Blazi-Card"
+  },
+  "688": {
+    "name": "Blazi-Seal"
+  },
+  "689": {
+    "name": "Blaze Torc"
+  },
+  "690": {
+    "name": "Mudkip Mud"
+  },
+  "691": {
+    "name": "Mudkip Card"
+  },
+  "692": {
+    "name": "Mud Jewel"
+  },
+  "693": {
+    "name": "Speed Scarf"
+  },
+  "694": {
+    "name": "Marsh-Mud"
+  },
+  "695": {
+    "name": "Marsh-Card"
+  },
+  "696": {
+    "name": "Marsh-Crest"
+  },
+  "697": {
+    "name": "Marsh Torc"
+  },
+  "698": {
+    "name": "Swamp-Mud"
+  },
+  "699": {
+    "name": "Swamp-Card"
+  },
+  "700": {
+    "name": "Swamp-Seal"
+  },
+  "701": {
+    "name": "Swamp Bangle"
+  },
+  "702": {
+    "name": "Skitty Fang"
+  },
+  "703": {
+    "name": "Skitty Card"
+  },
+  "704": {
+    "name": "Smile Pebble"
+  },
+  "705": {
+    "name": "Heal Pendant"
+  },
+  "706": {
+    "name": "Delcat-Hair"
+  },
+  "707": {
+    "name": "Delcat-Fang"
+  },
+  "708": {
+    "name": "Prim Pebble"
+  },
+  "709": {
+    "name": "Guard Collar"
+  },
+  "710": {
+    "name": "Lucky Leaf"
+  },
+  "711": {
+    "name": "Turtwig Card"
+  },
+  "712": {
+    "name": "Sprout Rock"
+  },
+  "713": {
+    "name": "Leafy Hat"
+  },
+  "714": {
+    "name": "Grotle Twig"
+  },
+  "715": {
+    "name": "Grotle Claw"
+  },
+  "716": {
+    "name": "Grotle Crest"
+  },
+  "717": {
+    "name": "Woody Scarf"
+  },
+  "718": {
+    "name": "Tort-Claw"
+  },
+  "719": {
+    "name": "Tort-Horn"
+  },
+  "720": {
+    "name": "Tort-Seal"
+  },
+  "721": {
+    "name": "Forest Torc"
+  },
+  "722": {
+    "name": "Chim-Hair"
+  },
+  "723": {
+    "name": "Chim-Fang"
+  },
+  "724": {
+    "name": "Nimble Charm"
+  },
+  "725": {
+    "name": "Ember Cap"
+  },
+  "726": {
+    "name": "Monfer-Hair"
+  },
+  "727": {
+    "name": "Monfer-Fang"
+  },
+  "728": {
+    "name": "Monfer-Crest"
+  },
+  "729": {
+    "name": "Burst Sash"
+  },
+  "730": {
+    "name": "Infern-Hair"
+  },
+  "731": {
+    "name": "Infern-Fang"
+  },
+  "732": {
+    "name": "Infern-Seal"
+  },
+  "733": {
+    "name": "Blazing Ruff"
+  },
+  "734": {
+    "name": "Piplup Foam"
+  },
+  "735": {
+    "name": "Piplup Card"
+  },
+  "736": {
+    "name": "Sea Ore"
+  },
+  "737": {
+    "name": "Water Cape"
+  },
+  "738": {
+    "name": "Prin-Foam"
+  },
+  "739": {
+    "name": "Prin-Card"
+  },
+  "740": {
+    "name": "Prin-Crest"
+  },
+  "741": {
+    "name": "Aqua Blade"
+  },
+  "742": {
+    "name": "Empol-Claw"
+  },
+  "743": {
+    "name": "Empol-Horn"
+  },
+  "744": {
+    "name": "Empol-Seal"
+  },
+  "745": {
+    "name": "Marine Crown"
+  },
+  "746": {
+    "name": "Munch-Drool"
+  },
+  "747": {
+    "name": "Munch-Claw"
+  },
+  "748": {
+    "name": "Tummy Charm"
+  },
+  "749": {
+    "name": "Glutton Cape"
+  },
+  "750": {
+    "name": "Snorlax Gasp"
+  },
+  "751": {
+    "name": "Snorlax Fang"
+  },
+  "752": {
+    "name": "Valor Charm"
+  },
+  "753": {
+    "name": "Glee Scarf"
+  },
+  "754": {
+    "name": "Scyther Fang"
+  },
+  "755": {
+    "name": "Scyther Card"
+  },
+  "756": {
+    "name": "Ambush Rock"
+  },
+  "757": {
+    "name": "Strike Ruff"
+  },
+  "758": {
+    "name": "Scizor Wing"
+  },
+  "759": {
+    "name": "Scizor Card"
+  },
+  "760": {
+    "name": "Steel Charm"
+  },
+  "761": {
+    "name": "Red Armlet"
+  },
+  "762": {
+    "name": "Lapras Song"
+  },
+  "763": {
+    "name": "Lapras Card"
+  },
+  "764": {
+    "name": "Wavy Charm"
+  },
+  "765": {
+    "name": "Mystic Scarf"
+  },
+  "766": {
+    "name": "Eevee Tail"
+  },
+  "767": {
+    "name": "Eevee Card"
+  },
+  "768": {
+    "name": "Evolve Charm"
+  },
+  "769": {
+    "name": "Eevee"
+  },
+  "770": {
+    "name": "Cleffa Dew"
+  },
+  "771": {
+    "name": "Cleffa Card"
+  },
+  "772": {
+    "name": "Starry Ore"
+  },
+  "773": {
+    "name": "Comet Ring"
+  },
+  "774": {
+    "name": "Clef-Claw"
+  },
+  "775": {
+    "name": "Clef-Fang"
+  },
+  "776": {
+    "name": "Moon Jewel"
+  },
+  "777": {
+    "name": "Moon Scarf"
+  },
+  "778": {
+    "name": "Clefa-Claw"
+  },
+  "779": {
+    "name": "Clefa-Card"
+  },
+  "780": {
+    "name": "Moon Rock"
+  },
+  "781": {
+    "name": "Fairy Bow"
+  },
+  "782": {
+    "name": "Iggly-Dew"
+  },
+  "783": {
+    "name": "Iggly-Card"
+  },
+  "784": {
+    "name": "Bouncy Charm"
+  },
+  "785": {
+    "name": "Pretty Bow"
+  },
+  "786": {
+    "name": "Jiggly-Song"
+  },
+  "787": {
+    "name": "Jiggly-Card"
+  },
+  "788": {
+    "name": "Slumber Rock"
+  },
+  "789": {
+    "name": "Snooze Ring"
+  },
+  "790": {
+    "name": "Wiggly-Hair"
+  },
+  "791": {
+    "name": "Wiggly-Card"
+  },
+  "792": {
+    "name": "Buddy Rock"
+  },
+  "793": {
+    "name": "Friend Torc"
+  },
+  "794": {
+    "name": "Togepi Dew"
+  },
+  "795": {
+    "name": "Togepi Card"
+  },
+  "796": {
+    "name": "Pure Heart"
+  },
+  "797": {
+    "name": "Angel Scarf"
+  },
+  "798": {
+    "name": "Togetic Wing"
+  },
+  "799": {
+    "name": "Togetic Card"
+  },
+  "800": {
+    "name": "Happy Rock"
+  },
+  "801": {
+    "name": "Luck Brooch"
+  },
+  "802": {
+    "name": "Togek-Wing"
+  },
+  "803": {
+    "name": "Togek-Card"
+  },
+  "804": {
+    "name": "Ovation Rock"
+  },
+  "805": {
+    "name": "Glitter Robe"
+  },
+  "806": {
+    "name": "Sneasel Claw"
+  },
+  "807": {
+    "name": "Sneasel Card"
+  },
+  "808": {
+    "name": "Dusk Jewel"
+  },
+  "809": {
+    "name": "Cruel Ring"
+  },
+  "810": {
+    "name": "Weavile Claw"
+  },
+  "811": {
+    "name": "Weavile Fang"
+  },
+  "812": {
+    "name": "Vile Tag"
+  },
+  "813": {
+    "name": "Ruin Armlet"
+  },
+  "814": {
+    "name": "Teddi-Claw"
+  },
+  "815": {
+    "name": "Teddi-Card"
+  },
+  "816": {
+    "name": "Honey Rock"
+  },
+  "817": {
+    "name": "Heal Scarf"
+  },
+  "818": {
+    "name": "Ursa-Claw"
+  },
+  "819": {
+    "name": "Ursa-Fang"
+  },
+  "820": {
+    "name": "Calming Rock"
+  },
+  "821": {
+    "name": "Hiber Scarf"
+  },
+  "822": {
+    "name": "Tyro-Sweat"
+  },
+  "823": {
+    "name": "Tyro-Card"
+  },
+  "824": {
+    "name": "Muscle Charm"
+  },
+  "825": {
+    "name": "Tyrogue"
+  },
+  "826": {
+    "name": "Smooch-Song"
+  },
+  "827": {
+    "name": "Smooch-Card"
+  },
+  "828": {
+    "name": "Kiss Charm"
+  },
+  "829": {
+    "name": "Heart Tiara"
+  },
+  "830": {
+    "name": "Jynx Song"
+  },
+  "831": {
+    "name": "Jynx Card"
+  },
+  "832": {
+    "name": "Frozen Ore"
+  },
+  "833": {
+    "name": "Ruin Scarf"
+  },
+  "834": {
+    "name": "Elekid Claw"
+  },
+  "835": {
+    "name": "Elekid Card"
+  },
+  "836": {
+    "name": "Jolt Charm"
+  },
+  "837": {
+    "name": "Current Ring"
+  },
+  "838": {
+    "name": "Electa-Claw"
+  },
+  "839": {
+    "name": "Electa-Fang"
+  },
+  "840": {
+    "name": "Charge Seal"
+  },
+  "841": {
+    "name": "Volt Bangle"
+  },
+  "842": {
+    "name": "Electi-Claw"
+  },
+  "843": {
+    "name": "Electi-Card"
+  },
+  "844": {
+    "name": "Voltaic Rock"
+  },
+  "845": {
+    "name": "Voltaic Band"
+  },
+  "846": {
+    "name": "Magby Claw"
+  },
+  "847": {
+    "name": "Magby Card"
+  },
+  "848": {
+    "name": "Ember Jewel"
+  },
+  "849": {
+    "name": "Coal Ring"
+  },
+  "850": {
+    "name": "Magmar Claw"
+  },
+  "851": {
+    "name": "Magmar Card"
+  },
+  "852": {
+    "name": "Erupt Ore"
+  },
+  "853": {
+    "name": "Magma Scarf"
+  },
+  "854": {
+    "name": "Magmor-Claw"
+  },
+  "855": {
+    "name": "Magmor-Card"
+  },
+  "856": {
+    "name": "Vulcan Rock"
+  },
+  "857": {
+    "name": "Burning Torc"
+  },
+  "858": {
+    "name": "Azuri-Dew"
+  },
+  "859": {
+    "name": "Azuri-Card"
+  },
+  "860": {
+    "name": "Fount Charm"
+  },
+  "861": {
+    "name": "Water Float"
+  },
+  "862": {
+    "name": "Marill Dew"
+  },
+  "863": {
+    "name": "Marill Card"
+  },
+  "864": {
+    "name": "Surfer Rock"
+  },
+  "865": {
+    "name": "Brine Scarf"
+  },
+  "866": {
+    "name": "Azuma-Dew"
+  },
+  "867": {
+    "name": "Azuma-Card"
+  },
+  "868": {
+    "name": "Stream Charm"
+  },
+  "869": {
+    "name": "Dotted Scarf"
+  },
+  "870": {
+    "name": "Plusle Tail"
+  },
+  "871": {
+    "name": "Plusle Card"
+  },
+  "872": {
+    "name": "Cheer Rock"
+  },
+  "873": {
+    "name": "Pulse Bow"
+  },
+  "874": {
+    "name": "Minun Tail"
+  },
+  "875": {
+    "name": "Minun Card"
+  },
+  "876": {
+    "name": "Volt Heart"
+  },
+  "877": {
+    "name": "Spark Tie"
+  },
+  "878": {
+    "name": "Cast-Dew"
+  },
+  "879": {
+    "name": "Cast-Card"
+  },
+  "880": {
+    "name": "Cloud Rock"
+  },
+  "881": {
+    "name": "Weather Cape"
+  },
+  "882": {
+    "name": "Wynaut Tail"
+  },
+  "883": {
+    "name": "Wynaut Card"
+  },
+  "884": {
+    "name": "Grin Charm"
+  },
+  "885": {
+    "name": "Cheery Scarf"
+  },
+  "886": {
+    "name": "Wobbu-Sweat"
+  },
+  "887": {
+    "name": "Wobbu-Card"
+  },
+  "888": {
+    "name": "Endure Rock"
+  },
+  "889": {
+    "name": "Suffer Scarf"
+  },
+  "890": {
+    "name": "Bidoof Tooth"
+  },
+  "891": {
+    "name": "Bidoof Card"
+  },
+  "892": {
+    "name": "Fall Charm"
+  },
+  "893": {
+    "name": "Stolid Scarf"
+  },
+  "894": {
+    "name": "Biba-Tooth"
+  },
+  "895": {
+    "name": "Biba-Card"
+  },
+  "896": {
+    "name": "River Charm"
+  },
+  "897": {
+    "name": "Dam Scarf"
+  },
+  "898": {
+    "name": "Shinx Claw"
+  },
+  "899": {
+    "name": "Shinx Fang"
+  },
+  "900": {
+    "name": "Flash Tag"
+  },
+  "901": {
+    "name": "Energy Scarf"
+  },
+  "902": {
+    "name": "Luxio Claw"
+  },
+  "903": {
+    "name": "Luxio Fang"
+  },
+  "904": {
+    "name": "Spark Tag"
+  },
+  "905": {
+    "name": "Spark Scarf"
+  },
+  "906": {
+    "name": "Luxray Claw"
+  },
+  "907": {
+    "name": "Luxray Fang"
+  },
+  "908": {
+    "name": "Glare Tag"
+  },
+  "909": {
+    "name": "Glare Sash"
+  },
+  "910": {
+    "name": "Pachi-Tooth"
+  },
+  "911": {
+    "name": "Pachi-Card"
+  },
+  "912": {
+    "name": "Rouse Charm"
+  },
+  "913": {
+    "name": "Miracle Bow"
+  },
+  "914": {
+    "name": "Buizel Fang"
+  },
+  "915": {
+    "name": "Buizel Card"
+  },
+  "916": {
+    "name": "Swimmer Rock"
+  },
+  "917": {
+    "name": "Screw Torc"
+  },
+  "918": {
+    "name": "Float-Fang"
+  },
+  "919": {
+    "name": "Float-Card"
+  },
+  "920": {
+    "name": "Rescue Rock"
+  },
+  "921": {
+    "name": "Float Aid"
+  },
+  "922": {
+    "name": "Drifloo-Gasp"
+  },
+  "923": {
+    "name": "Drifloo-Card"
+  },
+  "924": {
+    "name": "Wind Heart"
+  },
+  "925": {
+    "name": "Draft Ring"
+  },
+  "926": {
+    "name": "Drifbli-Gasp"
+  },
+  "927": {
+    "name": "Drifbli-Card"
+  },
+  "928": {
+    "name": "Easy Charm"
+  },
+  "929": {
+    "name": "Breeze Scarf"
+  },
+  "930": {
+    "name": "Cherubi Seed"
+  },
+  "931": {
+    "name": "Cherubi Card"
+  },
+  "932": {
+    "name": "Cute Ore"
+  },
+  "933": {
+    "name": "Charm Bow"
+  },
+  "934": {
+    "name": "Cherrim Dew"
+  },
+  "935": {
+    "name": "Cherrim Card"
+  },
+  "936": {
+    "name": "Sweet Aroma"
+  },
+  "937": {
+    "name": "Petal Dress"
+  },
+  "938": {
+    "name": "Bonsly Dew"
+  },
+  "939": {
+    "name": "Bonsly Card"
+  },
+  "940": {
+    "name": "Arid Tag"
+  },
+  "941": {
+    "name": "Teary Cape"
+  },
+  "942": {
+    "name": "Sudo-Sweat"
+  },
+  "943": {
+    "name": "Sudo-Card"
+  },
+  "944": {
+    "name": "Drain Rock"
+  },
+  "945": {
+    "name": "Fake Torc"
+  },
+  "946": {
+    "name": "Junior Beam"
+  },
+  "947": {
+    "name": "Junior Card"
+  },
+  "948": {
+    "name": "Mimic Pebble"
+  },
+  "949": {
+    "name": "Copy Mask"
+  },
+  "950": {
+    "name": "Mime Key"
+  },
+  "951": {
+    "name": "Mime Card"
+  },
+  "952": {
+    "name": "Bulwark Rock"
+  },
+  "953": {
+    "name": "Barrier Bow"
+  },
+  "954": {
+    "name": "Happiny Dew"
+  },
+  "955": {
+    "name": "Happiny Card"
+  },
+  "956": {
+    "name": "Play Tag"
+  },
+  "957": {
+    "name": "Nurture Cape"
+  },
+  "958": {
+    "name": "Chansey Song"
+  },
+  "959": {
+    "name": "Chansey Card"
+  },
+  "960": {
+    "name": "Lucky Charm"
+  },
+  "961": {
+    "name": "Lucky Scarf"
+  },
+  "962": {
+    "name": "Blissey Song"
+  },
+  "963": {
+    "name": "Blissey Card"
+  },
+  "964": {
+    "name": "Amity Rock"
+  },
+  "965": {
+    "name": "Faith Ring"
+  },
+  "966": {
+    "name": "Gible Fang"
+  },
+  "967": {
+    "name": "Gible Card"
+  },
+  "968": {
+    "name": "Dragon Jewel"
+  },
+  "969": {
+    "name": "Dragon Tie"
+  },
+  "970": {
+    "name": "Gabite Claw"
+  },
+  "971": {
+    "name": "Gabite Fang"
+  },
+  "972": {
+    "name": "Star Rock"
+  },
+  "973": {
+    "name": "Meteor Torc"
+  },
+  "974": {
+    "name": "Gar-Claw"
+  },
+  "975": {
+    "name": "Gar-Fang"
+  },
+  "976": {
+    "name": "Speed Tag"
+  },
+  "977": {
+    "name": "Mach Scarf"
+  },
+  "978": {
+    "name": "Riolu Tail"
+  },
+  "979": {
+    "name": "Riolu Card"
+  },
+  "980": {
+    "name": "Valiant Rock"
+  },
+  "981": {
+    "name": "Emit Ring"
+  },
+  "982": {
+    "name": "Lucario Fang"
+  },
+  "983": {
+    "name": "Lucario Card"
+  },
+  "984": {
+    "name": "Pledge Rock"
+  },
+  "985": {
+    "name": "Ravage Ring"
+  },
+  "986": {
+    "name": "Mantyke Beam"
+  },
+  "987": {
+    "name": "Mantyke Card"
+  },
+  "988": {
+    "name": "Waft Rock"
+  },
+  "989": {
+    "name": "Ocean Bow"
+  },
+  "990": {
+    "name": "Mantine Foam"
+  },
+  "991": {
+    "name": "Mantine Card"
+  },
+  "992": {
+    "name": "Sunset Rock"
+  },
+  "993": {
+    "name": "Horizon Bow"
+  },
+  "994": {
+    "name": "Phione Song"
+  },
+  "995": {
+    "name": "Phione Card"
+  },
+  "996": {
+    "name": "Wave Jewel"
+  },
+  "997": {
+    "name": "Ripple Cape"
+  },
+  "998": {
+    "name": "Vulpix Tail"
+  },
+  "999": {
+    "name": "Vulpix Card"
+  },
+  "1000": {
+    "name": "Vulpix Tag"
+  },
+  "1001": {
+    "name": "Glowing Bow"
+  },
+  "1002": {
+    "name": "Nine-Hair"
+  },
+  "1003": {
+    "name": "Nine-Card"
+  },
+  "1004": {
+    "name": "Nine-Seal"
+  },
+  "1005": {
+    "name": "Afire Collar"
+  },
+  "1006": {
+    "name": "Phanpy Claw"
+  },
+  "1007": {
+    "name": "Phanpy Card"
+  },
+  "1008": {
+    "name": "Phanpy Tag"
+  },
+  "1009": {
+    "name": "Value Ruff"
+  },
+  "1010": {
+    "name": "Donphan Fang"
+  },
+  "1011": {
+    "name": "Donphan Card"
+  },
+  "1012": {
+    "name": "Don-Crest"
+  },
+  "1013": {
+    "name": "Armor Scarf"
+  },
+  "1014": {
+    "name": "Cater-Belt"
+  },
+  "1015": {
+    "name": "Defense Bow"
+  },
+  "1016": {
+    "name": "Glittery Bow"
+  },
+  "1017": {
+    "name": "Weedle Bow"
+  },
+  "1018": {
+    "name": "Kakuna Scarf"
+  },
+  "1019": {
+    "name": "Charge Scarf"
+  },
+  "1020": {
+    "name": "Pidgey Bow"
+  },
+  "1021": {
+    "name": "Pidgeo-Scarf"
+  },
+  "1022": {
+    "name": "Pidgeot Torc"
+  },
+  "1023": {
+    "name": "Ratta-Scarf"
+  },
+  "1024": {
+    "name": "Overcome Bow"
+  },
+  "1025": {
+    "name": "Quirky Bow"
+  },
+  "1026": {
+    "name": "Wing Scarf"
+  },
+  "1027": {
+    "name": "Leash Bow"
+  },
+  "1028": {
+    "name": "Shock Ruff"
+  },
+  "1029": {
+    "name": "Sand-Scarf"
+  },
+  "1030": {
+    "name": "Sandy Torc"
+  },
+  "1031": {
+    "name": "Pointy Scarf"
+  },
+  "1032": {
+    "name": "Return Scarf"
+  },
+  "1033": {
+    "name": "Impact Torc"
+  },
+  "1034": {
+    "name": "Halve Scarf"
+  },
+  "1035": {
+    "name": "Thorny Scarf"
+  },
+  "1036": {
+    "name": "King Sash"
+  },
+  "1037": {
+    "name": "Dodge Bow"
+  },
+  "1038": {
+    "name": "Absorb Scarf"
+  },
+  "1039": {
+    "name": "Odd Bow"
+  },
+  "1040": {
+    "name": "Guard Hat"
+  },
+  "1041": {
+    "name": "Aroma Scarf"
+  },
+  "1042": {
+    "name": "Moving Scarf"
+  },
+  "1043": {
+    "name": "Firm Hat"
+  },
+  "1044": {
+    "name": "Gaze Goggles"
+  },
+  "1045": {
+    "name": "Venomoth Bow"
+  },
+  "1046": {
+    "name": "Diglett Hat"
+  },
+  "1047": {
+    "name": "Dugtrio Bow"
+  },
+  "1048": {
+    "name": "Psyduck Hat"
+  },
+  "1049": {
+    "name": "Paddle Scarf"
+  },
+  "1050": {
+    "name": "Mankey Torc"
+  },
+  "1051": {
+    "name": "Nullify Belt"
+  },
+  "1052": {
+    "name": "Growl-Scarf"
+  },
+  "1053": {
+    "name": "Legend Bow"
+  },
+  "1054": {
+    "name": "Damp Bow"
+  },
+  "1055": {
+    "name": "Poli-Bow"
+  },
+  "1056": {
+    "name": "Bold Belt"
+  },
+  "1057": {
+    "name": "Predict Torc"
+  },
+  "1058": {
+    "name": "Psychic Torc"
+  },
+  "1059": {
+    "name": "Sparkle Ruff"
+  },
+  "1060": {
+    "name": "Impish Band"
+  },
+  "1061": {
+    "name": "Strong Belt"
+  },
+  "1062": {
+    "name": "Machamp Belt"
+  },
+  "1063": {
+    "name": "Bell-Bow"
+  },
+  "1064": {
+    "name": "Digest Scarf"
+  },
+  "1065": {
+    "name": "Victree-Torc"
+  },
+  "1066": {
+    "name": "Tangle Bow"
+  },
+  "1067": {
+    "name": "Tenta-Cape"
+  },
+  "1068": {
+    "name": "Geodude Torc"
+  },
+  "1069": {
+    "name": "Rocky Torc"
+  },
+  "1070": {
+    "name": "Rugged Sash"
+  },
+  "1071": {
+    "name": "Heated Bow"
+  },
+  "1072": {
+    "name": "Sunlight Bow"
+  },
+  "1073": {
+    "name": "Slowpoke Hat"
+  },
+  "1074": {
+    "name": "Slow-Scarf"
+  },
+  "1075": {
+    "name": "Magne-Torc"
+  },
+  "1076": {
+    "name": "Magneton Bow"
+  },
+  "1077": {
+    "name": "Bullseye Bow"
+  },
+  "1078": {
+    "name": "Buddy Torc"
+  },
+  "1079": {
+    "name": "Fight Torc"
+  },
+  "1080": {
+    "name": "Gentle Bow"
+  },
+  "1081": {
+    "name": "North Torc"
+  },
+  "1082": {
+    "name": "Grimy Scarf"
+  },
+  "1083": {
+    "name": "Slimy Bow"
+  },
+  "1084": {
+    "name": "Shell-Torc"
+  },
+  "1085": {
+    "name": "Cover Armor"
+  },
+  "1086": {
+    "name": "Gastly Veil"
+  },
+  "1087": {
+    "name": "Slip Scarf"
+  },
+  "1088": {
+    "name": "Sunglasses"
+  },
+  "1089": {
+    "name": "Trust Brooch"
+  },
+  "1090": {
+    "name": "Drowzee Tie"
+  },
+  "1091": {
+    "name": "Dream Coin"
+  },
+  "1092": {
+    "name": "Krabby Bow"
+  },
+  "1093": {
+    "name": "Super Sash"
+  },
+  "1094": {
+    "name": "Ball Scarf"
+  },
+  "1095": {
+    "name": "Electro-Bow"
+  },
+  "1096": {
+    "name": "Repel Scarf"
+  },
+  "1097": {
+    "name": "Exeggu-Sash"
+  },
+  "1098": {
+    "name": "Cubone Scarf"
+  },
+  "1099": {
+    "name": "Marowak Torc"
+  },
+  "1100": {
+    "name": "Licky Scarf"
+  },
+  "1101": {
+    "name": "Koffing Bow"
+  },
+  "1102": {
+    "name": "Weez-Scarf"
+  },
+  "1103": {
+    "name": "Solid Shield"
+  },
+  "1104": {
+    "name": "Pierce Drill"
+  },
+  "1105": {
+    "name": "Sticky Bow"
+  },
+  "1106": {
+    "name": "Kang-Apron"
+  },
+  "1107": {
+    "name": "Horsea Bow"
+  },
+  "1108": {
+    "name": "Swirl Scarf"
+  },
+  "1109": {
+    "name": "Goldeen Bow"
+  },
+  "1110": {
+    "name": "Seaking Bow"
+  },
+  "1111": {
+    "name": "Recover Torc"
+  },
+  "1112": {
+    "name": "Starmie Belt"
+  },
+  "1113": {
+    "name": "Pinsir Sash"
+  },
+  "1114": {
+    "name": "Rushing Bow"
+  },
+  "1115": {
+    "name": "Magikarp Bow"
+  },
+  "1116": {
+    "name": "Tempest Sash"
+  },
+  "1117": {
+    "name": "Ditto Torc"
+  },
+  "1118": {
+    "name": "AI Brooch"
+  },
+  "1119": {
+    "name": "Spike Brooch"
+  },
+  "1120": {
+    "name": "Aged Scarf"
+  },
+  "1121": {
+    "name": "Kabuto Hat"
+  },
+  "1122": {
+    "name": "Kabu-Torc"
+  },
+  "1123": {
+    "name": "Old Brooch"
+  },
+  "1124": {
+    "name": "Dragon Sash"
+  },
+  "1125": {
+    "name": "Aloft Mantle"
+  },
+  "1126": {
+    "name": "Mirage Cape"
+  },
+  "1127": {
+    "name": "Sentret Ruff"
+  },
+  "1128": {
+    "name": "Body Collar"
+  },
+  "1129": {
+    "name": "Expose Specs"
+  },
+  "1130": {
+    "name": "Noctowl Torc"
+  },
+  "1131": {
+    "name": "Morning Bow"
+  },
+  "1132": {
+    "name": "Ledian Bow"
+  },
+  "1133": {
+    "name": "Spina-Scarf"
+  },
+  "1134": {
+    "name": "Ariados Bow"
+  },
+  "1135": {
+    "name": "Slash Bow"
+  },
+  "1136": {
+    "name": "Shine Torc"
+  },
+  "1137": {
+    "name": "Lanturn Bow"
+  },
+  "1138": {
+    "name": "Lively Scarf"
+  },
+  "1139": {
+    "name": "Xatu Bow"
+  },
+  "1140": {
+    "name": "Wool Bow"
+  },
+  "1141": {
+    "name": "Fluffy Scarf"
+  },
+  "1142": {
+    "name": "Sacred Scarf"
+  },
+  "1143": {
+    "name": "Bright Tiara"
+  },
+  "1144": {
+    "name": "Rain Crown"
+  },
+  "1145": {
+    "name": "Zephyr Bow"
+  },
+  "1146": {
+    "name": "Skip-Scarf"
+  },
+  "1147": {
+    "name": "Cotton Torc"
+  },
+  "1148": {
+    "name": "Revenge Ruff"
+  },
+  "1149": {
+    "name": "Hasty Bow"
+  },
+  "1150": {
+    "name": "Sun Scarf"
+  },
+  "1151": {
+    "name": "Chitin Bow"
+  },
+  "1152": {
+    "name": "Wooper Bow"
+  },
+  "1153": {
+    "name": "Quag-Torc"
+  },
+  "1154": {
+    "name": "Murkrow Hat"
+  },
+  "1155": {
+    "name": "King Cap"
+  },
+  "1156": {
+    "name": "Misdrea-Cape"
+  },
+  "1157": {
+    "name": "Cryptic Sash"
+  },
+  "1158": {
+    "name": "Reverse Bow"
+  },
+  "1159": {
+    "name": "Robust Bow"
+  },
+  "1160": {
+    "name": "Dense Poncho"
+  },
+  "1161": {
+    "name": "Escape Scarf"
+  },
+  "1162": {
+    "name": "Takeoff Ruff"
+  },
+  "1163": {
+    "name": "Quartz Torc"
+  },
+  "1164": {
+    "name": "Snub-Cape"
+  },
+  "1165": {
+    "name": "Stern Sash"
+  },
+  "1166": {
+    "name": "Qwilfish Bow"
+  },
+  "1167": {
+    "name": "Shuckle Bow"
+  },
+  "1168": {
+    "name": "Horn Torc"
+  },
+  "1169": {
+    "name": "Lava Bow"
+  },
+  "1170": {
+    "name": "Torrid Scarf"
+  },
+  "1171": {
+    "name": "Frigid Bow"
+  },
+  "1172": {
+    "name": "Frost Torc"
+  },
+  "1173": {
+    "name": "Eager Brooch"
+  },
+  "1174": {
+    "name": "Reach Bow"
+  },
+  "1175": {
+    "name": "Psy Bow"
+  },
+  "1176": {
+    "name": "Snow Brooch"
+  },
+  "1177": {
+    "name": "Skar-Cape"
+  },
+  "1178": {
+    "name": "Dark Choker"
+  },
+  "1179": {
+    "name": "Pit Fang"
+  },
+  "1180": {
+    "name": "Tornado Bow"
+  },
+  "1181": {
+    "name": "Virtual Bow"
+  },
+  "1182": {
+    "name": "Delusion Bow"
+  },
+  "1183": {
+    "name": "Paint Scarf"
+  },
+  "1184": {
+    "name": "Milky Scarf"
+  },
+  "1185": {
+    "name": "Larvitar Bow"
+  },
+  "1186": {
+    "name": "Pupita-Scarf"
+  },
+  "1187": {
+    "name": "Crash Claw"
+  },
+  "1188": {
+    "name": "Pooch-Collar"
+  },
+  "1189": {
+    "name": "Dark Fang"
+  },
+  "1190": {
+    "name": "Merry Scarf"
+  },
+  "1191": {
+    "name": "Linoone Ruff"
+  },
+  "1192": {
+    "name": "Wurmple Bow"
+  },
+  "1193": {
+    "name": "Tough Scarf"
+  },
+  "1194": {
+    "name": "Vivid Silk"
+  },
+  "1195": {
+    "name": "Guard Bow"
+  },
+  "1196": {
+    "name": "Dustox Bow"
+  },
+  "1197": {
+    "name": "Kelp Hat"
+  },
+  "1198": {
+    "name": "Jolly Scarf"
+  },
+  "1199": {
+    "name": "Ludicolo Hat"
+  },
+  "1200": {
+    "name": "Seedot Hat"
+  },
+  "1201": {
+    "name": "Nuzleaf Bow"
+  },
+  "1202": {
+    "name": "Shiftry Belt"
+  },
+  "1203": {
+    "name": "Taillow Bow"
+  },
+  "1204": {
+    "name": "Midair Scarf"
+  },
+  "1205": {
+    "name": "Wingull Bow"
+  },
+  "1206": {
+    "name": "Stock Scarf"
+  },
+  "1207": {
+    "name": "Sensing Hat"
+  },
+  "1208": {
+    "name": "Magical Bow"
+  },
+  "1209": {
+    "name": "Caring Scarf"
+  },
+  "1210": {
+    "name": "Bliss Scarf"
+  },
+  "1211": {
+    "name": "Blocking Bow"
+  },
+  "1212": {
+    "name": "Mobile Bow"
+  },
+  "1213": {
+    "name": "Thwart Bow"
+  },
+  "1214": {
+    "name": "Slak-Scarf"
+  },
+  "1215": {
+    "name": "Vigor Sash"
+  },
+  "1216": {
+    "name": "Lazy Ruff"
+  },
+  "1217": {
+    "name": "Novice Scarf"
+  },
+  "1218": {
+    "name": "Ninja Ruff"
+  },
+  "1219": {
+    "name": "Awe Mantle"
+  },
+  "1220": {
+    "name": "Good Earring"
+  },
+  "1221": {
+    "name": "Nice Bangle"
+  },
+  "1222": {
+    "name": "Great Torc"
+  },
+  "1223": {
+    "name": "Makuhit-Belt"
+  },
+  "1224": {
+    "name": "Thrust Belt"
+  },
+  "1225": {
+    "name": "Nose-Torc"
+  },
+  "1226": {
+    "name": "Sable-Scope"
+  },
+  "1227": {
+    "name": "Deceit Mask"
+  },
+  "1228": {
+    "name": "Iron Torc"
+  },
+  "1229": {
+    "name": "Metal Bangle"
+  },
+  "1230": {
+    "name": "Iron Helmet"
+  },
+  "1231": {
+    "name": "Intuit Bow"
+  },
+  "1232": {
+    "name": "Ponder Sash"
+  },
+  "1233": {
+    "name": "Punish Torc"
+  },
+  "1234": {
+    "name": "Protect Mask"
+  },
+  "1235": {
+    "name": "Neon Scarf"
+  },
+  "1236": {
+    "name": "Evening Bow"
+  },
+  "1237": {
+    "name": "Thorned Torc"
+  },
+  "1238": {
+    "name": "Gulpin Bow"
+  },
+  "1239": {
+    "name": "Swalot Belt"
+  },
+  "1240": {
+    "name": "Carva-Sash"
+  },
+  "1241": {
+    "name": "Vicious Bow"
+  },
+  "1242": {
+    "name": "Spout Scarf"
+  },
+  "1243": {
+    "name": "Huge Bow"
+  },
+  "1244": {
+    "name": "Numel Bow"
+  },
+  "1245": {
+    "name": "Erupt Scarf"
+  },
+  "1246": {
+    "name": "Sooty Sash"
+  },
+  "1247": {
+    "name": "Spring Bow"
+  },
+  "1248": {
+    "name": "Scheme Scarf"
+  },
+  "1249": {
+    "name": "Hula Bow"
+  },
+  "1250": {
+    "name": "Desert Bow"
+  },
+  "1251": {
+    "name": "Vibra Scarf"
+  },
+  "1252": {
+    "name": "Red Glasses"
+  },
+  "1253": {
+    "name": "Desert Sash"
+  },
+  "1254": {
+    "name": "Cacturne Hat"
+  },
+  "1255": {
+    "name": "Tuft Bow"
+  },
+  "1256": {
+    "name": "Cloud Ruff"
+  },
+  "1257": {
+    "name": "Strong Sash"
+  },
+  "1258": {
+    "name": "Seviper Bow"
+  },
+  "1259": {
+    "name": "Lunaton-Torc"
+  },
+  "1260": {
+    "name": "Solrock Bow"
+  },
+  "1261": {
+    "name": "Soak Scarf"
+  },
+  "1262": {
+    "name": "Whiscash Bow"
+  },
+  "1263": {
+    "name": "Bossy Scarf"
+  },
+  "1264": {
+    "name": "Cower Sash"
+  },
+  "1265": {
+    "name": "Bal-Brooch"
+  },
+  "1266": {
+    "name": "Claydol Torc"
+  },
+  "1267": {
+    "name": "Bind Scarf"
+  },
+  "1268": {
+    "name": "Cradily Bow"
+  },
+  "1269": {
+    "name": "Guard Claw"
+  },
+  "1270": {
+    "name": "Rigid Cape"
+  },
+  "1271": {
+    "name": "Admire Scarf"
+  },
+  "1272": {
+    "name": "Grace Scarf"
+  },
+  "1273": {
+    "name": "Kecleon Torc"
+  },
+  "1274": {
+    "name": "Shuppet Cape"
+  },
+  "1275": {
+    "name": "Ominous Torc"
+  },
+  "1276": {
+    "name": "Duskull Ruff"
+  },
+  "1277": {
+    "name": "Illusion Bow"
+  },
+  "1278": {
+    "name": "Tropius Bow"
+  },
+  "1279": {
+    "name": "Chime-Scarf"
+  },
+  "1280": {
+    "name": "Perish Torc"
+  },
+  "1281": {
+    "name": "Chilly Hat"
+  },
+  "1282": {
+    "name": "Hail Scarf"
+  },
+  "1283": {
+    "name": "Sleet Bow"
+  },
+  "1284": {
+    "name": "Safe Scarf"
+  },
+  "1285": {
+    "name": "Walrein Torc"
+  },
+  "1286": {
+    "name": "Clam-Brooch"
+  },
+  "1287": {
+    "name": "Deep Torc"
+  },
+  "1288": {
+    "name": "Gore-Scarf"
+  },
+  "1289": {
+    "name": "Reli-Torc"
+  },
+  "1290": {
+    "name": "Luvdisc Torc"
+  },
+  "1291": {
+    "name": "Crag Helmet"
+  },
+  "1292": {
+    "name": "Outlast Bow"
+  },
+  "1293": {
+    "name": "Sala-Cape"
+  },
+  "1294": {
+    "name": "Beldum Torc"
+  },
+  "1295": {
+    "name": "Metang Scarf"
+  },
+  "1296": {
+    "name": "Meta-Torc"
+  },
+  "1297": {
+    "name": "Starly Bow"
+  },
+  "1298": {
+    "name": "Regret Torc"
+  },
+  "1299": {
+    "name": "Guts Sash"
+  },
+  "1300": {
+    "name": "Still Bow"
+  },
+  "1301": {
+    "name": "Kricke-Torc"
+  },
+  "1302": {
+    "name": "Budew Scarf"
+  },
+  "1303": {
+    "name": "Bouquet Cape"
+  },
+  "1304": {
+    "name": "Hard Helmet"
+  },
+  "1305": {
+    "name": "Skull Helmet"
+  },
+  "1306": {
+    "name": "Rebound Bow"
+  },
+  "1307": {
+    "name": "Block Brooch"
+  },
+  "1308": {
+    "name": "Straw Cape"
+  },
+  "1309": {
+    "name": "Worma-Bow"
+  },
+  "1310": {
+    "name": "Mothim Bow"
+  },
+  "1311": {
+    "name": "Nectar Bow"
+  },
+  "1312": {
+    "name": "Vespi-Torc"
+  },
+  "1313": {
+    "name": "Awake Bow"
+  },
+  "1314": {
+    "name": "Gastro-Torc"
+  },
+  "1315": {
+    "name": "Ambipom Bow"
+  },
+  "1316": {
+    "name": "Defrost Ruff"
+  },
+  "1317": {
+    "name": "Allure Coat"
+  },
+  "1318": {
+    "name": "Magic Hat"
+  },
+  "1319": {
+    "name": "Honch-Cape"
+  },
+  "1320": {
+    "name": "Glameow Bow"
+  },
+  "1321": {
+    "name": "Scary Belt"
+  },
+  "1322": {
+    "name": "Ching-Torc"
+  },
+  "1323": {
+    "name": "Stinky Scarf"
+  },
+  "1324": {
+    "name": "Stench Sash"
+  },
+  "1325": {
+    "name": "Image Brooch"
+  },
+  "1326": {
+    "name": "Mirror Torc"
+  },
+  "1327": {
+    "name": "Chatot Scarf"
+  },
+  "1328": {
+    "name": "Thick Scarf"
+  },
+  "1329": {
+    "name": "Grit Veil"
+  },
+  "1330": {
+    "name": "Skorupi Bow"
+  },
+  "1331": {
+    "name": "Dust Scarf"
+  },
+  "1332": {
+    "name": "Croa-Torc"
+  },
+  "1333": {
+    "name": "Toxi-Belt"
+  },
+  "1334": {
+    "name": "Carni-Bow"
+  },
+  "1335": {
+    "name": "Swim Bow"
+  },
+  "1336": {
+    "name": "Lumi-Torc"
+  },
+  "1337": {
+    "name": "Snowy Torc"
+  },
+  "1338": {
+    "name": "Frozen Cape"
+  },
+  "1339": {
+    "name": "Builder Sash"
+  },
+  "1340": {
+    "name": "Flabby Belt"
+  },
+  "1341": {
+    "name": "Rhyperi-Torc"
+  },
+  "1342": {
+    "name": "Clinging Bow"
+  },
+  "1343": {
+    "name": "Yanmega Bow"
+  },
+  "1344": {
+    "name": "Gliscor Cape"
+  },
+  "1345": {
+    "name": "Glacier Cape"
+  },
+  "1346": {
+    "name": "Best Scarf"
+  },
+  "1347": {
+    "name": "Gallant Torc"
+  },
+  "1348": {
+    "name": "Probo-Hat"
+  },
+  "1349": {
+    "name": "Unlucky Sash"
+  },
+  "1350": {
+    "name": "Froslass Bow"
+  },
+  "1351": {
+    "name": "Purify Veil"
+  },
+  "1352": {
+    "name": "$$$"
+  },
+  "1353": {
+    "name": "$$$"
+  },
+  "1354": {
+    "name": "$$$"
+  },
+  "1355": {
+    "name": "$$$"
+  },
+  "1356": {
+    "name": "$$$"
+  },
+  "1357": {
+    "name": "$$$"
+  },
+  "1358": {
+    "name": "$$$"
+  },
+  "1359": {
+    "name": "$$$"
+  },
+  "1360": {
+    "name": "$$$"
+  },
+  "1361": {
+    "name": "$$$"
+  },
+  "1362": {
+    "name": "$$$"
+  },
+  "1363": {
+    "name": "$$$"
+  },
+  "1364": {
+    "name": "$$$"
+  },
+  "1365": {
+    "name": "$$$"
+  },
+  "1366": {
+    "name": "$$$"
+  },
+  "1367": {
+    "name": "$$$"
+  },
+  "1368": {
+    "name": "$$$"
+  },
+  "1369": {
+    "name": "$$$"
+  },
+  "1370": {
+    "name": "$$$"
+  },
+  "1371": {
+    "name": "$$$"
+  },
+  "1372": {
+    "name": "$$$"
+  },
+  "1373": {
+    "name": "$$$"
+  },
+  "1374": {
+    "name": "$$$"
+  },
+  "1375": {
+    "name": "$$$"
+  },
+  "1376": {
+    "name": "$$$"
+  },
+  "1377": {
+    "name": "$$$"
+  },
+  "1378": {
+    "name": "$$$"
+  },
+  "1379": {
+    "name": "$$$"
+  },
+  "1380": {
+    "name": "$$$"
+  },
+  "1381": {
+    "name": "$$$"
+  },
+  "1382": {
+    "name": "$$$"
+  },
+  "1383": {
+    "name": "$$$"
+  },
+  "1384": {
+    "name": "$$$"
+  },
+  "1385": {
+    "name": "$$$"
+  },
+  "1386": {
+    "name": "$$$"
+  },
+  "1387": {
+    "name": "$$$"
+  },
+  "1388": {
+    "name": "$$$"
+  },
+  "1389": {
+    "name": "$$$"
+  },
+  "1390": {
+    "name": "$$$"
+  },
+  "1391": {
+    "name": "$$$"
+  },
+  "1392": {
+    "name": "$$$"
+  },
+  "1393": {
+    "name": "$$$"
+  },
+  "1394": {
+    "name": "$$$"
+  },
+  "1395": {
+    "name": "$$$"
+  },
+  "1396": {
+    "name": "$$$"
+  },
+  "1397": {
+    "name": "$$$"
+  },
+  "1398": {
+    "name": "$$$"
+  },
+  "1399": {
+    "name": "$$$"
+  }
+}

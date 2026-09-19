@@ -1,0 +1,44 @@
+{
+  "dungeons": [
+    {
+      "name": "Craggy Coast",
+      "table": "craggy-coast"
+    },
+    {
+      "name": "Mt. Horn",
+      "table": "craggy-coast"
+    },
+    {
+      "name": "Amp Plains",
+      "table": "amp-plains"
+    },
+    {
+      "name": "Far Amp Plains",
+      "table": "amp-plains"
+    },
+    {
+      "name": "Crystal Cave",
+      "table": "crystal-cave"
+    },
+    {
+      "name": "Crystal Crossing",
+      "table": "crystal-cave"
+    },
+    {
+      "name": "Treeshroud Forest",
+      "table": "crystal-cave"
+    },
+    {
+      "name": "Mystifying Forest",
+      "table": "mystifying-forest"
+    },
+    {
+      "name": "Sky Peak",
+      "table": "sky-peak"
+    },
+    {
+      "name": "Mt. Travail",
+      "table": "mt-travail"
+    }
+  ]
+}

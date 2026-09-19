@@ -1,0 +1,34 @@
+{
+  "modes": {
+    "story": {
+      "label": "Story Dungeons",
+      "items": [
+        26,
+        29,
+        40,
+        73,
+        77,
+        89,
+        100,
+        101,
+        102,
+        108,
+        121,
+        355,
+        362
+      ],
+      "dungeons": {
+        "Craggy Coast": 3,
+        "Mt. Horn": 3,
+        "Amp Plains": 2,
+        "Far Amp Plains": 2,
+        "Crystal Cave": 2,
+        "Crystal Crossing": 2,
+        "Treeshroud Forest": 3,
+        "Mystifying Forest": 2,
+        "Sky Peak": 3,
+        "Mt. Travail": 3
+      }
+    }
+  }
+}

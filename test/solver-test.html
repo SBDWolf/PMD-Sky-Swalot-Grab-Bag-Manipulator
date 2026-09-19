@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solver self-test — Secret Bazaar Manipulator</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Solver self-test</h1>
+    <p class="tagline">
+      validates <code>js/solver.js</code> against reference results computed by
+      <code>tools/reference_solve.py</code> · <a href="../index.html">← back to the tool</a>
+    </p>
+  </header>
+  <main>
+    <section class="panel">
+      <div class="panel-head">
+        <h2 id="summary">Running…</h2>
+        <button id="rerun" type="button" class="btn-small">Re-run</button>
+      </div>
+      <div id="test-body"></div>
+    </section>
+    <footer class="site-footer">
+      <p>Expected values were generated with <code>python tools/reference_solve.py Data/tables/&lt;table&gt;.json
+      --team &lt;n&gt; --items &lt;id&gt;:&lt;qty&gt;</code> and pasted in by hand — regenerate them if you change the
+      cost model in the solver.</p>
+    </footer>
+  </main>
+  <script type="module" src="solver-test.js"></script>
+</body>
+</html>

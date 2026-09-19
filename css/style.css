@@ -1,0 +1,285 @@
+/* Secret Bazaar Manipulator — styles */
+
+:root {
+  --bg: #10141a;
+  --bg-panel: #1a2029;
+  --bg-panel-alt: #212936;
+  --bg-input: #0d1117;
+  --border: #2e3947;
+  --text: #dbe2ea;
+  --text-dim: #8b98a8;
+  --accent: #e8b93c;
+  --accent-dim: #8a6f24;
+  --good: #57c785;
+  --bad: #e5654f;
+  --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.site-header {
+  padding: 20px 16px 8px;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  letter-spacing: 0.02em;
+}
+
+.tagline {
+  margin: 4px 0 0;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px 16px 40px;
+}
+
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-top: 14px;
+}
+
+.panel-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.panel-head h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.hint {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin: 6px 0 0;
+}
+
+/* controls */
+.control-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1 1 180px;
+}
+
+.control span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+
+select,
+input[type="number"] {
+  background: var(--bg-input);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 7px 9px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+select:focus,
+input:focus {
+  outline: 2px solid var(--accent-dim);
+  border-color: var(--accent);
+}
+
+select:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-small {
+  background: var(--bg-panel-alt);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn-small:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-small.copied {
+  border-color: var(--good);
+  color: var(--good);
+}
+
+/* item grid */
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 8px;
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-panel-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.item-row.qty-zero .qty {
+  color: var(--bad);
+}
+
+.item-row.not-in-table {
+  opacity: 0.55;
+}
+
+.item-icon {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1.05rem;
+  overflow: hidden;
+}
+
+.item-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.item-name {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.item-name span:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-id {
+  color: var(--text-dim);
+  font-size: 0.78rem;
+}
+
+.qty {
+  width: 62px;
+  text-align: center;
+}
+
+.qty:disabled {
+  opacity: 0.5;
+}
+
+/* results */
+.manip-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.manip-table th,
+.manip-table td {
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  text-align: center;
+}
+
+.manip-table thead th {
+  background: var(--bg-panel-alt);
+  font-weight: 600;
+}
+
+.manip-table td:last-child {
+  text-align: left;
+}
+
+.total {
+  margin: 14px 0 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--good);
+}
+
+/* errors */
+.error-panel {
+  border-color: var(--bad);
+}
+
+.error-title {
+  margin: 0 0 6px;
+  font-weight: 600;
+  color: var(--bad);
+}
+
+.error-detail {
+  margin: 0;
+}
+
+/* footer */
+.site-footer {
+  margin-top: 18px;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+@media (max-width: 560px) {
+  .item-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .control {
+    flex-basis: 100%;
+  }
+}

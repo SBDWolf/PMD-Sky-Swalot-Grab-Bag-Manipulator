@@ -1,0 +1,1400 @@
+0x0 	Nothing 	なし
+0x1 	Stick 	きのえだ
+0x2 	Iron Thorn 	てつのトゲ
+0x3 	Silver Spike 	ぎんのハリ
+0x4 	Gold Fang 	きんのキバ
+0x5 	Cacnea Spike 	サボネアのハリ
+0x6 	Corsola Twig 	サニーゴのトゲ
+0x7 	Gravelerock 	ゴローンのいし
+0x8 	Geo Pebble 	いしのつぶて
+0x9 	Gold Thorn 	おうごんのトゲ
+0xa 	Rare Fossil 	たいこのかせき
+0xb 	$$$ 	$$$
+0xc 	$$$ 	$$$
+0xd 	No-Slip Cap 	くっつくずきん
+0xe 	Y-Ray Specs 	みおとしメガネ
+0xf 	Gaggle Specs 	ばっちりメガネ
+0x10 	Mobile Scarf 	つうかスカーフ
+0x11 	Heal Ribbon 	かいふくリボン
+0x12 	Twist Band 	ねじりハチマキ
+0x13 	Scope Lens 	ピントレンズ
+0x14 	Patsy Band 	ねらわれハチマキ
+0x15 	No-Stick Cap 	くっつかずきん
+0x16 	Pierce Band 	かんつうバンダナ
+0x17 	Joy Ribbon 	しあわせリボン
+0x18 	X-Ray Specs 	みとおしメガネ
+0x19 	Persim Band 	キーのハチマキ
+0x1a 	Power Band 	パワーバンダナ
+0x1b 	Pecha Scarf 	モモンスカーフ
+0x1c 	Insomniscope 	ふみんスコープ
+0x1d 	Warp Scarf 	ワープスカーフ
+0x1e 	Tight Belt 	きついハラマキ
+0x1f 	Sneak Scarf 	こっそりスカーフ
+0x20 	Gold Ribbon 	きんのリボン
+0x21 	Goggle Specs 	ぱっちりメガネ
+0x22 	Diet Ribbon 	はらぺこリボン
+0x23 	Trap Scarf 	わなぬけスカーフ
+0x24 	Racket Band 	ばくおんハチマキ
+0x25 	Def. Scarf 	ぼうぎょスカーフ
+0x26 	Stamina Band 	スタミナリボン
+0x27 	Plain Ribbon 	ただのリボン
+0x28 	Special Band 	スペシャルリボン
+0x29 	Zinc Band 	キトサンバンダナ
+0x2a 	Detect Band 	みきりハチマキ
+0x2b 	Space Globe 	じくうのオーブ
+0x2c 	Dodge Scarf 	みかわしスカーフ
+0x2d 	Bounce Band 	おはじきリボン
+0x2e 	Curve Band 	カーブバンダナ
+0x2f 	Whiff Specs 	あたらずメガネ
+0x30 	No-Aim Scope 	ノーコンスコープ
+0x31 	Lockon Specs 	ロックオンメガネ
+0x32 	Munch Belt 	ゴンベのハラマキ
+0x33 	Pass Scarf 	あしらいスカーフ
+0x34 	Weather Band 	ノーてんバンダナ
+0x35 	Friend Bow 	ともだちリボン
+0x36 	Beauty Scarf 	うつくしスカーフ
+0x37 	Sun Ribbon 	たいようのリボン
+0x38 	Lunar Ribbon 	げっこうのリボン
+0x39 	Golden Mask 	おうごんかめん
+0x3a 	Amber Tear 	こはくのなみだ
+0x3b 	Icy Flute 	こおりのフルート
+0x3c 	Fiery Drum 	ほのおのドラム
+0x3d 	Terra Cymbal 	だいちのシンバル
+0x3e 	Aqua-Monica 	みずのハーモニカ
+0x3f 	Rock Horn 	いわのメガホン
+0x40 	Grass Cornet 	くさのラッパ
+0x41 	Sky Melodica 	ひこうのピアノ
+0x42 	Miracle Chest 	ミラクルチェスト
+0x43 	Wonder Chest 	ワンダーチェスト
+0x44 	IQ Booster 	ＩＱアッパー
+0x45 	Heal Seed 	いやしのタネ
+0x46 	Oran Berry 	オレンのみ
+0x47 	Sitrus Berry 	オボンのみ
+0x48 	Eyedrop Seed 	めぐすりのタネ
+0x49 	Reviver Seed 	ふっかつのタネ
+0x4a 	Blinker Seed 	めつぶしのタネ
+0x4b 	Doom Seed 	ふこうのタネ
+0x4c 	X-Eye Seed 	まどわしのタネ
+0x4d 	Life Seed 	いのちのタネ
+0x4e 	Rawst Berry 	チーゴのみ
+0x4f 	Hunger Seed 	くうふくのタネ
+0x50 	Quick Seed 	しゅんそくのタネ
+0x51 	Pecha Berry 	モモンのみ
+0x52 	Cheri Berry 	クラボのみ
+0x53 	Totter Seed 	ふらふらのタネ
+0x54 	Sleep Seed 	すいみんのタネ
+0x55 	Plain Seed 	ただのタネ
+0x56 	Warp Seed 	ワープのタネ
+0x57 	Blast Seed 	ばくれつのタネ
+0x58 	Ginseng 	カテキン
+0x59 	Joy Seed 	しあわせのタネ
+0x5a 	Chesto Berry 	カゴのみ
+0x5b 	Stun Seed 	しばられのタネ
+0x5c 	Gabite Scale 	ガバイトのウロコ
+0x5d 	Golden Seed 	おうごんのタネ
+0x5e 	Vile Seed 	じゃあくなタネ
+0x5f 	Pure Seed 	せいなるタネ
+0x60 	Violent Seed 	もうげきのタネ
+0x61 	Vanish Seed 	ドロンのタネ
+0x62 	$$$ 	$$$
+0x63 	Max Elixir 	ピーピーマックス
+0x64 	Protein 	タウリン
+0x65 	Calcium 	リゾチウム
+0x66 	Iron 	ブロムヘキシン
+0x67 	Nectar 	おいしいミツ
+0x68 	Dropeye Seed 	めくすぐりのタネ
+0x69 	Reviser Seed 	ぷっかつのタネ
+0x6a 	Slip Seed 	すいみんぐのタネ
+0x6b 	Via Seed 	じゃあなのタネ
+0x6c 	Zinc 	キトサン
+0x6d 	Apple 	リンゴ
+0x6e 	Big Apple 	おおきなリンゴ
+0x6f 	Grimy Food 	ベトベタフード
+0x70 	Huge Apple 	とくだいリンゴ
+0x71 	$$$ 	$$$
+0x72 	$$$ 	$$$
+0x73 	Golden Apple 	おうごんのリンゴ
+0x74 	Mix Elixir 	ピーピーマッスグ
+0x75 	Oren Berry 	オレソのみ
+0x76 	Dough Seed 	ふごうのタネ
+0x77 	White Gummi 	しろいグミ
+0x78 	Red Gummi 	あかいグミ
+0x79 	Blue Gummi 	あおいグミ
+0x7a 	Grass Gummi 	わかくさグミ
+0x7b 	Yellow Gummi 	きいろグミ
+0x7c 	Clear Gummi 	とうめいグミ
+0x7d 	Orange Gummi 	だいだいグミ
+0x7e 	Pink Gummi 	ももいろグミ
+0x7f 	Brown Gummi 	ちゃいろグミ
+0x80 	Sky Gummi 	そらいろグミ
+0x81 	Gold Gummi 	きんいろグミ
+0x82 	Green Gummi 	みどりグミ
+0x83 	Gray Gummi 	はいいろグミ
+0x84 	Purple Gummi 	むらさきグミ
+0x85 	Royal Gummi 	こんいろグミ
+0x86 	Black Gummi 	くろいグミ
+0x87 	Silver Gummi 	ぎんいろグミ
+0x88 	Wonder Gummi 	ふしぎなグミ
+0x89 	Gravelyrock 	ゴローソのいし
+0x8a 	$$$ 	$$$
+0x8b 	Upgrade 	アップグレード
+0x8c 	King's Rock 	おうじゃのしるし
+0x8d 	Thunderstone 	かみなりのいし
+0x8e 	Deepseascale 	しんかいのウロコ
+0x8f 	Deepseatooth 	しんかいのキバ
+0x90 	Sun Stone 	たいようのいし
+0x91 	Moon Stone 	つきのいし
+0x92 	Fire Stone 	ほのおのいし
+0x93 	Water Stone 	みずのいし
+0x94 	Metal Coat 	メタルコート
+0x95 	Leaf Stone 	リーフのいし
+0x96 	Dragon Scale 	りゅうのウロコ
+0x97 	Link Cable 	つうしんケーブル
+0x98 	Dubious Disc 	あやしいパッチ
+0x99 	Protector 	プロテクター
+0x9a 	Reaper Cloth 	れいかいのぬの
+0x9b 	Razor Fang 	するどいキバ
+0x9c 	Razor Claw 	するどいツメ
+0x9d 	Electirizer 	エレキブースター
+0x9e 	Magmarizer 	マグマブースター
+0x9f 	Oval Stone 	まんまるいし
+0xa0 	Dawn Stone 	めざめいし
+0xa1 	Shiny Stone 	ひかりのいし
+0xa2 	Dusk Stone 	やみのいし
+0xa3 	Coronet Rock 	テンガンざんせき
+0xa4 	Mossy Rock 	こけむしたいわ
+0xa5 	Frozen Rock 	とうけつしたいわ
+0xa6 	$$$ 	$$$
+0xa7 	Gone Pebble 	なしのつぶて
+0xa8 	Wander Gummi 	ふしぎなゴミ
+0xa9 	Prize Ticket 	クジびきけん
+0xaa 	Silver Ticket 	シルバークジ
+0xab 	Gold Ticket 	ゴールドクジ
+0xac 	Prism Ticket 	ビクトリークジ
+0xad 	Mystery Part 	なぞのパーツ
+0xae 	Secret Slab 	ひみつのせきばん
+0xaf 	$$$ 	$$$
+0xb0 	$$$ 	$$$
+0xb1 	$$$ 	$$$
+0xb2 	Wonder Egg 	ふしぎなタマゴ
+0xb3 	Gracidea 	グラシデアのはな
+0xb4 	Sky Gift 	そらのおくりもの
+0xb5 	$$$ 	$$$
+0xb6 	Key 	カギ
+0xb7 	Poké 	ポケ
+0xb8 	$$$ 	$$$
+0xb9 	$$$ 	$$$
+0xba 	Lost Loot 	まいぞうきん
+0xbb 	Used TM 	しようごマシン
+0xbc 	Focus Punch TM 	きあいパンチ
+0xbd 	Dragon Claw TM 	ドラゴンクロー
+0xbe 	Water Pulse TM 	みずのはどう
+0xbf 	Calm Mind TM 	めいそう
+0xc0 	Roar TM 	ほえる
+0xc1 	Toxic TM 	どくどく
+0xc2 	Hail TM 	あられ
+0xc3 	Bulk Up TM 	ビルドアップ
+0xc4 	Bullet Seed TM 	タネマシンガン
+0xc5 	Hidden Power TM 	めざめるパワー
+0xc6 	$$$ 	$$$
+0xc7 	Taunt TM 	ちょうはつ
+0xc8 	Ice Beam TM 	れいとうビーム
+0xc9 	Blizzard TM 	ふぶき
+0xca 	Hyper Beam TM 	はかいこうせん
+0xcb 	Light Screen TM 	ひかりのかべ
+0xcc 	Protect TM 	まもる
+0xcd 	$$$ 	$$$
+0xce 	Giga Drain TM 	ギガドレイン
+0xcf 	Safeguard TM 	しんぴのまもり
+0xd0 	Frustration TM 	やつあたり
+0xd1 	SolarBeam TM 	ソーラービーム
+0xd2 	Iron Tail TM 	アイアンテール
+0xd3 	Thunderbolt TM 	10まんボルト
+0xd4 	Thunder TM 	かみなり
+0xd5 	Earthquake TM 	じしん
+0xd6 	Return TM 	おんがえし
+0xd7 	Dig TM 	あなをほる
+0xd8 	Psychic TM 	サイコキネシス
+0xd9 	Shadow Ball TM 	シャドーボール
+0xda 	Brick Break TM 	かわらわり
+0xdb 	$$$ 	$$$
+0xdc 	Reflect TM 	リフレクター
+0xdd 	Shock Wave TM 	でんげきは
+0xde 	Flamethrower TM 	かえんほうしゃ
+0xdf 	Sludge Bomb TM 	ヘドロばくだん
+0xe0 	$$$ 	$$$
+0xe1 	Fire Blast TM 	だいもんじ
+0xe2 	$$$ 	$$$
+0xe3 	Aerial Ace TM 	つばめがえし
+0xe4 	Torment TM 	いちゃもん
+0xe5 	Facade TM 	からげんき
+0xe6 	Secret Power TM 	ひみつのちから
+0xe7 	Rest TM 	ねむる
+0xe8 	Attract TM 	メロメロ
+0xe9 	Thief TM 	どろぼう
+0xea 	Steel Wing TM 	はがねのつばさ
+0xeb 	Skill Swap TM 	スキルスワップ
+0xec 	$$$ 	$$$
+0xed 	Overheat TM 	オーバーヒート
+0xee 	Roost TM 	はねやすめ
+0xef 	Focus Blast TM 	きあいだま
+0xf0 	Energy Ball TM 	エナジーボール
+0xf1 	False Swipe TM 	みねうち
+0xf2 	Brine TM 	しおみず
+0xf3 	Fling TM 	なげつける
+0xf4 	Charge Beam TM 	チャージビーム
+0xf5 	Endure TM 	こらえる
+0xf6 	Dragon Pulse TM 	りゅうのはどう
+0xf7 	Drain Punch TM 	ドレインパンチ
+0xf8 	Will-O-Wisp TM 	おにび
+0xf9 	Silver Wind TM 	ぎんいろのかぜ
+0xfa 	Embargo TM 	さしおさえ
+0xfb 	Explosion TM 	だいばくはつ
+0xfc 	Shadow Claw TM 	シャドークロー
+0xfd 	Payback TM 	しっぺがえし
+0xfe 	Recycle TM 	リサイクル
+0xff 	Giga Impact TM 	ギガインパクト
+0x100 	Rock Polish TM 	ロックカット
+0x101 	Wide Slash TM 	すいへいぎり
+0x102 	$$$ 	$$$
+0x103 	$$$ 	$$$
+0x104 	Vacuum-Cut TM 	しんくうぎり
+0x105 	Dive TM 	ダイビング
+0x106 	Flash TM 	フラッシュ
+0x107 	Stone Edge TM 	ストーンエッジ
+0x108 	Avalanche TM 	ゆきなだれ
+0x109 	Thunder Wave TM 	でんじは
+0x10a 	Gyro Ball TM 	ジャイロボール
+0x10b 	Swords Dance TM 	つるぎのまい
+0x10c 	Stealth Rock TM 	ステルスロック
+0x10d 	Psych Up TM 	じこあんじ
+0x10e 	Captivate TM 	ゆうわく
+0x10f 	Dark Pulse TM 	あくのはどう
+0x110 	Rock Slide TM 	いわなだれ
+0x111 	X-Scissor TM 	シザークロス
+0x112 	Sleep Talk TM 	ねごと
+0x113 	Natural Gift TM 	しぜんのめぐみ
+0x114 	Poison Jab TM 	どくづき
+0x115 	Dream Eater TM 	ゆめくい
+0x116 	Grass Knot TM 	くさむすび
+0x117 	Swagger TM 	いばる
+0x118 	Pluck TM 	ついばむ
+0x119 	U-turn TM 	とんぼがえり
+0x11a 	Substitute TM 	みがわり
+0x11b 	Flash Cannon TM 	ラスターカノン
+0x11c 	Trick Room TM 	トリックルーム
+0x11d 	Cut HM 	いあいぎり
+0x11e 	Fly HM 	そらをとぶ
+0x11f 	Surf HM 	なみのり
+0x120 	Strength HM 	かいりき
+0x121 	Defog HM 	きりばらい
+0x122 	Rock Smash HM 	いわくだき
+0x123 	Waterfall HM 	たきのぼり
+0x124 	Rock Climb HM 	ロッククライム
+0x125 	$$$ 	$$$
+0x126 	$$$ 	$$$
+0x127 	$$$ 	$$$
+0x128 	$$$ 	$$$
+0x129 	$$$ 	$$$
+0x12a 	$$$ 	$$$
+0x12b 	$$$ 	$$$
+0x12c 	$$$ 	$$$
+0x12d 	Hail Orb 	あられだま
+0x12e 	Sunny Orb 	ひでりだま
+0x12f 	Rainy Orb 	あめだま
+0x130 	Evasion Orb 	ぶんしんだま
+0x131 	Sandy Orb 	すなのたま
+0x132 	Rocky Orb 	がんせきだま
+0x133 	Snatch Orb 	よこどりのたま
+0x134 	See-Trap Orb 	わなみえのたま
+0x135 	Mug Orb 	ぶんどりのたま
+0x136 	Rebound Orb 	はねかえしだま
+0x137 	Lob Orb 	やまごえだま
+0x138 	Switcher Orb 	ばしょがえだま
+0x139 	Blowback Orb 	ふっとびだま
+0x13a 	Warp Orb 	ワープだま
+0x13b 	Transfer Orb 	へんげのたま
+0x13c 	Slow Orb 	どんそくだま
+0x13d 	Quick Orb 	しゅんそくだま
+0x13e 	Luminous Orb 	ひかりのたま
+0x13f 	Petrify Orb 	しばりだま
+0x140 	Stayaway Orb 	しのぎのたま
+0x141 	Pounce Orb 	とびつきのたま
+0x142 	Trawl Orb 	ひきよせのたま
+0x143 	Cleanse Orb 	せんたくだま
+0x144 	$$$ 	$$$
+0x145 	Decoy Orb 	みがわりだま
+0x146 	Slumber Orb 	バクスイだま
+0x147 	Totter Orb 	ふらふらだま
+0x148 	Two-Edge Orb 	もろはのたま
+0x149 	Silence Orb 	ちんもくだま
+0x14a 	Escape Orb 	あなぬけのたま
+0x14b 	Scanner Orb 	ものみのたま
+0x14c 	Radar Orb 	たんちのたま
+0x14d 	Drought Orb 	ひあがりだま
+0x14e 	Trapbust Orb 	わなこわしだま
+0x14f 	Rollcall Orb 	あつまれだま
+0x150 	Invisify Orb 	とうめいのたま
+0x151 	One-Shot Orb 	いちげきのたま
+0x152 	Identify Orb 	しきべつのたま
+0x153 	$$$ 	$$$
+0x154 	Shocker Orb 	ビックリだま
+0x155 	Sizebust Orb 	ひれいだま
+0x156 	One-Room Orb 	おおべやのたま
+0x157 	Fill-In Orb 	うめたてのたま
+0x158 	Trapper Orb 	わなのたま
+0x159 	$$$ 	$$$
+0x15a 	Itemizer Orb 	ものがえだま
+0x15b 	Hurl Orb 	なげとばしだま
+0x15c 	Mobile Orb 	つうかのたま
+0x15d 	$$$ 	$$$
+0x15e 	Stairs Orb 	かいだんのたま
+0x15f 	Longtoss Orb 	えんとうだま
+0x160 	Pierce Orb 	かんつうだま
+0x161 	$$$ 	$$$
+0x162 	Spurn Orb 	はらいのけだま
+0x163 	Foe-Hold Orb 	てきしばりだま
+0x164 	All-Mach Orb 	みなマッハだま
+0x165 	Foe-Fear Orb 	てきおびえだま
+0x166 	All-Hit Orb 	みなヒットだま
+0x167 	Foe-Seal Orb 	てきふうじだま
+0x168 	$$$ 	$$$
+0x169 	$$$ 	$$$
+0x16a 	Link Box 	れんけつばこ
+0x16b 	$$$ 	$$$
+0x16c 	Gorgeous Box 	うつくしいはこ
+0x16d 	Gorgeous Box 	うつくしいはこ
+0x16e 	Gorgeous Box 	うつくしいはこ
+0x16f 	Heavy Box 	おもいはこ
+0x170 	Heavy Box 	おもいはこ
+0x171 	Heavy Box 	おもいはこ
+0x172 	Shiny Box 	かがやくはこ
+0x173 	Shiny Box 	かがやくはこ
+0x174 	Shiny Box 	かがやくはこ
+0x175 	Nifty Box 	かっこいいはこ
+0x176 	Nifty Box 	かっこいいはこ
+0x177 	Nifty Box 	かっこいいはこ
+0x178 	Dainty Box 	かわいいはこ
+0x179 	Dainty Box 	かわいいはこ
+0x17a 	Dainty Box 	かわいいはこ
+0x17b 	Glittery Box 	きらめくはこ
+0x17c 	Glittery Box 	きらめくはこ
+0x17d 	Glittery Box 	きらめくはこ
+0x17e 	Pretty Box 	きれいなはこ
+0x17f 	Pretty Box 	きれいなはこ
+0x180 	Pretty Box 	きれいなはこ
+0x181 	Deluxe Box 	ごうかなはこ
+0x182 	Deluxe Box 	ごうかなはこ
+0x183 	Deluxe Box 	ごうかなはこ
+0x184 	Light Box 	かるいはこ
+0x185 	Light Box 	かるいはこ
+0x186 	Light Box 	かるいはこ
+0x187 	Cute Box 	キュートなはこ
+0x188 	Cute Box 	キュートなはこ
+0x189 	Cute Box 	キュートなはこ
+0x18a 	Hard Box 	かたいはこ
+0x18b 	Hard Box 	かたいはこ
+0x18c 	Hard Box 	かたいはこ
+0x18d 	Sinister Box 	あやしいはこ
+0x18e 	Sinister Box 	あやしいはこ
+0x18f 	Sinister Box 	あやしいはこ
+0x190 	A-Stone 	Aのいし
+0x191 	B-Stone 	Bのいし
+0x192 	C-Stone 	Cのいし
+0x193 	D-Stone 	Dのいし
+0x194 	E-Stone 	Eのいし
+0x195 	F-Stone 	Fのいし
+0x196 	G-Stone 	Gのいし
+0x197 	H-Stone 	Hのいし
+0x198 	I-Stone 	Iのいし
+0x199 	J-Stone 	Jのいし
+0x19a 	K-Stone 	Kのいし
+0x19b 	L-Stone 	Lのいし
+0x19c 	M-Stone 	Mのいし
+0x19d 	N-Stone 	Nのいし
+0x19e 	O-Stone 	Oのいし
+0x19f 	P-Stone 	Pのいし
+0x1a0 	Q-Stone 	Qのいし
+0x1a1 	R-Stone 	Rのいし
+0x1a2 	S-Stone 	Sのいし
+0x1a3 	T-Stone 	Tのいし
+0x1a4 	U-Stone 	Uのいし
+0x1a5 	V-Stone 	Vのいし
+0x1a6 	W-Stone 	Wのいし
+0x1a7 	X-Stone 	Xのいし
+0x1a8 	Y-Stone 	Yのいし
+0x1a9 	Z-Stone 	Zのいし
+0x1aa 	!-Stone 	!のいし
+0x1ab 	?-Stone 	?のいし
+0x1ac 	Silver Bow 	シルバーリボン
+0x1ad 	Brown Bow 	ブラウンリボン
+0x1ae 	Red Bow 	レッドリボン
+0x1af 	Pink Bow 	ピンクリボン
+0x1b0 	Orange Bow 	オレンジリボン
+0x1b1 	Yellow Bow 	イエローリボン
+0x1b2 	Lime Bow 	きみどりリボン
+0x1b3 	Green Bow 	グリーンリボン
+0x1b4 	Viridian Bow 	ふかみどりリボン
+0x1b5 	Minty Bow 	ミントいろリボン
+0x1b6 	Sky Blue Bow 	みずいろリボン
+0x1b7 	Blue Bow 	ブルーリボン
+0x1b8 	Cobalt Bow 	こんいろリボン
+0x1b9 	Purple Bow 	むらさきリボン
+0x1ba 	Violet Bow 	すみれいろリボン
+0x1bb 	Fuchsia Bow 	こいピンクリボン
+0x1bc 	Prism Ruff 	なないろマフラー
+0x1bd 	Aqua Collar 	みずのえりまき
+0x1be 	Volt Collar 	かみなりえりまき
+0x1bf 	Fire Collar 	ほのおのえりまき
+0x1c0 	Light Collar 	ひかりのえりまき
+0x1c1 	Dusk Collar 	やみのえりまき
+0x1c2 	Virid Collar 	きせきのえりまき
+0x1c3 	Icy Collar 	ふぶきのえりまき
+0x1c4 	Pep Sash 	げんきなバンダナ
+0x1c5 	Counter Ruff 	けっしのマフラー
+0x1c6 	Victory Belt 	しょうりのベルト
+0x1c7 	Power Bangle 	パワフルバングル
+0x1c8 	Thundershard 	かみなりのかけら
+0x1c9 	Fallen Star 	ながれぼし
+0x1ca 	Fluff Dust 	ふわふわパウダー
+0x1cb 	Egg Shard 	タマゴのかけら
+0x1cc 	Heroic Medal 	ヒーローのメダル
+0x1cd 	Chic Shard 	おしゃれなかけら
+0x1ce 	Yellow Jewel 	きいろのジュエル
+0x1cf 	Red Jewel 	あかいジュエル
+0x1d0 	Blue Jewel 	あおいジュエル
+0x1d1 	Laugh Dust 	ニコニコパウダー
+0x1d2 	Guard Sand 	まもりのすな
+0x1d3 	Purple Jewel 	むらさきジュエル
+0x1d4 	White Jewel 	しろいジュエル
+0x1d5 	Brave Dust 	ブレイブパウダー
+0x1d6 	Heal Dew 	かいふくのしずく
+0x1d7 	Marine Cache 	しんかいのたから
+0x1d8 	Freeze Veil 	フリーズベール
+0x1d9 	Thunder Veil 	サンダーベール
+0x1da 	Fire Veil 	ファイヤーベール
+0x1db 	Havoc Robe 	はかいのローブ
+0x1dc 	Life Ring 	いのちのゆびわ
+0x1dd 	Bolt Fang 	いかずちのキバ
+0x1de 	Flare Fang 	えんじょうのキバ
+0x1df 	Aqua Mantle 	みずのはごろも
+0x1e0 	Silver Veil 	プラチナベール
+0x1e1 	Rainbow Veil 	レインボーベール
+0x1e2 	Chrono Veil 	ときのベール
+0x1e3 	Rock Sash 	ロックバンダナ
+0x1e4 	Ice Sash 	アイスバンダナ
+0x1e5 	Steel Sash 	スチルバンダナ
+0x1e6 	Heart Brooch 	こころのブローチ
+0x1e7 	Eon Veil 	むげんのベール
+0x1e8 	Seabed Veil 	かいていのベール
+0x1e9 	Terra Ring 	だいちのゆびわ
+0x1ea 	SkyHigh Veil 	てんくうのベール
+0x1eb 	Wish Mantle 	ねがいのはごろも
+0x1ec 	Revive Robe 	さいせいのローブ
+0x1ed 	Shadow Veil 	シャドーベール
+0x1ee 	Plasma Veil 	プラズマベール
+0x1ef 	Edify Robe 	さとりのローブ
+0x1f0 	Charity Robe 	めぐみのローブ
+0x1f1 	Hope Robe 	きぼうのローブ
+0x1f2 	Time Shield 	タイムシールド
+0x1f3 	Air Blade 	エアーブレード
+0x1f4 	Searing Ring 	やけつくゆびわ
+0x1f5 	Ancient Ring 	いにしえのゆびわ
+0x1f6 	Nether Veil 	めいかいのベール
+0x1f7 	Lunar Veil 	みかづきのベール
+0x1f8 	Tidal Cape 	しおさいのケープ
+0x1f9 	Eclipse Robe 	あんこくのローブ
+0x1fa 	White Silk 	しろいシフォン
+0x1fb 	Normal Dust 	ノーマルパウダー
+0x1fc 	White Gem 	ホワイトジェム
+0x1fd 	Joy Globe 	しあわせのオーブ
+0x1fe 	Red Silk 	あかいシフォン
+0x1ff 	Fire Dust 	ほのおのパウダー
+0x200 	Fiery Gem 	ファイヤージェム
+0x201 	Fiery Globe 	ほのおのオーブ
+0x202 	Blue Silk 	あおいシフォン
+0x203 	Water Dust 	みずのパウダー
+0x204 	Aqua Gem 	アクアジェム
+0x205 	Aqua Globe 	みずのオーブ
+0x206 	Grass Silk 	わかくさシフォン
+0x207 	Grass Dust 	くさのパウダー
+0x208 	Grass Gem 	グラスジェム
+0x209 	Soothe Globe 	いやしのオーブ
+0x20a 	Yellow Silk 	きいろのシフォン
+0x20b 	Thunder Dust 	でんきのパウダー
+0x20c 	Thunder Gem 	サンダージェム
+0x20d 	Volt Globe 	かみなりのオーブ
+0x20e 	Clear Silk 	とうめいシフォン
+0x20f 	Icy Dust 	こおりのパウダー
+0x210 	Icy Gem 	アイスジェム
+0x211 	Icy Globe 	こおりのオーブ
+0x212 	Orange Silk 	だいだいシフォン
+0x213 	Courage Dust 	きあいのパウダー
+0x214 	Fight Gem 	ファイトジェム
+0x215 	Power Globe 	パワフルオーブ
+0x216 	Pink Silk 	ももいろシフォン
+0x217 	Poison Dust 	どくのパウダー
+0x218 	Poison Gem 	ポイズンジェム
+0x219 	Poison Globe 	どくのオーブ
+0x21a 	Brown Silk 	ちゃいろシフォン
+0x21b 	Ground Dust 	じめんのパウダー
+0x21c 	Earth Gem 	アースジェム
+0x21d 	Terra Globe 	だいちのオーブ
+0x21e 	Sky Silk 	そらいろシフォン
+0x21f 	Sky Dust 	そらのパウダー
+0x220 	Sky Gem 	スカイジェム
+0x221 	Sky Globe 	てんくうのオーブ
+0x222 	Gold Silk 	きんいろシフォン
+0x223 	Psyche Dust 	ねんりきパウダー
+0x224 	Psyche Gem 	サイキックジェム
+0x225 	Psyche Globe 	サイキックオーブ
+0x226 	Green Silk 	みどりのシフォン
+0x227 	Wonder Dust 	ふしぎなパウダー
+0x228 	Guard Gem 	ガードジェム
+0x229 	Defend Globe 	まもりのオーブ
+0x22a 	Gray Silk 	はいいろシフォン
+0x22b 	Rock Dust 	いわのパウダー
+0x22c 	Stone Gem 	ストーンジェム
+0x22d 	Rock Globe 	いわのオーブ
+0x22e 	Purple Silk 	むらさきシフォン
+0x22f 	Shady Dust 	あやしいパウダー
+0x230 	Shadow Gem 	シャドージェム
+0x231 	Nether Globe 	れいかいのオーブ
+0x232 	Royal Silk 	こんいろシフォン
+0x233 	Dragon Dust 	りゅうのパウダー
+0x234 	Dragon Gem 	ドラゴンジェム
+0x235 	Dragon Globe 	ドラゴンオーブ
+0x236 	Black Silk 	くろいシフォン
+0x237 	Dark Dust 	あくのパウダー
+0x238 	Dark Gem 	ダークジェム
+0x239 	Dusk Globe 	やみのオーブ
+0x23a 	Iron Silk 	ぎんいろシフォン
+0x23b 	Steel Dust 	はがねのパウダー
+0x23c 	Metal Gem 	メタルジェム
+0x23d 	Steel Globe 	はがねのオーブ
+0x23e 	Bulba-Claw 	フシギダネのツメ
+0x23f 	Bulba-Fang 	フシギダネのキバ
+0x240 	Grass-Guard 	くさまもりのいし
+0x241 	Leafy Tie 	リーフミサンガ
+0x242 	Ivy-Claw 	フシギソウのツメ
+0x243 	Ivy-Fang 	フシギソウのキバ
+0x244 	Ivy-Crest 	フシギソウのごふ
+0x245 	Plant Torc 	プラントリング
+0x246 	Venus-Claw 	フシギバナのツメ
+0x247 	Venus-Fang 	フシギバナのキバ
+0x248 	Venus-Seal 	フシギバナのいん
+0x249 	Solar Sash 	ソーラーバンダナ
+0x24a 	Char-Claw 	ヒトカゲのツメ
+0x24b 	Char-Fang 	ヒトカゲのキバ
+0x24c 	Fiery Heart 	ほのおのハート
+0x24d 	Heat Armlet 	ほかげのうでわ
+0x24e 	Charme-Claw 	リザードのツメ
+0x24f 	Charme-Fang 	リザードのキバ
+0x250 	Charme-Crest 	リザードのごふ
+0x251 	Kindle Scarf 	かえんのスカーフ
+0x252 	Chariz-Claw 	リザードンのツメ
+0x253 	Chariz-Fang 	リザードンのキバ
+0x254 	Chariz-Seal 	リザードンのいん
+0x255 	Flame Bangle 	フレイムバングル
+0x256 	Squirt-Foam 	ゼニガメのあわ
+0x257 	Squirt-Card 	ゼニガメのカード
+0x258 	Water-Guard 	みずまもりのいし
+0x259 	Aqua Tie 	アクアミサンガ
+0x25a 	Wartor-Claw 	カメールのツメ
+0x25b 	Wartor-Fang 	カメールのキバ
+0x25c 	Wartor-Crest 	カメールのごふ
+0x25d 	BubbleBangle 	バブルバングル
+0x25e 	Blasto-Claw 	カメックスのツメ
+0x25f 	Blasto-Card 	カメックスカード
+0x260 	Blasto-Seal 	カメックスのいん
+0x261 	Hydro Band 	ハイドロハチマキ
+0x262 	Pichu Hair 	ピチューのけ
+0x263 	Pichu Card 	ピチューのカード
+0x264 	Express Tag 	せんせいのおふだ
+0x265 	Shocker Cape 	でんげきのケープ
+0x266 	Pikachu Hair 	ピカチュウのけ
+0x267 	Pikachu Card 	ピカチュウカード
+0x268 	Volt Charm 	でんきのおまもり
+0x269 	Volt Torc 	ボルテックリング
+0x26a 	Raichu Hair 	ライチュウのけ
+0x26b 	Raichu Card 	ライチュウカード
+0x26c 	Raichu Crest 	ライチュウのごふ
+0x26d 	Zapper Scarf 	らくらいスカーフ
+0x26e 	Meowth Claw 	ニャースのツメ
+0x26f 	Meowth Fang 	ニャースのキバ
+0x270 	Coin Charm 	こばんのおまもり
+0x271 	Bling Ruff 	もうかりマフラー
+0x272 	Persian Claw 	ペルシアンのツメ
+0x273 	Persian Fang 	ペルシアンのキバ
+0x274 	Insight Rock 	みきわめのいし
+0x275 	Noble Scarf 	こうきなスカーフ
+0x276 	Chiko-Claw 	チコリータのツメ
+0x277 	Chiko-Card 	チコリータカード
+0x278 	Dawn Jewel 	あさひのほうじゅ
+0x279 	Fresh Bow 	フレッシュリボン
+0x27a 	Bayleef Claw 	ベイリーフのツメ
+0x27b 	Bayleef Card 	ベイリーフカード
+0x27c 	Bayleef Seal 	ベイリーフのいん
+0x27d 	Spice Bow 	スパイスリボン
+0x27e 	Megani-Claw 	メガニウムのツメ
+0x27f 	Megani-Card 	メガニウムカード
+0x280 	Shiny Charm 	ひかりのおまもり
+0x281 	Bright Veil 	ブライトベール
+0x282 	Cynda-Hair 	ヒノアラシのけ
+0x283 	Cynda-Claw 	ヒノアラシのツメ
+0x284 	Blazing Rock 	もえさかるいし
+0x285 	Storm Sash 	ストームバンダナ
+0x286 	Quila-Hair 	マグマラシのけ
+0x287 	Quila-Card 	マグマラシカード
+0x288 	Quila-Crest 	マグマラシのごふ
+0x289 	Volcano Torc 	ボルケーノリング
+0x28a 	Typhlo-Gasp 	バクフーンのいき
+0x28b 	Typhlo-Fang 	バクフーンのキバ
+0x28c 	Typhlo-Seal 	バクフーンのいん
+0x28d 	Blast Bangle 	ブラストバングル
+0x28e 	Totodi-Dew 	ワニノコのしずく
+0x28f 	Totodi-Fang 	ワニノコのキバ
+0x290 	Water Heart 	みずのハート
+0x291 	Wash Bow 	ウォッシュリボン
+0x292 	Croco-Fang 	アリゲイツのキバ
+0x293 	Croco-Card 	アリゲイツカード
+0x294 	Swirl Rock 	だくりゅうのいし
+0x295 	Anger Scarf 	いかりのスカーフ
+0x296 	Feral-Claw 	オーダイルのツメ
+0x297 	Feral-Fang 	オーダイルのキバ
+0x298 	Feral-Crest 	オーダイルのごふ
+0x299 	Hydro Jaw 	ハイドロファング
+0x29a 	Treeck-Thorn 	キモリのトゲ
+0x29b 	Treeck-Card 	キモリのカード
+0x29c 	Forest Ore 	もりのほうせき
+0x29d 	Guard Ring 	まもりのゆびわ
+0x29e 	Grovy-Shoot 	ジュプトルのえだ
+0x29f 	Grovy-Card 	ジュプトルカード
+0x2a0 	Jungle-Tag 	みつりんのおふだ
+0x2a1 	Grass Blade 	グラスブレード
+0x2a2 	Scept-Claw 	ジュカインのツメ
+0x2a3 	Scept-Card 	ジュカインカード
+0x2a4 	Scept-Seal 	ジュカインのいん
+0x2a5 	Drain Bangle 	ドレインバングル
+0x2a6 	Torchic Hair 	アチャモのけ
+0x2a7 	Torchic Card 	アチャモのカード
+0x2a8 	Hot Pebble 	ホットストーン
+0x2a9 	Fire Cape 	ほのおのケープ
+0x2aa 	Combus-Sweat 	ワカシャモのあせ
+0x2ab 	Combus-Claw 	ワカシャモのツメ
+0x2ac 	Charge Tag 	もうしんのおふだ
+0x2ad 	Gutsy Band 	ねっけつハチマキ
+0x2ae 	Blazi-Claw 	バシャーモのツメ
+0x2af 	Blazi-Card 	バシャーモカード
+0x2b0 	Blazi-Seal 	バシャーモのいん
+0x2b1 	Blaze Torc 	ブレイズリング
+0x2b2 	Mudkip Mud 	ミズゴロウのどろ
+0x2b3 	Mudkip Card 	ミズゴロウカード
+0x2b4 	Mud Jewel 	ぬまのほうじゅ
+0x2b5 	Speed Scarf 	スピードスカーフ
+0x2b6 	Marsh-Mud 	ヌマクローのどろ
+0x2b7 	Marsh-Card 	ヌマクローカード
+0x2b8 	Marsh-Crest 	ヌマクローのごふ
+0x2b9 	Marsh Torc 	スワンプリング
+0x2ba 	Swamp-Mud 	ラグラージのどろ
+0x2bb 	Swamp-Card 	ラグラージカード
+0x2bc 	Swamp-Seal 	ラグラージのいん
+0x2bd 	Swamp Bangle 	マッドバングル
+0x2be 	Skitty Fang 	エネコのキバ
+0x2bf 	Skitty Card 	エネコのカード
+0x2c0 	Smile Pebble 	スマイルストーン
+0x2c1 	Heal Pendant 	いやしのくびわ
+0x2c2 	Delcat-Hair 	エネコロロのけ
+0x2c3 	Delcat-Fang 	エネコロロのキバ
+0x2c4 	Prim Pebble 	プリムストーン
+0x2c5 	Guard Collar 	まもりのえりまき
+0x2c6 	Lucky Leaf 	こううんなはっぱ
+0x2c7 	Turtwig Card 	ナエトルのカード
+0x2c8 	Sprout Rock 	めばえのいし
+0x2c9 	Leafy Hat 	わかばのぼうし
+0x2ca 	Grotle Twig 	ハヤシガメのえだ
+0x2cb 	Grotle Claw 	ハヤシガメのツメ
+0x2cc 	Grotle Crest 	ハヤシガメのごふ
+0x2cd 	Woody Scarf 	ウッディスカーフ
+0x2ce 	Tort-Claw 	ドダイトスのツメ
+0x2cf 	Tort-Horn 	ドダイトスのツノ
+0x2d0 	Tort-Seal 	ドダイトスのいん
+0x2d1 	Forest Torc 	フォレストリング
+0x2d2 	Chim-Hair 	ヒコザルのけ
+0x2d3 	Chim-Fang 	ヒコザルのキバ
+0x2d4 	Nimble Charm 	みがるなおまもり
+0x2d5 	Ember Cap 	ひのこのぼうし
+0x2d6 	Monfer-Hair 	モウカザルのけ
+0x2d7 	Monfer-Fang 	モウカザルのキバ
+0x2d8 	Monfer-Crest 	モウカザルのごふ
+0x2d9 	Burst Sash 	もうかのバンダナ
+0x2da 	Infern-Hair 	ゴウカザルのけ
+0x2db 	Infern-Fang 	ゴウカザルのキバ
+0x2dc 	Infern-Seal 	ゴウカザルのいん
+0x2dd 	Blazing Ruff 	ごうかのマフラー
+0x2de 	Piplup Foam 	ポッチャマのあわ
+0x2df 	Piplup Card 	ポッチャマカード
+0x2e0 	Sea Ore 	うみのほうせき
+0x2e1 	Water Cape 	みずのケープ
+0x2e2 	Prin-Foam 	ポッタイシのあわ
+0x2e3 	Prin-Card 	ポッタイシカード
+0x2e4 	Prin-Crest 	ポッタイシのごふ
+0x2e5 	Aqua Blade 	アクアブレード
+0x2e6 	Empol-Claw 	エンペルトのツメ
+0x2e7 	Empol-Horn 	エンペルトのツノ
+0x2e8 	Empol-Seal 	エンペルトのいん
+0x2e9 	Marine Crown 	うみのクラウン
+0x2ea 	Munch-Drool 	ゴンベのよだれ
+0x2eb 	Munch-Claw 	ゴンベのツメ
+0x2ec 	Tummy Charm 	おなかのおまもり
+0x2ed 	Glutton Cape 	おおぐいのケープ
+0x2ee 	Snorlax Gasp 	カビゴンのいき
+0x2ef 	Snorlax Fang 	カビゴンのキバ
+0x2f0 	Valor Charm 	すてみのおまもり
+0x2f1 	Glee Scarf 	しふくのスカーフ
+0x2f2 	Scyther Fang 	ストライクのキバ
+0x2f3 	Scyther Card 	ストライクカード
+0x2f4 	Ambush Rock 	かげよみのいし
+0x2f5 	Strike Ruff 	はやてのマフラー
+0x2f6 	Scizor Wing 	ハッサムのはね
+0x2f7 	Scizor Card 	ハッサムのカード
+0x2f8 	Steel Charm 	はがねのおまもり
+0x2f9 	Red Armlet 	くれないのうでわ
+0x2fa 	Lapras Song 	ラプラスのうた
+0x2fb 	Lapras Card 	ラプラスのカード
+0x2fc 	Wavy Charm 	なみのおまもり
+0x2fd 	Mystic Scarf 	しんぴのスカーフ
+0x2fe 	Eevee Tail 	イーブイのお
+0x2ff 	Eevee Card 	イーブイのカード
+0x300 	Evolve Charm 	しんかのおまもり
+0x301 	Eevee 	イーブイ
+0x302 	Cleffa Dew 	ピィのなみだ
+0x303 	Cleffa Card 	ピィのカード
+0x304 	Starry Ore 	ほしのほうせき
+0x305 	Comet Ring 	ほしふるゆびわ
+0x306 	Clef-Claw 	ピッピのツメ
+0x307 	Clef-Fang 	ピッピのキバ
+0x308 	Moon Jewel 	つきのほうじゅ
+0x309 	Moon Scarf 	ムーンスカーフ
+0x30a 	Clefa-Claw 	ピクシーのツメ
+0x30b 	Clefa-Card 	ピクシーのカード
+0x30c 	Moon Rock 	まんげつのいし
+0x30d 	Fairy Bow 	ようせいのリボン
+0x30e 	Iggly-Dew 	ププリンのなみだ
+0x30f 	Iggly-Card 	ププリンのカード
+0x310 	Bouncy Charm 	はずむおまもり
+0x311 	Pretty Bow 	プリティリボン
+0x312 	Jiggly-Song 	プリンのうた
+0x313 	Jiggly-Card 	プリンのカード
+0x314 	Slumber Rock 	うたたねのいし
+0x315 	Snooze Ring 	ねむりのゆびわ
+0x316 	Wiggly-Hair 	プクリンのけ
+0x317 	Wiggly-Card 	プクリンのカード
+0x318 	Buddy Rock 	ゆうじょうのいし
+0x319 	Friend Torc 	フレンドリング
+0x31a 	Togepi Dew 	トゲピーのなみだ
+0x31b 	Togepi Card 	トゲピーのカード
+0x31c 	Pure Heart 	むじゃきなハート
+0x31d 	Angel Scarf 	てんしのスカーフ
+0x31e 	Togetic Wing 	トゲチックのはね
+0x31f 	Togetic Card 	トゲチックカード
+0x320 	Happy Rock 	しあわせのいし
+0x321 	Luck Brooch 	ラックのブローチ
+0x322 	Togek-Wing 	トゲキッスのはね
+0x323 	Togek-Card 	トゲキッスカード
+0x324 	Ovation Rock 	しゅくふくのいし
+0x325 	Glitter Robe 	かがやきのローブ
+0x326 	Sneasel Claw 	ニューラのツメ
+0x327 	Sneasel Card 	ニューラのカード
+0x328 	Dusk Jewel 	やみのほうじゅ
+0x329 	Cruel Ring 	ひじょうなゆびわ
+0x32a 	Weavile Claw 	マニューラのツメ
+0x32b 	Weavile Fang 	マニューラのキバ
+0x32c 	Vile Tag 	あくまのおふだ
+0x32d 	Ruin Armlet 	はめつのうでわ
+0x32e 	Teddi-Claw 	ヒメグマのツメ
+0x32f 	Teddi-Card 	ヒメグマのカード
+0x330 	Honey Rock 	みつあつめのいし
+0x331 	Heal Scarf 	ヒールスカーフ
+0x332 	Ursa-Claw 	リングマのツメ
+0x333 	Ursa-Fang 	リングマのキバ
+0x334 	Calming Rock 	やすらぎのいし
+0x335 	Hiber Scarf 	とうみんスカーフ
+0x336 	Tyro-Sweat 	バルキーのあせ
+0x337 	Tyro-Card 	バルキーのカード
+0x338 	Muscle Charm 	ちからのおまもり
+0x339 	Tyrogue 	バルキー
+0x33a 	Smooch-Song 	ムチュールのうた
+0x33b 	Smooch-Card 	ムチュールカード
+0x33c 	Kiss Charm 	キッスのおまもり
+0x33d 	Heart Tiara 	ハートのティアラ
+0x33e 	Jynx Song 	ルージュラのうた
+0x33f 	Jynx Card 	ルージュラカード
+0x340 	Frozen Ore 	こおりのほうせき
+0x341 	Ruin Scarf 	ほろびのスカーフ
+0x342 	Elekid Claw 	エレキッドのツメ
+0x343 	Elekid Card 	エレキッドカード
+0x344 	Jolt Charm 	しびれるおまもり
+0x345 	Current Ring 	いなずまのゆびわ
+0x346 	Electa-Claw 	エレブーのツメ
+0x347 	Electa-Fang 	エレブーのキバ
+0x348 	Charge Seal 	じゅうでんのふだ
+0x349 	Volt Bangle 	エレキバングル
+0x34a 	Electi-Claw 	エレキブルのツメ
+0x34b 	Electi-Card 	エレキブルカード
+0x34c 	Voltaic Rock 	じゅうでんのいし
+0x34d 	Voltaic Band 	らいでんハチマキ
+0x34e 	Magby Claw 	ブビィのツメ
+0x34f 	Magby Card 	ブビィのカード
+0x350 	Ember Jewel 	ひだねのほうじゅ
+0x351 	Coal Ring 	ほのおのゆびわ
+0x352 	Magmar Claw 	ブーバーのツメ
+0x353 	Magmar Card 	ブーバーのカード
+0x354 	Erupt Ore 	ひふきのほうせき
+0x355 	Magma Scarf 	マグマのスカーフ
+0x356 	Magmor-Claw 	ブーバーンのツメ
+0x357 	Magmor-Card 	ブーバーンカード
+0x358 	Vulcan Rock 	ばくえんのいし
+0x359 	Burning Torc 	バーニングリング
+0x35a 	Azuri-Dew 	ルリリのなみだ
+0x35b 	Azuri-Card 	ルリリのカード
+0x35c 	Fount Charm 	いずみのおまもり
+0x35d 	Water Float 	みずのフロート
+0x35e 	Marill Dew 	マリルのしずく
+0x35f 	Marill Card 	マリルのカード
+0x360 	Surfer Rock 	なみのりのいし
+0x361 	Brine Scarf 	うしおのスカーフ
+0x362 	Azuma-Dew 	マリルリのしずく
+0x363 	Azuma-Card 	マリルリのカード
+0x364 	Stream Charm 	おがわのおまもり
+0x365 	Dotted Scarf 	みずたまスカーフ
+0x366 	Plusle Tail 	プラスルのシッポ
+0x367 	Plusle Card 	プラスルのカード
+0x368 	Cheer Rock 	おうえんのいし
+0x369 	Pulse Bow 	パルスリボン
+0x36a 	Minun Tail 	マイナンのシッポ
+0x36b 	Minun Card 	マイナンのカード
+0x36c 	Volt Heart 	でんきのハート
+0x36d 	Spark Tie 	スパークミサンガ
+0x36e 	Cast-Dew 	ポワルンのしずく
+0x36f 	Cast-Card 	ポワルンのカード
+0x370 	Cloud Rock 	あまぐものいし
+0x371 	Weather Cape 	おてんきスカーフ
+0x372 	Wynaut Tail 	ソーナノのシッポ
+0x373 	Wynaut Card 	ソーナノのカード
+0x374 	Grin Charm 	えがおのおまもり
+0x375 	Cheery Scarf 	ほがらかスカーフ
+0x376 	Wobbu-Sweat 	ソーナンスのあせ
+0x377 	Wobbu-Card 	ソーナンスカード
+0x378 	Endure Rock 	がまんのいし
+0x379 	Suffer Scarf 	しれんのスカーフ
+0x37a 	Bidoof Tooth 	ビッパのまえば
+0x37b 	Bidoof Card 	ビッパのカード
+0x37c 	Fall Charm 	たきのおまもり
+0x37d 	Stolid Scarf 	どんかんスカーフ
+0x37e 	Biba-Tooth 	ビーダルのまえば
+0x37f 	Biba-Card 	ビーダルのカード
+0x380 	River Charm 	たいがのおまもり
+0x381 	Dam Scarf 	せきとめスカーフ
+0x382 	Shinx Claw 	コリンクのツメ
+0x383 	Shinx Fang 	コリンクのキバ
+0x384 	Flash Tag 	せんこうのおふだ
+0x385 	Energy Scarf 	エナジースカーフ
+0x386 	Luxio Claw 	ルクシオのツメ
+0x387 	Luxio Fang 	ルクシオのキバ
+0x388 	Spark Tag 	でんこうのおふだ
+0x389 	Spark Scarf 	かんでんスカーフ
+0x38a 	Luxray Claw 	レントラーのツメ
+0x38b 	Luxray Fang 	レントラーのキバ
+0x38c 	Glare Tag 	がんこうのおふだ
+0x38d 	Glare Sash 	ライトバンダナ
+0x38e 	Pachi-Tooth 	パチリスのまえば
+0x38f 	Pachi-Card 	パチリスのカード
+0x390 	Rouse Charm 	めざめのおまもり
+0x391 	Miracle Bow 	ミラクルリボン
+0x392 	Buizel Fang 	ブイゼルのキバ
+0x393 	Buizel Card 	ブイゼルのカード
+0x394 	Swimmer Rock 	はやおよぎのいし
+0x395 	Screw Torc 	スクリューリング
+0x396 	Float-Fang 	フローゼルのキバ
+0x397 	Float-Card 	フローゼルカード
+0x398 	Rescue Rock 	きゅうえんのいし
+0x399 	Float Aid 	おたすけフロート
+0x39a 	Drifloo-Gasp 	フワンテのいき
+0x39b 	Drifloo-Card 	フワンテのカード
+0x39c 	Wind Heart 	かぜのハート
+0x39d 	Draft Ring 	そよかぜのゆびわ
+0x39e 	Drifbli-Gasp 	フワライドのいき
+0x39f 	Drifbli-Card 	フワライドカード
+0x3a0 	Easy Charm 	きままなおまもり
+0x3a1 	Breeze Scarf 	ブリーズスカーフ
+0x3a2 	Cherubi Seed 	チェリンボのタネ
+0x3a3 	Cherubi Card 	チェリンボカード
+0x3a4 	Cute Ore 	かわいいほうせき
+0x3a5 	Charm Bow 	チャームリボン
+0x3a6 	Cherrim Dew 	チェリムのしずく
+0x3a7 	Cherrim Card 	チェリムのカード
+0x3a8 	Sweet Aroma 	あまいパフューム
+0x3a9 	Petal Dress 	はなびらのドレス
+0x3aa 	Bonsly Dew 	ウソハチのなみだ
+0x3ab 	Bonsly Card 	ウソハチのカード
+0x3ac 	Arid Tag 	かんそうのおふだ
+0x3ad 	Teary Cape 	なみだのケープ
+0x3ae 	Sudo-Sweat 	ウソッキーのあせ
+0x3af 	Sudo-Card 	ウソッキーカード
+0x3b0 	Drain Rock 	みずはけのいし
+0x3b1 	Fake Torc 	フェイクリング
+0x3b2 	Junior Beam 	マネネのひかり
+0x3b3 	Junior Card 	マネネのカード
+0x3b4 	Mimic Pebble 	ミミックストーン
+0x3b5 	Copy Mask 	ものまねずきん
+0x3b6 	Mime Key 	バリヤードのキー
+0x3b7 	Mime Card 	バリヤードカード
+0x3b8 	Bulwark Rock 	かべつくりのいし
+0x3b9 	Barrier Bow 	バリヤーリボン
+0x3ba 	Happiny Dew 	ピンプクのなみだ
+0x3bb 	Happiny Card 	ピンプクのカード
+0x3bc 	Play Tag 	ままごとのおふだ
+0x3bd 	Nurture Cape 	はぐくみのケープ
+0x3be 	Chansey Song 	ラッキーのうた
+0x3bf 	Chansey Card 	ラッキーのカード
+0x3c0 	Lucky Charm 	ついてるおまもり
+0x3c1 	Lucky Scarf 	ラッキースカーフ
+0x3c2 	Blissey Song 	ハピナスのうた
+0x3c3 	Blissey Card 	ハピナスのカード
+0x3c4 	Amity Rock 	ほほえみのいし
+0x3c5 	Faith Ring 	いのりのゆびわ
+0x3c6 	Gible Fang 	フカマルのキバ
+0x3c7 	Gible Card 	フカマルのカード
+0x3c8 	Dragon Jewel 	りゅうのほうじゅ
+0x3c9 	Dragon Tie 	ドラゴンミサンガ
+0x3ca 	Gabite Claw 	ガバイトのツメ
+0x3cb 	Gabite Fang 	ガバイトのキバ
+0x3cc 	Star Rock 	りゅうせいのいし
+0x3cd 	Meteor Torc 	メテオリング
+0x3ce 	Gar-Claw 	ガブリアスのツメ
+0x3cf 	Gar-Fang 	ガブリアスのキバ
+0x3d0 	Speed Tag 	こうそくのおふだ
+0x3d1 	Mach Scarf 	マッハスカーフ
+0x3d2 	Riolu Tail 	リオルのお
+0x3d3 	Riolu Card 	リオルのカード
+0x3d4 	Valiant Rock 	ゆうきのいし
+0x3d5 	Emit Ring 	はもんのゆびわ
+0x3d6 	Lucario Fang 	ルカリオのキバ
+0x3d7 	Lucario Card 	ルカリオのカード
+0x3d8 	Pledge Rock 	ちかいのいし
+0x3d9 	Ravage Ring 	はじゃのゆびわ
+0x3da 	Mantyke Beam 	タマンタのひかり
+0x3db 	Mantyke Card 	タマンタのカード
+0x3dc 	Waft Rock 	しおかぜのいし
+0x3dd 	Ocean Bow 	オーシャンリボン
+0x3de 	Mantine Foam 	マンタインのあわ
+0x3df 	Mantine Card 	マンタインカード
+0x3e0 	Sunset Rock 	ゆうやけのいし
+0x3e1 	Horizon Bow 	ホライズンリボン
+0x3e2 	Phione Song 	フィオネのうた
+0x3e3 	Phione Card 	フィオネのカード
+0x3e4 	Wave Jewel 	なみのほうじゅ
+0x3e5 	Ripple Cape 	さざなみのケープ
+0x3e6 	Vulpix Tail 	ロコンのお
+0x3e7 	Vulpix Card 	ロコンのカード
+0x3e8 	Vulpix Tag 	ロコンのおふだ
+0x3e9 	Glowing Bow 	ともしびリボン
+0x3ea 	Nine-Hair 	キュウコンのけ
+0x3eb 	Nine-Card 	キュウコンカード
+0x3ec 	Nine-Seal 	キュウコンのいん
+0x3ed 	Afire Collar 	おにびのえりまき
+0x3ee 	Phanpy Claw 	ゴマゾウのツメ
+0x3ef 	Phanpy Card 	ゴマゾウのカード
+0x3f0 	Phanpy Tag 	ゴマゾウのおふだ
+0x3f1 	Value Ruff 	おとくなマフラー
+0x3f2 	Donphan Fang 	ドンファンのキバ
+0x3f3 	Donphan Card 	ドンファンカード
+0x3f4 	Don-Crest 	ドンファンのごふ
+0x3f5 	Armor Scarf 	よろいのスカーフ
+0x3f6 	Cater-Belt 	キャタピーベルト
+0x3f7 	Defense Bow 	ぼうぎょリボン
+0x3f8 	Glittery Bow 	グリッターリボン
+0x3f9 	Weedle Bow 	ビードルリボン
+0x3fa 	Kakuna Scarf 	コクーンスカーフ
+0x3fb 	Charge Scarf 	とっかんスカーフ
+0x3fc 	Pidgey Bow 	ポッポリボン
+0x3fd 	Pidgeo-Scarf 	ピジョンスカーフ
+0x3fe 	Pidgeot Torc 	ピジョットリング
+0x3ff 	Ratta-Scarf 	コラッタスカーフ
+0x400 	Overcome Bow 	つよすぎリボン
+0x401 	Quirky Bow 	きまぐれリボン
+0x402 	Wing Scarf 	はばたきスカーフ
+0x403 	Leash Bow 	はなさずリボン
+0x404 	Shock Ruff 	ビックリマフラー
+0x405 	Sand-Scarf 	サンドのスカーフ
+0x406 	Sandy Torc 	すなまもリング
+0x407 	Pointy Scarf 	とがったスカーフ
+0x408 	Return Scarf 	しかえしスカーフ
+0x409 	Impact Torc 	インパクトリング
+0x40a 	Halve Scarf 	はんげんスカーフ
+0x40b 	Thorny Scarf 	とげつきスカーフ
+0x40c 	King Sash 	キングのバンダナ
+0x40d 	Dodge Bow 	みかわしリボン
+0x40e 	Absorb Scarf 	すいとりスカーフ
+0x40f 	Odd Bow 	ナゾナゾリボン
+0x410 	Guard Hat 	まもりのぼうし
+0x411 	Aroma Scarf 	アロマスカーフ
+0x412 	Moving Scarf 	まひなしスカーフ
+0x413 	Firm Hat 	しゃっきりハット
+0x414 	Gaze Goggles 	みすかしゴーグル
+0x415 	Venomoth Bow 	モルフォンリボン
+0x416 	Diglett Hat 	ディグダハット
+0x417 	Dugtrio Bow 	ダグトリオリボン
+0x418 	Psyduck Hat 	コダックハット
+0x419 	Paddle Scarf 	みずかきスカーフ
+0x41a 	Mankey Torc 	マンキーリング
+0x41b 	Nullify Belt 	きかないベルト
+0x41c 	Growl-Scarf 	ガーディスカーフ
+0x41d 	Legend Bow 	レジェンドリボン
+0x41e 	Damp Bow 	しめったリボン
+0x41f 	Poli-Bow 	ニョロゾのリボン
+0x420 	Bold Belt 	こんじょうベルト
+0x421 	Predict Torc 	よげんのリング
+0x422 	Psychic Torc 	サイキックリング
+0x423 	Sparkle Ruff 	きらめくマフラー
+0x424 	Impish Band 	わんぱくハチマキ
+0x425 	Strong Belt 	ストロングベルト
+0x426 	Machamp Belt 	カイリキーベルト
+0x427 	Bell-Bow 	マダツボミリボン
+0x428 	Digest Scarf 	しょうかスカーフ
+0x429 	Victree-Torc 	ウツボットリング
+0x42a 	Tangle Bow 	からみすぎリボン
+0x42b 	Tenta-Cape 	ドククラゲマント
+0x42c 	Geodude Torc 	イシツブテリング
+0x42d 	Rocky Torc 	いわまもリング
+0x42e 	Rugged Sash 	ごつごつバンダナ
+0x42f 	Heated Bow 	ホットリボン
+0x430 	Sunlight Bow 	サンライトリボン
+0x431 	Slowpoke Hat 	ヤドンのぼうし
+0x432 	Slow-Scarf 	ヤドランスカーフ
+0x433 	Magne-Torc 	コイルリング
+0x434 	Magneton Bow 	レアコイルリボン
+0x435 	Bullseye Bow 	めいちゅうリボン
+0x436 	Buddy Torc 	なかよしリング
+0x437 	Fight Torc 	とうこんリング
+0x438 	Gentle Bow 	やさしいリボン
+0x439 	North Torc 	ノーザンリング
+0x43a 	Grimy Scarf 	ベトベトスカーフ
+0x43b 	Slimy Bow 	ねばつきリボン
+0x43c 	Shell-Torc 	シェルダーリング
+0x43d 	Cover Armor 	かいがらアーマー
+0x43e 	Gastly Veil 	ゴースベール
+0x43f 	Slip Scarf 	すりぬけスカーフ
+0x440 	Sunglasses 	くろいサングラス
+0x441 	Trust Brooch 	たよれるブローチ
+0x442 	Drowzee Tie 	スリープミサンガ
+0x443 	Dream Coin 	ゆめのコイン
+0x444 	Krabby Bow 	クラブのリボン
+0x445 	Super Sash 	すごいバンダナ
+0x446 	Ball Scarf 	ボールスカーフ
+0x447 	Electro-Bow 	マルマインリボン
+0x448 	Repel Scarf 	はねつけスカーフ
+0x449 	Exeggu-Sash 	ナッシーバンダナ
+0x44a 	Cubone Scarf 	カラカラスカーフ
+0x44b 	Marowak Torc 	ガラガラリング
+0x44c 	Licky Scarf 	ベロベロスカーフ
+0x44d 	Koffing Bow 	ドガースリボン
+0x44e 	Weez-Scarf 	マタドガスカーフ
+0x44f 	Solid Shield 	がんじょうなたて
+0x450 	Pierce Drill 	とつげきドリル
+0x451 	Sticky Bow 	はりつけリボン
+0x452 	Kang-Apron 	ガルーラエプロン
+0x453 	Horsea Bow 	タッツーリボン
+0x454 	Swirl Scarf 	うずしおスカーフ
+0x455 	Goldeen Bow 	トサキントリボン
+0x456 	Seaking Bow 	アズマオウリボン
+0x457 	Recover Torc 	さいせいリング
+0x458 	Starmie Belt 	スターミーベルト
+0x459 	Pinsir Sash 	カイロスバンダナ
+0x45a 	Rushing Bow 	もうしんリボン
+0x45b 	Magikarp Bow 	コイキングリボン
+0x45c 	Tempest Sash 	あらしのバンダナ
+0x45d 	Ditto Torc 	メタモンリング
+0x45e 	AI Brooch 	でんのうブローチ
+0x45f 	Spike Brooch 	スパイクブローチ
+0x460 	Aged Scarf 	げんしのスカーフ
+0x461 	Kabuto Hat 	カブトのぼうし
+0x462 	Kabu-Torc 	カブトプスリング
+0x463 	Old Brooch 	たいこのブローチ
+0x464 	Dragon Sash 	りゅうのサッシュ
+0x465 	Aloft Mantle 	てんのはごろも
+0x466 	Mirage Cape 	まぼろしのマント
+0x467 	Sentret Ruff 	オタチのマフラー
+0x468 	Body Collar 	ぜんしんえりまき
+0x469 	Expose Specs 	みやぶりメガネ
+0x46a 	Noctowl Torc 	ヨルノズクリング
+0x46b 	Morning Bow 	モーニングリボン
+0x46c 	Ledian Bow 	レディアンリボン
+0x46d 	Spina-Scarf 	イトマルスカーフ
+0x46e 	Ariados Bow 	アリアドスリボン
+0x46f 	Slash Bow 	スラッシュリボン
+0x470 	Shine Torc 	フラッシュリング
+0x471 	Lanturn Bow 	ランターンリボン
+0x472 	Lively Scarf 	にぎやかスカーフ
+0x473 	Xatu Bow 	ネイティオリボン
+0x474 	Wool Bow 	わたげのリボン
+0x475 	Fluffy Scarf 	モコモコスカーフ
+0x476 	Sacred Scarf 	せいなるスカーフ
+0x477 	Bright Tiara 	ひかりのティアラ
+0x478 	Rain Crown 	あめのかんむり
+0x479 	Zephyr Bow 	はるかぜのリボン
+0x47a 	Skip-Scarf 	ポポッコスカーフ
+0x47b 	Cotton Torc 	わたくさのリング
+0x47c 	Revenge Ruff 	おかえしマフラー
+0x47d 	Hasty Bow 	せっかちリボン
+0x47e 	Sun Scarf 	おひさまスカーフ
+0x47f 	Chitin Bow 	うすばねリボン
+0x480 	Wooper Bow 	ウパーのリボン
+0x481 	Quag-Torc 	ヌオーのリング
+0x482 	Murkrow Hat 	ヤミカラスハット
+0x483 	King Cap 	おうじゃのぼうし
+0x484 	Misdrea-Cape 	ムウマのケープ
+0x485 	Cryptic Sash 	あんごうバンダナ
+0x486 	Reverse Bow 	リバースリボン
+0x487 	Robust Bow 	じょうぶなリボン
+0x488 	Dense Poncho 	かたいポンチョ
+0x489 	Escape Scarf 	にげあしスカーフ
+0x48a 	Takeoff Ruff 	とびにげマフラー
+0x48b 	Quartz Torc 	クォーツリング
+0x48c 	Snub-Cape 	ブルーのケープ
+0x48d 	Stern Sash 	いかついバンダナ
+0x48e 	Qwilfish Bow 	ハリーセンリボン
+0x48f 	Shuckle Bow 	ツボツボリボン
+0x490 	Horn Torc 	ツノリング
+0x491 	Lava Bow 	ようがんリボン
+0x492 	Torrid Scarf 	もえすぎスカーフ
+0x493 	Frigid Bow 	とうけつリボン
+0x494 	Frost Torc 	いてつくリング
+0x495 	Eager Brooch 	はりきりブローチ
+0x496 	Reach Bow 	えんとうリボン
+0x497 	Psy Bow 	サイケなリボン
+0x498 	Snow Brooch 	ふぶきのブローチ
+0x499 	Skar-Cape 	エアームドマント
+0x49a 	Dark Choker 	あくのチョーカー
+0x49b 	Pit Fang 	じごくのキバ
+0x49c 	Tornado Bow 	トルネードリボン
+0x49d 	Virtual Bow 	バーチャルリボン
+0x49e 	Delusion Bow 	さっかくリボン
+0x49f 	Paint Scarf 	パレットスカーフ
+0x4a0 	Milky Scarf 	ミルキースカーフ
+0x4a1 	Larvitar Bow 	ヨーギラスリボン
+0x4a2 	Pupita-Scarf 	サナギラスカーフ
+0x4a3 	Crash Claw 	ほうかいのツメ
+0x4a4 	Pooch-Collar 	ポチエナのくびわ
+0x4a5 	Dark Fang 	ダークファング
+0x4a6 	Merry Scarf 	うれしいスカーフ
+0x4a7 	Linoone Ruff 	マッスグマフラー
+0x4a8 	Wurmple Bow 	ケムッソリボン
+0x4a9 	Tough Scarf 	かちかちスカーフ
+0x4aa 	Vivid Silk 	あざやかシフォン
+0x4ab 	Guard Bow 	ガードリボン
+0x4ac 	Dustox Bow 	ドクケイルリボン
+0x4ad 	Kelp Hat 	うきくさのぼうし
+0x4ae 	Jolly Scarf 	ようきなスカーフ
+0x4af 	Ludicolo Hat 	ルンパッパハット
+0x4b0 	Seedot Hat 	タネボーハット
+0x4b1 	Nuzleaf Bow 	コノハナリボン
+0x4b2 	Shiftry Belt 	ダーテングベルト
+0x4b3 	Taillow Bow 	スバメのリボン
+0x4b4 	Midair Scarf 	おおぞらスカーフ
+0x4b5 	Wingull Bow 	キャモメのリボン
+0x4b6 	Stock Scarf 	たくわえスカーフ
+0x4b7 	Sensing Hat 	センスハット
+0x4b8 	Magical Bow 	マジカルリボン
+0x4b9 	Caring Scarf 	じあいのスカーフ
+0x4ba 	Bliss Scarf 	めぐまれスカーフ
+0x4bb 	Blocking Bow 	いわばらいリボン
+0x4bc 	Mobile Bow 	まひしらずリボン
+0x4bd 	Thwart Bow 	むこうのリボン
+0x4be 	Slak-Scarf 	ナマケロスカーフ
+0x4bf 	Vigor Sash 	やるきのバンダナ
+0x4c0 	Lazy Ruff 	ものぐさマフラー
+0x4c1 	Novice Scarf 	したづみスカーフ
+0x4c2 	Ninja Ruff 	しのびのマフラー
+0x4c3 	Awe Mantle 	ふしぎなはごろも
+0x4c4 	Good Earring 	グッドイヤリング
+0x4c5 	Nice Bangle 	ナイスバングル
+0x4c6 	Great Torc 	グレートリング
+0x4c7 	Makuhit-Belt 	マクノシタベルト
+0x4c8 	Thrust Belt 	つっぱりハラマキ
+0x4c9 	Nose-Torc 	ノズパスリング
+0x4ca 	Sable-Scope 	ヤミラミスコープ
+0x4cb 	Deceit Mask 	あざむきずきん
+0x4cc 	Iron Torc 	アイアンリング
+0x4cd 	Metal Bangle 	メタルバングル
+0x4ce 	Iron Helmet 	てつのヘルメット
+0x4cf 	Intuit Bow 	みきわめリボン
+0x4d0 	Ponder Sash 	めいそうバンダナ
+0x4d1 	Punish Torc 	てんばつのリング
+0x4d2 	Protect Mask 	まもられずきん
+0x4d3 	Neon Scarf 	ネオンスカーフ
+0x4d4 	Evening Bow 	よぞらのリボン
+0x4d5 	Thorned Torc 	いばらのリング
+0x4d6 	Gulpin Bow 	ゴクリンのリボン
+0x4d7 	Swalot Belt 	マルノームベルト
+0x4d8 	Carva-Sash 	キバニアバンダナ
+0x4d9 	Vicious Bow 	きょうあくリボン
+0x4da 	Spout Scarf 	しおふきスカーフ
+0x4db 	Huge Bow 	きょだいなリボン
+0x4dc 	Numel Bow 	ドンメルのリボン
+0x4dd 	Erupt Scarf 	ふんかスカーフ
+0x4de 	Sooty Sash 	すすけたバンダナ
+0x4df 	Spring Bow 	バネつきリボン
+0x4e0 	Scheme Scarf 	あやつりスカーフ
+0x4e1 	Hula Bow 	フラフラリボン
+0x4e2 	Desert Bow 	デザートリボン
+0x4e3 	Vibra Scarf 	しんどうスカーフ
+0x4e4 	Red Glasses 	あかいサングラス
+0x4e5 	Desert Sash 	さばくのバンダナ
+0x4e6 	Cacturne Hat 	ノクタスハット
+0x4e7 	Tuft Bow 	まわたのリボン
+0x4e8 	Cloud Ruff 	わたぐもマフラー
+0x4e9 	Strong Sash 	つよきのバンダナ
+0x4ea 	Seviper Bow 	ハブネークリボン
+0x4eb 	Lunaton-Torc 	ルナトーンリング
+0x4ec 	Solrock Bow 	ソルロックリボン
+0x4ed 	Soak Scarf 	しめりけスカーフ
+0x4ee 	Whiscash Bow 	ナマズンリボン
+0x4ef 	Bossy Scarf 	いあつのスカーフ
+0x4f0 	Cower Sash 	ひるませバンダナ
+0x4f1 	Bal-Brooch 	ヤジロンブローチ
+0x4f2 	Claydol Torc 	ネンドールリング
+0x4f3 	Bind Scarf 	そくばくスカーフ
+0x4f4 	Cradily Bow 	ユレイドルリボン
+0x4f5 	Guard Claw 	まもりのツメ
+0x4f6 	Rigid Cape 	きょうこなマント
+0x4f7 	Admire Scarf 	すてきなスカーフ
+0x4f8 	Grace Scarf 	うるわしスカーフ
+0x4f9 	Kecleon Torc 	カクレオンリング
+0x4fa 	Shuppet Cape 	カゲボウズケープ
+0x4fb 	Ominous Torc 	ふうんなリング
+0x4fc 	Duskull Ruff 	ヨマワルマフラー
+0x4fd 	Illusion Bow 	げんわくのリボン
+0x4fe 	Tropius Bow 	トロピウスリボン
+0x4ff 	Chime-Scarf 	チリーンスカーフ
+0x500 	Perish Torc 	わざわいリング
+0x501 	Chilly Hat 	つめたいぼうし
+0x502 	Hail Scarf 	あられスカーフ
+0x503 	Sleet Bow 	みぞれリボン
+0x504 	Safe Scarf 	みまもりスカーフ
+0x505 	Walrein Torc 	トドゼルガリング
+0x506 	Clam-Brooch 	パールルブローチ
+0x507 	Deep Torc 	ディープリング
+0x508 	Gore-Scarf 	サクラビスカーフ
+0x509 	Reli-Torc 	ジーランスリング
+0x50a 	Luvdisc Torc 	ラブカスリング
+0x50b 	Crag Helmet 	いしのヘルメット
+0x50c 	Outlast Bow 	にんたいリボン
+0x50d 	Sala-Cape 	ボーマンダマント
+0x50e 	Beldum Torc 	ダンバルリング
+0x50f 	Metang Scarf 	メタングスカーフ
+0x510 	Meta-Torc 	メタグロスリング
+0x511 	Starly Bow 	ムックルリボン
+0x512 	Regret Torc 	つうこんのリング
+0x513 	Guts Sash 	ガッツバンダナ
+0x514 	Still Bow 	れいせいリボン
+0x515 	Kricke-Torc 	コロトックリング
+0x516 	Budew Scarf 	スボミースカーフ
+0x517 	Bouquet Cape 	はなたばのマント
+0x518 	Hard Helmet 	ハードヘルメット
+0x519 	Skull Helmet 	スカルヘルメット
+0x51a 	Rebound Bow 	はねかえしリボン
+0x51b 	Block Brooch 	とおさずブローチ
+0x51c 	Straw Cape 	ストローマント
+0x51d 	Worma-Bow 	ミノマダムリボン
+0x51e 	Mothim Bow 	ガーメイルリボン
+0x51f 	Nectar Bow 	ハニーリボン
+0x520 	Vespi-Torc 	ビークインリング
+0x521 	Awake Bow 	めざめるリボン
+0x522 	Gastro-Torc 	トリトドンリング
+0x523 	Ambipom Bow 	エテボースリボン
+0x524 	Defrost Ruff 	こおらずマフラー
+0x525 	Allure Coat 	みわくのコート
+0x526 	Magic Hat 	スペルハット
+0x527 	Honch-Cape 	ドンカラスマント
+0x528 	Glameow Bow 	ニャルマーリボン
+0x529 	Scary Belt 	こわいベルト
+0x52a 	Ching-Torc 	リーシャンリング
+0x52b 	Stinky Scarf 	におうスカーフ
+0x52c 	Stench Sash 	くさすぎバンダナ
+0x52d 	Image Brooch 	かがみのブローチ
+0x52e 	Mirror Torc 	ミラーリング
+0x52f 	Chatot Scarf 	ペラップスカーフ
+0x530 	Thick Scarf 	ぶあついスカーフ
+0x531 	Grit Veil 	すなのベール
+0x532 	Skorupi Bow 	スコルピのリボン
+0x533 	Dust Scarf 	さじんのスカーフ
+0x534 	Croa-Torc 	グレッグルリング
+0x535 	Toxi-Belt 	ドクロッグベルト
+0x536 	Carni-Bow 	マスキッパリボン
+0x537 	Swim Bow 	スイスイリボン
+0x538 	Lumi-Torc 	ネオラントリング
+0x539 	Snowy Torc 	スノーリング
+0x53a 	Frozen Cape 	フローズンマント
+0x53b 	Builder Sash 	じがためバンダナ
+0x53c 	Flabby Belt 	ぶよぶよベルト
+0x53d 	Rhyperi-Torc 	ドサイドンリング
+0x53e 	Clinging Bow 	しがみつきリボン
+0x53f 	Yanmega Bow 	メガヤンマリボン
+0x540 	Gliscor Cape 	グライオンマント
+0x541 	Glacier Cape 	ひょうがのマント
+0x542 	Best Scarf 	さいてきスカーフ
+0x543 	Gallant Torc 	ゆうしゃのリング
+0x544 	Probo-Hat 	ダイノーズハット
+0x545 	Unlucky Sash 	あくうんバンダナ
+0x546 	Froslass Bow 	ユキメノコリボン
+0x547 	Purify Veil 	じょうかのベール
+0x548 	$$$ 	$$$
+0x549 	$$$ 	$$$
+0x54a 	$$$ 	$$$
+0x54b 	$$$ 	$$$
+0x54c 	$$$ 	$$$
+0x54d 	$$$ 	$$$
+0x54e 	$$$ 	$$$
+0x54f 	$$$ 	$$$
+0x550 	$$$ 	$$$
+0x551 	$$$ 	$$$
+0x552 	$$$ 	$$$
+0x553 	$$$ 	$$$
+0x554 	$$$ 	$$$
+0x555 	$$$ 	$$$
+0x556 	$$$ 	$$$
+0x557 	$$$ 	$$$
+0x558 	$$$ 	$$$
+0x559 	$$$ 	$$$
+0x55a 	$$$ 	$$$
+0x55b 	$$$ 	$$$
+0x55c 	$$$ 	$$$
+0x55d 	$$$ 	$$$
+0x55e 	$$$ 	$$$
+0x55f 	$$$ 	$$$
+0x560 	$$$ 	$$$
+0x561 	$$$ 	$$$
+0x562 	$$$ 	$$$
+0x563 	$$$ 	$$$
+0x564 	$$$ 	$$$
+0x565 	$$$ 	$$$
+0x566 	$$$ 	$$$
+0x567 	$$$ 	$$$
+0x568 	$$$ 	$$$
+0x569 	$$$ 	$$$
+0x56a 	$$$ 	$$$
+0x56b 	$$$ 	$$$
+0x56c 	$$$ 	$$$
+0x56d 	$$$ 	$$$
+0x56e 	$$$ 	$$$
+0x56f 	$$$ 	$$$
+0x570 	$$$ 	$$$
+0x571 	$$$ 	$$$
+0x572 	$$$ 	$$$
+0x573 	$$$ 	$$$
+0x574 	$$$ 	$$$
+0x575 	$$$ 	$$$
+0x576 	$$$ 	$$$
+0x577 	$$$ 	$$$

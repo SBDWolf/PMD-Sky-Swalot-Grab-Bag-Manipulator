@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swalot's Grab Bag Manipulator - PMD: Explorers of Sky</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Swalot's Grab Bag Manipulator</h1>
+    <p class="tagline">A web tool to generate Quicksave manipulations for Swalot's Grab Bag</p>
+    <p class="tagline">Read <a href="https://pmdspeedruns.miraheze.org/wiki/EoS_Bazaar_Manipulations">this article</a>
+      if you need more information on how these work</p>
+  </header>
+
+  <main>
+    <section class="panel controls-panel">
+      <div class="control-row">
+        <label class="control">
+          <span>Dungeon</span>
+          <select id="dungeon"></select>
+        </label>
+        <label class="control">
+          <span>Team size</span>
+          <select id="team">
+            <option value="1">1 member</option>
+            <option value="2">2 members</option>
+            <option value="3">3 members</option>
+            <option value="4" selected>4 members</option>
+          </select>
+        </label>
+        <label class="control">
+          <span>Mode</span>
+          <select id="mode">
+            <option value="story" selected>Story Dungeons</option>
+            <option value="free">Free Selection</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Items</h2>
+        <span class="hint">set a quantity for each item you want</span>
+      </div>
+      <div id="item-grid" class="item-grid"></div>
+    </section>
+
+    <section class="panel" id="results-panel" hidden>
+      <div class="panel-head">
+        <h2 id="results-title">Fastest manipulation</h2>
+      </div>
+      <div id="results-body"></div>
+    </section>
+
+    <section class="panel error-panel" id="error-panel" hidden>
+      <div id="error-body"></div>
+    </section>
+
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
