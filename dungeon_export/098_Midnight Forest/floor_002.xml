@@ -1,0 +1,431 @@
+<?xml version="1.0" ?>
+<Floor>
+  <FloorLayout structure="MEDIUM" tileset="34" bgm="59" weather="CLEAR" number="2" fixed_floor_id="0" darkness_level="NO_DARKNESS">
+    <GeneratorSettings room_density="8" floor_connectivity="25" initial_enemy_density="4" dead_ends="1" item_density="4" trap_density="8" extra_hallway_density="10" buried_item_density="6" water_density="6" max_coin_amount="250"/>
+    <Chances shop="9" monster_house="0" unused="1" sticky_item="5" empty_monster_house="0" hidden_stairs="15"/>
+    <TerrainSettings secondary_used="1" secondary_percentage="0" imperfect_rooms="0" unk1="0" unk3="0" unk4="0" unk5="0" unk6="0" unk7="0"/>
+    <MiscSettings unkE="0" kecleon_shop_item_positions="8" unk_hidden_stairs="255" enemy_iq="150" iq_booster_boost="1"/>
+  </FloorLayout>
+  <MonsterList>
+    <Monster level="31" weight="1282" weight2="1282" id="15"/>
+    <Monster level="30" weight="2564" weight2="2564" id="20"/>
+    <Monster level="15" weight="2821" weight2="2821" id="48"/>
+    <Monster level="35" weight="3846" weight2="3846" id="49"/>
+    <Monster level="6" weight="4103" weight2="4103" id="69"/>
+    <Monster level="15" weight="4359" weight2="4359" id="123"/>
+    <Monster level="14" weight="4615" weight2="4615" id="165"/>
+    <Monster level="33" weight="5641" weight2="5641" id="166"/>
+    <Monster level="5" weight="5897" weight2="5897" id="293"/>
+    <Monster level="29" weight="7179" weight2="7179" id="295"/>
+    <Monster level="30" weight="8462" weight2="8462" id="302"/>
+    <Monster level="23" weight="8718" weight2="8718" id="318"/>
+    <Monster level="30" weight="10000" weight2="10000" id="343"/>
+    <Monster level="48" weight="0" weight2="0" id="383"/>
+    <Monster level="1" weight="0" weight2="0" id="553"/>
+  </MonsterList>
+  <TrapList>
+    <Trap name="UNUSED" weight="0"/>
+    <Trap name="MUD_TRAP" weight="273"/>
+    <Trap name="STICKY_TRAP" weight="546"/>
+    <Trap name="GRIMY_TRAP" weight="1093"/>
+    <Trap name="SUMMON_TRAP" weight="1639"/>
+    <Trap name="PITFALL_TRAP" weight="2186"/>
+    <Trap name="WARP_TRAP" weight="2732"/>
+    <Trap name="GUST_TRAP" weight="3005"/>
+    <Trap name="SPIN_TRAP" weight="3497"/>
+    <Trap name="SLUMBER_TRAP" weight="4153"/>
+    <Trap name="SLOW_TRAP" weight="4699"/>
+    <Trap name="SEAL_TRAP" weight="4973"/>
+    <Trap name="POISON_TRAP" weight="5519"/>
+    <Trap name="SELFDESTRUCT_TRAP" weight="5683"/>
+    <Trap name="EXPLOSION_TRAP" weight="5902"/>
+    <Trap name="PP_ZERO_TRAP" weight="6448"/>
+    <Trap name="CHESTNUT_TRAP" weight="6995"/>
+    <Trap name="WONDER_TILE" weight="9180"/>
+    <Trap name="POKEMON_TRAP" weight="9727"/>
+    <Trap name="SPIKED_TILE" weight="0"/>
+    <Trap name="STEALTH_ROCK" weight="0"/>
+    <Trap name="TOXIC_SPIKES" weight="0"/>
+    <Trap name="TRIP_TRAP" weight="10000"/>
+    <Trap name="RANDOM_TRAP" weight="0"/>
+    <Trap name="GRUDGE_TRAP" weight="0"/>
+  </TrapList>
+  <ItemList type="Floor">
+    <Category name="Thrown - Pierce" weight="787"/>
+    <Category name="Thrown - Rock" weight="1969"/>
+    <Category name="Berries, Seeds, Vitamins" weight="4724"/>
+    <Category name="Hold" weight="5354"/>
+    <Category name="TMs, HMs" weight="5984"/>
+    <Category name="Poké (Money)" weight="7953"/>
+    <Category name="Other" weight="8031"/>
+    <Category name="Orbs" weight="10000"/>
+    <Item id="2" weight="5000"/>
+    <Item id="3" weight="10000"/>
+    <Item id="7" weight="10000"/>
+    <Item id="13" weight="82"/>
+    <Item id="15" weight="164"/>
+    <Item id="17" weight="574"/>
+    <Item id="18" weight="984"/>
+    <Item id="19" weight="1393"/>
+    <Item id="23" weight="1803"/>
+    <Item id="25" weight="2213"/>
+    <Item id="26" weight="4262"/>
+    <Item id="27" weight="5492"/>
+    <Item id="28" weight="6311"/>
+    <Item id="29" weight="6721"/>
+    <Item id="32" weight="7541"/>
+    <Item id="36" weight="7951"/>
+    <Item id="37" weight="9180"/>
+    <Item id="38" weight="10000"/>
+    <Item id="70" weight="3361"/>
+    <Item id="73" weight="3613"/>
+    <Item id="74" weight="4454"/>
+    <Item id="78" weight="5714"/>
+    <Item id="80" weight="6555"/>
+    <Item id="81" weight="7395"/>
+    <Item id="82" weight="7815"/>
+    <Item id="96" weight="8655"/>
+    <Item id="99" weight="9412"/>
+    <Item id="104" weight="9496"/>
+    <Item id="105" weight="9580"/>
+    <Item id="106" weight="9664"/>
+    <Item id="107" weight="9748"/>
+    <Item id="116" weight="9832"/>
+    <Item id="117" weight="9916"/>
+    <Item id="118" weight="10000"/>
+    <Item id="167" weight="5000"/>
+    <Item id="168" weight="10000"/>
+    <Item id="183" weight="10000"/>
+    <Item id="188" weight="270"/>
+    <Item id="189" weight="406"/>
+    <Item id="190" weight="676"/>
+    <Item id="191" weight="811"/>
+    <Item id="192" weight="947"/>
+    <Item id="193" weight="1082"/>
+    <Item id="195" weight="1217"/>
+    <Item id="196" weight="1251"/>
+    <Item id="197" weight="1386"/>
+    <Item id="199" weight="1420"/>
+    <Item id="200" weight="1555"/>
+    <Item id="201" weight="1690"/>
+    <Item id="202" weight="1792"/>
+    <Item id="203" weight="2062"/>
+    <Item id="204" weight="2197"/>
+    <Item id="206" weight="2333"/>
+    <Item id="207" weight="2468"/>
+    <Item id="209" weight="2535"/>
+    <Item id="210" weight="2569"/>
+    <Item id="211" weight="2637"/>
+    <Item id="212" weight="2772"/>
+    <Item id="214" weight="2833"/>
+    <Item id="215" weight="2901"/>
+    <Item id="216" weight="3036"/>
+    <Item id="217" weight="3103"/>
+    <Item id="218" weight="3374"/>
+    <Item id="220" weight="3644"/>
+    <Item id="221" weight="3813"/>
+    <Item id="222" weight="4084"/>
+    <Item id="223" weight="4253"/>
+    <Item id="225" weight="4523"/>
+    <Item id="227" weight="4659"/>
+    <Item id="228" weight="4794"/>
+    <Item id="229" weight="4861"/>
+    <Item id="230" weight="4929"/>
+    <Item id="231" weight="5199"/>
+    <Item id="232" weight="5335"/>
+    <Item id="233" weight="5402"/>
+    <Item id="234" weight="5504"/>
+    <Item id="237" weight="5605"/>
+    <Item id="238" weight="5740"/>
+    <Item id="239" weight="5876"/>
+    <Item id="240" weight="6146"/>
+    <Item id="241" weight="6281"/>
+    <Item id="242" weight="6416"/>
+    <Item id="250" weight="6687"/>
+    <Item id="251" weight="6822"/>
+    <Item id="252" weight="6856"/>
+    <Item id="253" weight="6991"/>
+    <Item id="254" weight="7262"/>
+    <Item id="255" weight="7295"/>
+    <Item id="256" weight="7329"/>
+    <Item id="257" weight="7465"/>
+    <Item id="260" weight="7667"/>
+    <Item id="261" weight="7938"/>
+    <Item id="262" weight="8141"/>
+    <Item id="265" weight="8411"/>
+    <Item id="266" weight="8546"/>
+    <Item id="267" weight="8817"/>
+    <Item id="268" weight="8952"/>
+    <Item id="269" weight="9087"/>
+    <Item id="270" weight="9222"/>
+    <Item id="272" weight="9358"/>
+    <Item id="273" weight="9493"/>
+    <Item id="274" weight="9696"/>
+    <Item id="275" weight="9831"/>
+    <Item id="276" weight="9966"/>
+    <Item id="278" weight="10000"/>
+    <Item id="304" weight="513"/>
+    <Item id="310" weight="1026"/>
+    <Item id="312" weight="1795"/>
+    <Item id="313" weight="2308"/>
+    <Item id="314" weight="3077"/>
+    <Item id="319" weight="3590"/>
+    <Item id="321" weight="4103"/>
+    <Item id="322" weight="4615"/>
+    <Item id="323" weight="5128"/>
+    <Item id="330" weight="6667"/>
+    <Item id="331" weight="7179"/>
+    <Item id="332" weight="7692"/>
+    <Item id="334" weight="8205"/>
+    <Item id="335" weight="8718"/>
+    <Item id="347" weight="9231"/>
+    <Item id="357" weight="9487"/>
+    <Item id="358" weight="9744"/>
+    <Item id="359" weight="10000"/>
+  </ItemList>
+  <ItemList type="Shop">
+    <Category name="Thrown - Pierce" weight="974"/>
+    <Category name="Thrown - Rock" weight="1948"/>
+    <Category name="Berries, Seeds, Vitamins" weight="3896"/>
+    <Category name="Foods, Gummies" weight="5844"/>
+    <Category name="Hold" weight="7792"/>
+    <Category name="TMs, HMs" weight="8442"/>
+    <Category name="Orbs" weight="9740"/>
+    <Category name="Link Box" weight="10000"/>
+    <Item id="2" weight="10000"/>
+    <Item id="8" weight="10000"/>
+    <Item id="32" weight="10000"/>
+    <Item id="69" weight="952"/>
+    <Item id="70" weight="1905"/>
+    <Item id="73" weight="4286"/>
+    <Item id="78" weight="5238"/>
+    <Item id="81" weight="6190"/>
+    <Item id="82" weight="7143"/>
+    <Item id="87" weight="8095"/>
+    <Item id="99" weight="10000"/>
+    <Item id="109" weight="1667"/>
+    <Item id="110" weight="3333"/>
+    <Item id="119" weight="5000"/>
+    <Item id="121" weight="6667"/>
+    <Item id="122" weight="8333"/>
+    <Item id="125" weight="10000"/>
+    <Item id="191" weight="292"/>
+    <Item id="192" weight="584"/>
+    <Item id="196" weight="657"/>
+    <Item id="197" weight="949"/>
+    <Item id="202" weight="1168"/>
+    <Item id="203" weight="1752"/>
+    <Item id="206" weight="2044"/>
+    <Item id="207" weight="2336"/>
+    <Item id="209" weight="2482"/>
+    <Item id="210" weight="2555"/>
+    <Item id="211" weight="2701"/>
+    <Item id="215" weight="2847"/>
+    <Item id="220" weight="3431"/>
+    <Item id="221" weight="3796"/>
+    <Item id="231" weight="4380"/>
+    <Item id="232" weight="4672"/>
+    <Item id="234" weight="4891"/>
+    <Item id="238" weight="5182"/>
+    <Item id="241" weight="5474"/>
+    <Item id="242" weight="5766"/>
+    <Item id="250" weight="6350"/>
+    <Item id="252" weight="6423"/>
+    <Item id="253" weight="6715"/>
+    <Item id="254" weight="7299"/>
+    <Item id="255" weight="7372"/>
+    <Item id="257" weight="7664"/>
+    <Item id="260" weight="8102"/>
+    <Item id="262" weight="8540"/>
+    <Item id="267" weight="9124"/>
+    <Item id="268" weight="9416"/>
+    <Item id="272" weight="9708"/>
+    <Item id="276" weight="10000"/>
+    <Item id="313" weight="1538"/>
+    <Item id="314" weight="2308"/>
+    <Item id="319" weight="3846"/>
+    <Item id="333" weight="5385"/>
+    <Item id="335" weight="6923"/>
+    <Item id="337" weight="8462"/>
+    <Item id="347" weight="10000"/>
+    <Item id="362" weight="10000"/>
+  </ItemList>
+  <ItemList type="MonsterHouse">
+    <Category name="Foods, Gummies" weight="6250"/>
+    <Category name="Poké (Money)" weight="10000"/>
+    <Item id="119" weight="588"/>
+    <Item id="120" weight="1176"/>
+    <Item id="121" weight="1765"/>
+    <Item id="122" weight="2353"/>
+    <Item id="123" weight="2941"/>
+    <Item id="124" weight="3529"/>
+    <Item id="125" weight="4118"/>
+    <Item id="126" weight="4706"/>
+    <Item id="127" weight="5294"/>
+    <Item id="128" weight="5882"/>
+    <Item id="129" weight="6471"/>
+    <Item id="130" weight="7059"/>
+    <Item id="131" weight="7647"/>
+    <Item id="132" weight="8235"/>
+    <Item id="133" weight="8824"/>
+    <Item id="134" weight="9412"/>
+    <Item id="135" weight="10000"/>
+    <Item id="183" weight="10000"/>
+  </ItemList>
+  <ItemList type="Buried">
+    <Category name="Poké (Money)" weight="10000"/>
+    <Item id="183" weight="10000"/>
+  </ItemList>
+  <ItemList type="Unk1">
+    <Category name="Thrown - Rock" weight="1079"/>
+    <Category name="Berries, Seeds, Vitamins" weight="3237"/>
+    <Category name="Foods, Gummies" weight="5396"/>
+    <Category name="Hold" weight="7554"/>
+    <Category name="TMs, HMs" weight="8273"/>
+    <Category name="Orbs" weight="9712"/>
+    <Category name="Link Box" weight="10000"/>
+    <Item id="8" weight="10000"/>
+    <Item id="32" weight="10000"/>
+    <Item id="69" weight="952"/>
+    <Item id="70" weight="1905"/>
+    <Item id="73" weight="4286"/>
+    <Item id="78" weight="5238"/>
+    <Item id="81" weight="6190"/>
+    <Item id="82" weight="7143"/>
+    <Item id="87" weight="8095"/>
+    <Item id="99" weight="10000"/>
+    <Item id="119" weight="588"/>
+    <Item id="120" weight="1176"/>
+    <Item id="121" weight="1765"/>
+    <Item id="122" weight="2353"/>
+    <Item id="123" weight="2941"/>
+    <Item id="124" weight="3529"/>
+    <Item id="125" weight="4118"/>
+    <Item id="126" weight="4706"/>
+    <Item id="127" weight="5294"/>
+    <Item id="128" weight="5882"/>
+    <Item id="129" weight="6471"/>
+    <Item id="130" weight="7059"/>
+    <Item id="131" weight="7647"/>
+    <Item id="132" weight="8235"/>
+    <Item id="133" weight="8824"/>
+    <Item id="134" weight="9412"/>
+    <Item id="135" weight="10000"/>
+    <Item id="191" weight="292"/>
+    <Item id="192" weight="584"/>
+    <Item id="196" weight="657"/>
+    <Item id="197" weight="949"/>
+    <Item id="202" weight="1168"/>
+    <Item id="203" weight="1752"/>
+    <Item id="206" weight="2044"/>
+    <Item id="207" weight="2336"/>
+    <Item id="209" weight="2482"/>
+    <Item id="210" weight="2555"/>
+    <Item id="211" weight="2701"/>
+    <Item id="215" weight="2847"/>
+    <Item id="220" weight="3431"/>
+    <Item id="221" weight="3796"/>
+    <Item id="231" weight="4380"/>
+    <Item id="232" weight="4672"/>
+    <Item id="234" weight="4891"/>
+    <Item id="238" weight="5182"/>
+    <Item id="241" weight="5474"/>
+    <Item id="242" weight="5766"/>
+    <Item id="250" weight="6350"/>
+    <Item id="252" weight="6423"/>
+    <Item id="253" weight="6715"/>
+    <Item id="254" weight="7299"/>
+    <Item id="255" weight="7372"/>
+    <Item id="257" weight="7664"/>
+    <Item id="260" weight="8102"/>
+    <Item id="262" weight="8540"/>
+    <Item id="267" weight="9124"/>
+    <Item id="268" weight="9416"/>
+    <Item id="272" weight="9708"/>
+    <Item id="276" weight="10000"/>
+    <Item id="313" weight="1538"/>
+    <Item id="314" weight="2308"/>
+    <Item id="319" weight="3846"/>
+    <Item id="333" weight="5385"/>
+    <Item id="335" weight="6923"/>
+    <Item id="337" weight="8462"/>
+    <Item id="347" weight="10000"/>
+    <Item id="362" weight="10000"/>
+  </ItemList>
+  <ItemList type="Unk2">
+    <Category name="Thrown - Rock" weight="1079"/>
+    <Category name="Berries, Seeds, Vitamins" weight="3237"/>
+    <Category name="Foods, Gummies" weight="5396"/>
+    <Category name="Hold" weight="7554"/>
+    <Category name="TMs, HMs" weight="8273"/>
+    <Category name="Orbs" weight="9712"/>
+    <Category name="Link Box" weight="10000"/>
+    <Item id="8" weight="10000"/>
+    <Item id="32" weight="10000"/>
+    <Item id="69" weight="952"/>
+    <Item id="70" weight="1905"/>
+    <Item id="73" weight="4286"/>
+    <Item id="78" weight="5238"/>
+    <Item id="81" weight="6190"/>
+    <Item id="82" weight="7143"/>
+    <Item id="87" weight="8095"/>
+    <Item id="99" weight="10000"/>
+    <Item id="119" weight="588"/>
+    <Item id="120" weight="1176"/>
+    <Item id="121" weight="1765"/>
+    <Item id="122" weight="2353"/>
+    <Item id="123" weight="2941"/>
+    <Item id="124" weight="3529"/>
+    <Item id="125" weight="4118"/>
+    <Item id="126" weight="4706"/>
+    <Item id="127" weight="5294"/>
+    <Item id="128" weight="5882"/>
+    <Item id="129" weight="6471"/>
+    <Item id="130" weight="7059"/>
+    <Item id="131" weight="7647"/>
+    <Item id="132" weight="8235"/>
+    <Item id="133" weight="8824"/>
+    <Item id="134" weight="9412"/>
+    <Item id="135" weight="10000"/>
+    <Item id="191" weight="292"/>
+    <Item id="192" weight="584"/>
+    <Item id="196" weight="657"/>
+    <Item id="197" weight="949"/>
+    <Item id="202" weight="1168"/>
+    <Item id="203" weight="1752"/>
+    <Item id="206" weight="2044"/>
+    <Item id="207" weight="2336"/>
+    <Item id="209" weight="2482"/>
+    <Item id="210" weight="2555"/>
+    <Item id="211" weight="2701"/>
+    <Item id="215" weight="2847"/>
+    <Item id="220" weight="3431"/>
+    <Item id="221" weight="3796"/>
+    <Item id="231" weight="4380"/>
+    <Item id="232" weight="4672"/>
+    <Item id="234" weight="4891"/>
+    <Item id="238" weight="5182"/>
+    <Item id="241" weight="5474"/>
+    <Item id="242" weight="5766"/>
+    <Item id="250" weight="6350"/>
+    <Item id="252" weight="6423"/>
+    <Item id="253" weight="6715"/>
+    <Item id="254" weight="7299"/>
+    <Item id="255" weight="7372"/>
+    <Item id="257" weight="7664"/>
+    <Item id="260" weight="8102"/>
+    <Item id="262" weight="8540"/>
+    <Item id="267" weight="9124"/>
+    <Item id="268" weight="9416"/>
+    <Item id="272" weight="9708"/>
+    <Item id="276" weight="10000"/>
+    <Item id="313" weight="1538"/>
+    <Item id="314" weight="2308"/>
+    <Item id="319" weight="3846"/>
+    <Item id="333" weight="5385"/>
+    <Item id="335" weight="6923"/>
+    <Item id="337" weight="8462"/>
+    <Item id="347" weight="10000"/>
+    <Item id="362" weight="10000"/>
+  </ItemList>
+</Floor>

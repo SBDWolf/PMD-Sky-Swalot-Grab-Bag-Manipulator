@@ -21,11 +21,12 @@
     "name": "Corsola Twig"
   },
   "7": {
-    "name": "Gravelerock"
+    "name": "Gravelerock",
+    "icon": "Data/icons/gravelerock.png"
   },
   "8": {
     "name": "Geo Pebble",
-    "icon": "Data/icons/geo_pebbles.png"
+    "icon": "Data/icons/geo_pebble.png"
   },
   "9": {
     "name": "Gold Thorn"
@@ -49,33 +50,40 @@
     "name": "Gaggle Specs"
   },
   "16": {
-    "name": "Mobile Scarf"
+    "name": "Mobile Scarf",
+    "icon": "Data/icons/scarf.png"
   },
   "17": {
     "name": "Heal Ribbon",
     "icon": "Data/icons/scarf.png"
   },
   "18": {
-    "name": "Twist Band"
+    "name": "Twist Band",
+    "icon": "Data/icons/scarf.png"
   },
   "19": {
     "name": "Scope Lens",
     "icon": "Data/icons/scope_lens.png"
   },
   "20": {
-    "name": "Patsy Band"
+    "name": "Patsy Band",
+    "icon": "Data/icons/scarf.png"
   },
   "21": {
-    "name": "No-Stick Cap"
+    "name": "No-Stick Cap",
+    "icon": "Data/icons/scarf.png"
   },
   "22": {
-    "name": "Pierce Band"
+    "name": "Pierce Band",
+    "icon": "Data/icons/scarf.png"
   },
   "23": {
-    "name": "Joy Ribbon"
+    "name": "Joy Ribbon",
+    "icon": "Data/icons/scarf.png"
   },
   "24": {
-    "name": "X-Ray Specs"
+    "name": "X-Ray Specs",
+    "icon": "Data/icons/xray_specs.png"
   },
   "25": {
     "name": "Persim Band",
@@ -98,7 +106,8 @@
     "icon": "Data/icons/scarf.png"
   },
   "30": {
-    "name": "Tight Belt"
+    "name": "Tight Belt",
+    "icon": "Data/icons/scarf.png"
   },
   "31": {
     "name": "Sneak Scarf",
@@ -112,24 +121,28 @@
     "name": "Goggle Specs"
   },
   "34": {
-    "name": "Diet Ribbon"
+    "name": "Diet Ribbon",
+    "icon": "Data/icons/scarf.png"
   },
   "35": {
-    "name": "Trap Scarf"
+    "name": "Trap Scarf",
+    "icon": "Data/icons/scarf.png"
   },
   "36": {
     "name": "Racket Band",
     "icon": "Data/icons/scarf.png"
   },
   "37": {
-    "name": "Def. Scarf"
+    "name": "Def. Scarf",
+    "icon": "Data/icons/scarf.png"
   },
   "38": {
     "name": "Stamina Band",
     "icon": "Data/icons/scarf.png"
   },
   "39": {
-    "name": "Plain Ribbon"
+    "name": "Plain Ribbon",
+    "icon": "Data/icons/scarf.png"
   },
   "40": {
     "name": "Special Band",
@@ -140,19 +153,23 @@
     "icon": "Data/icons/scarf.png"
   },
   "42": {
-    "name": "Detect Band"
+    "name": "Detect Band",
+    "icon": "Data/icons/scarf.png"
   },
   "43": {
     "name": "Space Globe"
   },
   "44": {
-    "name": "Dodge Scarf"
+    "name": "Dodge Scarf",
+    "icon": "Data/icons/scarf.png"
   },
   "45": {
-    "name": "Bounce Band"
+    "name": "Bounce Band",
+    "icon": "Data/icons/scarf.png"
   },
   "46": {
-    "name": "Curve Band"
+    "name": "Curve Band",
+    "icon": "Data/icons/scarf.png"
   },
   "47": {
     "name": "Whiff Specs"
@@ -164,16 +181,20 @@
     "name": "Lockon Specs"
   },
   "50": {
-    "name": "Munch Belt"
+    "name": "Munch Belt",
+    "icon": "Data/icons/scarf.png"
   },
   "51": {
-    "name": "Pass Scarf"
+    "name": "Pass Scarf",
+    "icon": "Data/icons/scarf.png"
   },
   "52": {
-    "name": "Weather Band"
+    "name": "Weather Band",
+    "icon": "Data/icons/scarf.png"
   },
   "53": {
-    "name": "Friend Bow"
+    "name": "Friend Bow",
+    "icon": "Data/icons/scarf.png"
   },
   "54": {
     "name": "Beauty Scarf"

@@ -1,0 +1,193 @@
+dungeon_id,folder,dungeon_name,number_floors,mappa_index,start_after
+0,000_Test Dungeon,Test Dungeon,3,0,0
+1,001_Beach Cave,Beach Cave,4,1,0
+2,002_Beach Cave Pit,Beach Cave Pit,1,1,4
+3,003_Drenched Bluff,Drenched Bluff,6,2,0
+4,004_Mt. Bristle,Mt. Bristle,9,3,0
+5,005_Mt. Bristle Peak,Mt. Bristle Peak,1,3,9
+6,006_Waterfall Cave,Waterfall Cave,8,4,0
+7,007_Apple Woods,Apple Woods,12,5,0
+8,008_Craggy Coast,Craggy Coast,9,6,0
+9,009_Side Path,Side Path,5,7,0
+10,010_Mt. Horn,Mt. Horn,14,8,0
+11,011_Rock Path,Rock Path,5,9,0
+12,012_Foggy Forest,Foggy Forest,11,10,0
+13,013_Forest Path,Forest Path,5,11,0
+14,014_Steam Cave,Steam Cave,8,12,0
+15,015_Upper Steam Cave,Upper Steam Cave,7,12,8
+16,016_Steam Cave Peak,Steam Cave Peak,1,12,15
+17,017_Amp Plains,Amp Plains,10,13,0
+18,018_Far Amp Plains,Far Amp Plains,9,13,10
+19,019_Amp Clearing,Amp Clearing,1,13,19
+20,020_Northern Desert,Northern Desert,15,14,0
+21,021_Quicksand Cave,Quicksand Cave,10,15,0
+22,022_Quicksand Pit,Quicksand Pit,10,15,10
+23,023_Underground Lake,Underground Lake,1,15,20
+24,024_Crystal Cave,Crystal Cave,11,16,0
+25,025_Crystal Crossing,Crystal Crossing,13,17,0
+26,026_Shining Lake,Shining Lake,1,17,13
+27,027_Chasm Cave,Chasm Cave,8,18,0
+28,028_Dark Hill,Dark Hill,15,19,0
+29,029_Sealed Ruin,Sealed Ruin,8,20,0
+30,030_Deep Sealed Ruin,Deep Sealed Ruin,6,20,8
+31,031_Sealed Ruin Pit,Sealed Ruin Pit,1,20,14
+32,032_Dusk Forest,Dusk Forest,8,21,0
+33,033_Deep Dusk Forest,Deep Dusk Forest,12,22,0
+34,034_Treeshroud Forest,Treeshroud Forest,20,23,0
+35,035_Brine Cave,Brine Cave,9,24,0
+36,036_Lower Brine Cave,Lower Brine Cave,5,24,9
+37,037_Brine Cave Pit,Brine Cave Pit,1,24,14
+38,038_Hidden Land,Hidden Land,15,25,0
+39,039_Hidden Highland,Hidden Highland,8,25,15
+40,040_Old Ruins,Old Ruins,1,25,23
+41,041_Temporal Tower,Temporal Tower,13,26,0
+42,042_Temporal Spire,Temporal Spire,10,26,13
+43,043_Temporal Pinnacle,Temporal Pinnacle,1,26,23
+44,044_Mystifying Forest,Mystifying Forest,13,27,0
+45,045_Mystifying Forest Clearing,Mystifying Forest Clearing,1,27,13
+46,046_Blizzard Island,Blizzard Island,20,41,0
+47,047_Crevice Cave,Crevice Cave,10,43,0
+48,048_Lower Crevice Cave,Lower Crevice Cave,4,43,10
+49,049_Crevice Cave Pit,Crevice Cave Pit,1,43,14
+50,050_Surrounded Sea,Surrounded Sea,20,33,0
+51,051_Miracle Sea,Miracle Sea,18,34,0
+52,052_Deep Miracle Sea,Deep Miracle Sea,4,34,18
+53,053_Miracle Seabed,Miracle Seabed,1,34,22
+54,054_Ice Aegis Cave,Ice Aegis Cave,3,52,0
+55,055_Regice Chamber,Regice Chamber,1,52,3
+56,056_Rock Aegis Cave,Rock Aegis Cave,3,52,4
+57,057_Regirock Chamber,Regirock Chamber,1,52,7
+58,058_Steel Aegis Cave,Steel Aegis Cave,4,52,8
+59,059_Registeel Chamber,Registeel Chamber,1,52,12
+60,060_Aegis Cave Pit,Aegis Cave Pit,5,52,13
+61,061_Regigigas Chamber,Regigigas Chamber,1,52,18
+62,062_Mt. Travail,Mt. Travail,19,56,0
+63,063_The Nightmare,The Nightmare,17,57,0
+64,064_Spacial Rift,Spacial Rift,15,58,0
+65,065_Deep Spacial Rift,Deep Spacial Rift,9,58,15
+66,066_Spacial Rift Bottom,Spacial Rift Bottom,1,58,24
+67,067_Dark Crater,Dark Crater,15,54,0
+68,068_Deep Dark Crater,Deep Dark Crater,14,54,15
+69,069_Dark Crater Pit,Dark Crater Pit,1,54,29
+70,070_Concealed Ruins,Concealed Ruins,30,35,0
+71,071_Deep Concealed Ruins,Deep Concealed Ruins,1,35,30
+72,072_Marine Resort,Marine Resort,19,55,0
+73,073_Bottomless Sea,Bottomless Sea,49,32,0
+74,074_Bottomless Sea Depths,Bottomless Sea Depths,1,32,49
+75,075_Shimmer Desert,Shimmer Desert,9,42,0
+76,076_Shimmer Desert Pit,Shimmer Desert Pit,1,42,9
+77,077_Mt. Avalanche,Mt. Avalanche,19,44,0
+78,078_Mt. Avalanche Peak,Mt. Avalanche Peak,1,44,19
+79,079_Giant Volcano,Giant Volcano,19,45,0
+80,080_Giant Volcano Peak,Giant Volcano Peak,1,45,19
+81,081_World Abyss,World Abyss,29,46,0
+82,082_World Abyss Pit,World Abyss Pit,1,46,29
+83,083_Sky Stairway,Sky Stairway,49,51,0
+84,084_Sky Stairway Apex,Sky Stairway Apex,1,51,49
+85,085_Mystery Jungle,Mystery Jungle,29,37,0
+86,086_Deep Mystery Jungle,Deep Mystery Jungle,1,37,29
+87,087_Serenity River,Serenity River,8,39,0
+88,088_Landslide Cave,Landslide Cave,13,40,0
+89,089_Lush Prairie,Lush Prairie,6,47,0
+90,090_Tiny Meadow,Tiny Meadow,5,48,0
+91,091_Labyrinth Cave,Labyrinth Cave,10,49,0
+92,092_Oran Forest,Oran Forest,5,50,0
+93,093_Lake Afar,Lake Afar,25,29,0
+94,094_Happy Outlook,Happy Outlook,20,38,0
+95,095_Mt. Mistral,Mt. Mistral,20,30,0
+96,096_Shimmer Hill,Shimmer Hill,18,31,0
+97,097_Lost Wilderness,Lost Wilderness,18,36,0
+98,098_Midnight Forest,Midnight Forest,25,28,0
+99,099_Zero Isle North,Zero Isle North,75,59,0
+100,100_Zero Isle East,Zero Isle East,40,61,0
+101,101_Zero Isle West,Zero Isle West,40,60,0
+102,102_Zero Isle South,Zero Isle South,99,62,0
+103,103_Zero Isle Center,Zero Isle Center,50,64,0
+104,104_Destiny Tower,Destiny Tower,99,65,0
+105,105_[MD1]Dummy,[M:D1]Dummy,10,66,0
+106,106_[MD1]Dummy,[M:D1]Dummy,5,67,0
+107,107_Oblivion Forest,Oblivion Forest,15,68,0
+108,108_Treacherous Waters,Treacherous Waters,20,69,0
+109,109_Southeastern Islands,Southeastern Islands,25,70,0
+110,110_Inferno Cave,Inferno Cave,30,71,0
+111,111_1st Station Pass,1st Station Pass,3,72,0
+112,112_2nd Station Pass,2nd Station Pass,3,72,3
+113,113_3rd Station Pass,3rd Station Pass,3,72,6
+114,114_4th Station Pass,4th Station Pass,3,72,9
+115,115_5th Station Pass,5th Station Pass,4,72,12
+116,116_6th Station Pass,6th Station Pass,4,72,16
+117,117_7th Station Pass,7th Station Pass,4,72,20
+118,118_8th Station Pass,8th Station Pass,4,72,24
+119,119_9th Station Pass,9th Station Pass,5,72,28
+120,120_Sky Peak Summit Pass,Sky Peak Summit Pass,5,72,33
+121,121_5th Station Clearing,5th Station Clearing,1,72,38
+122,122_Sky Peak Summit,Sky Peak Summit,1,72,39
+123,123_Star Cave,Star Cave,7,73,0
+124,124_Deep Star Cave,Deep Star Cave,4,73,7
+125,125_Deep Star Cave,Deep Star Cave,1,73,11
+126,126_Star Cave Depths,Star Cave Depths,4,73,12
+127,127_Star Cave Pit,Star Cave Pit,1,73,16
+128,128_Murky Forest,Murky Forest,7,74,0
+129,129_Eastern Cave,Eastern Cave,10,75,0
+130,130_Fortune Ravine,Fortune Ravine,8,76,0
+131,131_Fortune Ravine Depths,Fortune Ravine Depths,6,76,8
+132,132_Fortune Ravine Pit,Fortune Ravine Pit,1,76,14
+133,133_Barren Valley,Barren Valley,5,77,0
+134,134_Deep Barren Valley,Deep Barren Valley,5,77,5
+135,135_Barren Valley Clearing,Barren Valley Clearing,1,77,10
+136,136_Dark Wasteland,Dark Wasteland,4,78,0
+137,137_Temporal Tower,Temporal Tower,10,79,0
+138,138_Temporal Spire,Temporal Spire,10,79,10
+139,139_Dusk Forest,Dusk Forest,7,80,0
+140,140_Black Swamp,Black Swamp,1,80,7
+141,141_Spacial Cliffs,Spacial Cliffs,10,81,0
+142,142_Dark Ice Mountain,Dark Ice Mountain,10,82,0
+143,143_Dark Ice Mountain Peak,Dark Ice Mountain Peak,4,82,10
+144,144_Dark Ice Mountain Pinnacle,Dark Ice Mountain Pinnacle,1,82,14
+145,145_Icicle Forest,Icicle Forest,10,83,0
+146,146_Vast Ice Mountain,Vast Ice Mountain,9,84,0
+147,147_Vast Ice Mountain Peak,Vast Ice Mountain Peak,8,84,9
+148,148_Vast Ice Mountain Pinnacle,Vast Ice Mountain Pinnacle,1,84,17
+149,149_Southern Jungle,Southern Jungle,10,85,0
+150,150_Boulder Quarry,Boulder Quarry,5,86,0
+151,151_Deep Boulder Quarry,Deep Boulder Quarry,5,86,5
+152,152_Boulder Quarry Clearing,Boulder Quarry Clearing,1,86,10
+153,153_Right Cave Path,Right Cave Path,5,87,0
+154,154_Left Cave Path,Left Cave Path,5,88,0
+155,155_Limestone Cavern,Limestone Cavern,5,89,0
+156,156_Deep Limestone Cavern,Deep Limestone Cavern,5,89,5
+157,157_Limestone Cavern Depths,Limestone Cavern Depths,1,89,10
+158,158_Spring Cave,Spring Cave,4,90,0
+159,159_Upper Spring Cave,Upper Spring Cave,1,90,4
+160,160_Upper Spring Cave,Upper Spring Cave,4,90,5
+161,161_Middle Spring Cave,Middle Spring Cave,1,90,9
+162,162_Lower Spring Cave,Lower Spring Cave,4,90,10
+163,163_Spring Cave Depths,Spring Cave Depths,4,90,14
+164,164_Spring Cave Pit,Spring Cave Pit,1,90,18
+165,165_[MD1]Dummy,[M:D1]Dummy,5,92,0
+166,166_[MD1]Dummy,[M:D1]Dummy,6,93,0
+167,167_[MD1]Dummy,[M:D1]Dummy,7,94,0
+168,168_[MD1]Dummy,[M:D1]Dummy,6,95,0
+169,169_[MD1]Dummy,[M:D1]Dummy,5,96,0
+170,170_[MD1]Dummy,[M:D1]Dummy,5,97,0
+171,171_[MD1]Dummy,[M:D1]Dummy,5,98,0
+172,172_[MD1]Dummy,[M:D1]Dummy,5,99,0
+173,173_[MD1]Dummy,[M:D1]Dummy,5,99,5
+174,174_Star Cave,Star Cave,16,91,0
+175,175_Shaymin Village,Shaymin Village,3,79,0
+176,176_Armaldo's Shelter,Armaldo's Shelter,3,79,3
+177,177_Luminous Spring,Luminous Spring,3,79,6
+178,178_Hot Spring,Hot Spring,6,79,9
+179,179_Rescue,Rescue,1,63,0
+180,180_NormalFly Maze,Normal/Fly Maze,5,,
+181,181_DarkFire Maze,Dark/Fire Maze,5,,
+182,182_RockWater Maze,Rock/Water Maze,5,,
+183,183_Grass Maze,Grass Maze,5,,
+184,184_ElecSteel Maze,Elec/Steel Maze,5,,
+185,185_IceGround Maze,Ice/Ground Maze,5,,
+186,186_FightPsych Maze,Fight/Psych Maze,5,,
+187,187_PoisonBug Maze,Poison/Bug Maze,5,,
+188,188_Dragon Maze,Dragon Maze,5,,
+189,189_Ghost Maze,Ghost Maze,5,,
+190,190_Explorer Maze,Explorer Maze,1,,
+191,191_Final Maze,Final Maze,48,,

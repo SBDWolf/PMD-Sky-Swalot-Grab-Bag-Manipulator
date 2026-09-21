@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PRNG simulation self-test — Swalot's Grab Bag Manipulator</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>PRNG simulation self-test</h1>
+    <p class="tagline">Simulates the grab bag on the fly (js/rng.js) and compares it with the
+      precomputed tables in Data/tables/. Every position must match.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Results</h2>
+      </div>
+      <div id="results-body"></div>
+    </section>
+  </main>
+
+  <script type="module" src="rng-test.js"></script>
+</body>
+
+</html>

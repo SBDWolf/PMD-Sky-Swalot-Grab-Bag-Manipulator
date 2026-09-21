@@ -63,11 +63,17 @@ export function solve(table, teamSize, requirements, costs = DEFAULT_COSTS) {
   const N = items.length;
   const t = TURN_ADVANCE[teamSize - 1];
 
-  const itemSet = new Set(items);
-  const missing = [...new Set(reqs.filter(([id]) => !itemSet.has(id)).map(([id]) => id))]
+  // Item existence is judged against the pool (every id the dungeon's grab
+  // bag can ever produce) when available, not just the simulated window —
+  // an item in the pool but outside the window is a retry-with-larger-window
+  // case, not a "never appears here" case.
+  const poolSet = Array.isArray(table.pool) && table.pool.length > 0
+    ? new Set(table.pool)
+    : new Set(items);
+  const missing = [...new Set(reqs.filter(([id]) => !poolSet.has(id)).map(([id]) => id))]
     .sort((a, b) => a - b);
   if (missing.length > 0) {
-    throw fail('missing-items', 'Item(s) never appear in this dungeon\'s table.', { missing });
+    throw fail('missing-items', 'Item(s) never appear in this dungeon\'s grab bag.', { missing });
   }
 
   let S = 1;

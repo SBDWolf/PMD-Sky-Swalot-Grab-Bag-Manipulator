@@ -1,0 +1,211 @@
+<?xml version="1.0" ?>
+<Floor>
+  <FloorLayout structure="MEDIUM_LARGE" tileset="108" bgm="63" weather="CLOUDY" number="12" fixed_floor_id="0" darkness_level="NO_DARKNESS">
+    <GeneratorSettings room_density="12" floor_connectivity="20" initial_enemy_density="4" dead_ends="0" item_density="5" trap_density="4" extra_hallway_density="15" buried_item_density="6" water_density="0" max_coin_amount="250"/>
+    <Chances shop="8" monster_house="4" unused="1" sticky_item="7" empty_monster_house="0" hidden_stairs="10"/>
+    <TerrainSettings secondary_used="0" secondary_percentage="0" imperfect_rooms="0" unk1="0" unk3="0" unk4="0" unk5="0" unk6="0" unk7="0"/>
+    <MiscSettings unkE="0" kecleon_shop_item_positions="8" unk_hidden_stairs="255" enemy_iq="330" iq_booster_boost="1"/>
+  </FloorLayout>
+  <MonsterList>
+    <Monster level="13" weight="182" weight2="182" id="63"/>
+    <Monster level="38" weight="909" weight2="909" id="64"/>
+    <Monster level="32" weight="1636" weight2="1636" id="108"/>
+    <Monster level="32" weight="2364" weight2="2364" id="122"/>
+    <Monster level="34" weight="3091" weight2="3091" id="126"/>
+    <Monster level="16" weight="3273" weight2="3273" id="263"/>
+    <Monster level="32" weight="4000" weight2="4000" id="264"/>
+    <Monster level="32" weight="5364" weight2="5364" id="303"/>
+    <Monster level="17" weight="5545" weight2="5545" id="324"/>
+    <Monster level="32" weight="6909" weight2="6909" id="325"/>
+    <Monster level="17" weight="7636" weight2="7636" id="335"/>
+    <Monster level="32" weight="8364" weight2="8364" id="336"/>
+    <Monster level="32" weight="9091" weight2="9091" id="355"/>
+    <Monster level="50" weight="0" weight2="0" id="383"/>
+    <Monster level="45" weight="9273" weight2="9273" id="490"/>
+    <Monster level="32" weight="10000" weight2="10000" id="495"/>
+    <Monster level="3" weight="0" weight2="0" id="553"/>
+  </MonsterList>
+  <TrapList>
+    <Trap name="UNUSED" weight="0"/>
+    <Trap name="MUD_TRAP" weight="625"/>
+    <Trap name="STICKY_TRAP" weight="1016"/>
+    <Trap name="GRIMY_TRAP" weight="1797"/>
+    <Trap name="SUMMON_TRAP" weight="2031"/>
+    <Trap name="PITFALL_TRAP" weight="2344"/>
+    <Trap name="WARP_TRAP" weight="3125"/>
+    <Trap name="GUST_TRAP" weight="3906"/>
+    <Trap name="SPIN_TRAP" weight="4453"/>
+    <Trap name="SLUMBER_TRAP" weight="5078"/>
+    <Trap name="SLOW_TRAP" weight="5547"/>
+    <Trap name="SEAL_TRAP" weight="6328"/>
+    <Trap name="POISON_TRAP" weight="7109"/>
+    <Trap name="SELFDESTRUCT_TRAP" weight="7734"/>
+    <Trap name="EXPLOSION_TRAP" weight="8047"/>
+    <Trap name="PP_ZERO_TRAP" weight="0"/>
+    <Trap name="CHESTNUT_TRAP" weight="0"/>
+    <Trap name="WONDER_TILE" weight="9609"/>
+    <Trap name="POKEMON_TRAP" weight="0"/>
+    <Trap name="SPIKED_TILE" weight="0"/>
+    <Trap name="STEALTH_ROCK" weight="0"/>
+    <Trap name="TOXIC_SPIKES" weight="0"/>
+    <Trap name="TRIP_TRAP" weight="10000"/>
+    <Trap name="RANDOM_TRAP" weight="0"/>
+    <Trap name="GRUDGE_TRAP" weight="0"/>
+  </TrapList>
+  <ItemList type="Floor">
+    <Category name="Thrown - Pierce" weight="1515"/>
+    <Category name="Thrown - Rock" weight="2525"/>
+    <Category name="Hold" weight="3030"/>
+    <Category name="TMs, HMs" weight="3838"/>
+    <Category name="Poké (Money)" weight="7374"/>
+    <Category name="Other" weight="7475"/>
+    <Category name="Orbs" weight="10000"/>
+    <Item id="2" weight="10000"/>
+    <Item id="7" weight="10000"/>
+    <Item id="13" weight="109"/>
+    <Item id="15" weight="217"/>
+    <Item id="17" weight="1304"/>
+    <Item id="18" weight="1848"/>
+    <Item id="19" weight="2391"/>
+    <Item id="20" weight="2935"/>
+    <Item id="25" weight="4022"/>
+    <Item id="37" weight="5109"/>
+    <Item id="38" weight="6196"/>
+    <Item id="41" weight="6739"/>
+    <Item id="42" weight="7283"/>
+    <Item id="51" weight="10000"/>
+    <Item id="167" weight="5000"/>
+    <Item id="168" weight="10000"/>
+    <Item id="183" weight="10000"/>
+    <Item id="188" weight="270"/>
+    <Item id="189" weight="406"/>
+    <Item id="190" weight="676"/>
+    <Item id="191" weight="811"/>
+    <Item id="192" weight="947"/>
+    <Item id="193" weight="1082"/>
+    <Item id="195" weight="1217"/>
+    <Item id="196" weight="1251"/>
+    <Item id="197" weight="1386"/>
+    <Item id="199" weight="1420"/>
+    <Item id="200" weight="1555"/>
+    <Item id="201" weight="1690"/>
+    <Item id="202" weight="1792"/>
+    <Item id="203" weight="2062"/>
+    <Item id="204" weight="2197"/>
+    <Item id="206" weight="2333"/>
+    <Item id="207" weight="2468"/>
+    <Item id="209" weight="2535"/>
+    <Item id="210" weight="2569"/>
+    <Item id="211" weight="2637"/>
+    <Item id="212" weight="2772"/>
+    <Item id="214" weight="2833"/>
+    <Item id="215" weight="2901"/>
+    <Item id="216" weight="3036"/>
+    <Item id="217" weight="3103"/>
+    <Item id="218" weight="3374"/>
+    <Item id="220" weight="3644"/>
+    <Item id="221" weight="3813"/>
+    <Item id="222" weight="4084"/>
+    <Item id="223" weight="4253"/>
+    <Item id="225" weight="4523"/>
+    <Item id="227" weight="4659"/>
+    <Item id="228" weight="4794"/>
+    <Item id="229" weight="4861"/>
+    <Item id="230" weight="4929"/>
+    <Item id="231" weight="5199"/>
+    <Item id="232" weight="5335"/>
+    <Item id="233" weight="5402"/>
+    <Item id="234" weight="5504"/>
+    <Item id="237" weight="5605"/>
+    <Item id="238" weight="5740"/>
+    <Item id="239" weight="5876"/>
+    <Item id="240" weight="6146"/>
+    <Item id="241" weight="6281"/>
+    <Item id="242" weight="6416"/>
+    <Item id="250" weight="6687"/>
+    <Item id="251" weight="6822"/>
+    <Item id="252" weight="6856"/>
+    <Item id="253" weight="6991"/>
+    <Item id="254" weight="7262"/>
+    <Item id="255" weight="7295"/>
+    <Item id="256" weight="7329"/>
+    <Item id="257" weight="7465"/>
+    <Item id="260" weight="7667"/>
+    <Item id="261" weight="7938"/>
+    <Item id="262" weight="8141"/>
+    <Item id="265" weight="8411"/>
+    <Item id="266" weight="8546"/>
+    <Item id="267" weight="8817"/>
+    <Item id="268" weight="8952"/>
+    <Item id="269" weight="9087"/>
+    <Item id="270" weight="9222"/>
+    <Item id="272" weight="9358"/>
+    <Item id="273" weight="9493"/>
+    <Item id="274" weight="9696"/>
+    <Item id="275" weight="9831"/>
+    <Item id="276" weight="9966"/>
+    <Item id="278" weight="10000"/>
+    <Item id="304" weight="513"/>
+    <Item id="310" weight="1026"/>
+    <Item id="312" weight="1795"/>
+    <Item id="313" weight="2308"/>
+    <Item id="314" weight="3077"/>
+    <Item id="319" weight="3590"/>
+    <Item id="321" weight="4103"/>
+    <Item id="322" weight="4615"/>
+    <Item id="323" weight="5128"/>
+    <Item id="330" weight="6667"/>
+    <Item id="331" weight="7179"/>
+    <Item id="332" weight="7692"/>
+    <Item id="334" weight="8205"/>
+    <Item id="335" weight="8718"/>
+    <Item id="347" weight="9231"/>
+    <Item id="357" weight="9487"/>
+    <Item id="358" weight="9744"/>
+    <Item id="359" weight="10000"/>
+  </ItemList>
+  <ItemList type="Shop">
+    <Category name="Foods, Gummies" weight="10000"/>
+    <Item id="109" weight="6667"/>
+    <Item id="131" weight="8333"/>
+    <Item id="135" weight="10000"/>
+  </ItemList>
+  <ItemList type="MonsterHouse">
+    <Category name="Foods, Gummies" weight="6250"/>
+    <Category name="Poké (Money)" weight="10000"/>
+    <Item id="119" weight="588"/>
+    <Item id="120" weight="1176"/>
+    <Item id="121" weight="1765"/>
+    <Item id="122" weight="2353"/>
+    <Item id="123" weight="2941"/>
+    <Item id="124" weight="3529"/>
+    <Item id="125" weight="4118"/>
+    <Item id="126" weight="4706"/>
+    <Item id="127" weight="5294"/>
+    <Item id="128" weight="5882"/>
+    <Item id="129" weight="6471"/>
+    <Item id="130" weight="7059"/>
+    <Item id="131" weight="7647"/>
+    <Item id="132" weight="8235"/>
+    <Item id="133" weight="8824"/>
+    <Item id="134" weight="9412"/>
+    <Item id="135" weight="10000"/>
+    <Item id="183" weight="10000"/>
+  </ItemList>
+  <ItemList type="Buried">
+    <Category name="Poké (Money)" weight="10000"/>
+    <Item id="183" weight="10000"/>
+  </ItemList>
+  <ItemList type="Unk1">
+    <Category name="Foods, Gummies" weight="10000"/>
+    <Item id="109" weight="6667"/>
+    <Item id="131" weight="8333"/>
+    <Item id="135" weight="10000"/>
+  </ItemList>
+  <ItemList type="Unk2">
+    <Category name="Foods, Gummies" weight="10000"/>
+    <Item id="109" weight="6667"/>
+    <Item id="131" weight="8333"/>
+    <Item id="135" weight="10000"/>
+  </ItemList>
+</Floor>

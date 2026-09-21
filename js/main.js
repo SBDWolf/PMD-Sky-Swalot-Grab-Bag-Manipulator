@@ -1,18 +1,34 @@
 // Secret Bazaar Manipulator — UI controller.
-import { solve, DEFAULT_COSTS } from "./solver.js";
+//
+// Items are NOT read from precomputed tables: js/rng.js simulates the
+// dungeon PRNG on the fly from the floor XML's grab bag list
+// (dungeon_export/<folder>/floor_001.xml, ItemList type="Unk1"), so every
+// dungeon of the game is supported. Only dungeons whose floors can spawn a
+// Secret Bazaar (hidden_stairs != 0 with unk_hidden_stairs 0/255) are
+// selectable in Free Selection; Story Dungeons keeps its fixed list.
+import { solve } from "./solver.js";
+import { parseBazaarList, generateTable, DEFAULT_SEED, DEFAULT_WINDOW } from "./rng.js";
 
 const $ = (id) => document.getElementById(id);
 
-const MAX_QTY = 20;
 const LEGACY_COSTS_KEY = "pmdb-sb-costs"; // advanced-costs feature removed; stale key cleaned on load
 
+// The window grows when a solve finds no path within the first 1500 draws.
+const WINDOW_STEPS = [DEFAULT_WINDOW, 4 * DEFAULT_WINDOW];
+
+// Story-mode names that don't match a dungeon_export folder name exactly.
+const STORY_ALIASES = { "Sky Peak": "Sky Peak Summit Pass" };
+
 const state = {
-  registry: { dungeons: [] },
+  dungeons: [], // entries from Data/dungeons.json: {id, name, folder, bazaar}
+  dungeonByName: new Map(),
+  seed: DEFAULT_SEED,
   items: {},
   relevant: { modes: {} },
-  tables: new Map(), // tableId -> table
+  lists: new Map(), // folder -> parsed grab bag list (from floor_001.xml)
+  tables: new Map(), // `${folder}|${window}` -> generated table
   dungeonName: null,
-  tableId: null,
+  folder: null,
   team: 4,
   mode: "free", // "story" | "free" — synced from the #mode select in init()
   qty: new Map(), // itemId -> requested quantity (kept across grid rebuilds)
@@ -27,11 +43,25 @@ async function loadJson(path) {
   return res.json();
 }
 
-async function ensureTable(tableId) {
-  if (!state.tables.has(tableId)) {
-    state.tables.set(tableId, await loadJson(`Data/tables/${tableId}.json`));
+async function loadBazaarList(folder) {
+  if (!state.lists.has(folder)) {
+    const res = await fetch(`dungeon_export/${encodeURIComponent(folder)}/floor_001.xml`);
+    if (!res.ok) throw new Error(`could not load floor XML for ${folder} (HTTP ${res.status})`);
+    state.lists.set(folder, parseBazaarList(await res.text()));
   }
-  return state.tables.get(tableId);
+  return state.lists.get(folder);
+}
+
+// Generates the draw sequence for a dungeon by simulating the PRNG on the
+// fly; per (folder, window) results are memoized. `window` is only bumped
+// when a solve fails inside the default one.
+async function ensureTable(folder, window = DEFAULT_WINDOW) {
+  const key = `${folder}|${window}`;
+  if (!state.tables.has(key)) {
+    const list = await loadBazaarList(folder);
+    state.tables.set(key, generateTable(list, state.seed, window));
+  }
+  return state.tables.get(key);
 }
 
 function itemName(id) {
@@ -57,15 +87,22 @@ function modeDef() {
 
 function filterItemIds(table) {
   const m = modeDef();
-  if (!m) return [...new Set(table.items)].sort((a, b) => a - b);
-  return Array.isArray(m.items) ? m.items : [];
+  if (!m) return table.pool;
+  const pool = new Set(table.pool);
+  return (Array.isArray(m.items) ? m.items : []).filter((id) => pool.has(id));
 }
 
+// Free Selection: every dungeon that can actually spawn a Secret Bazaar.
+// Story Dungeons: the fixed relevant.json list, in its original order.
 function availableDungeons() {
   const m = modeDef();
-  if (!m) return state.registry.dungeons;
-  const names = new Set(Object.keys(m.dungeons || {}));
-  return state.registry.dungeons.filter((d) => names.has(d.name));
+  if (!m) return state.dungeons.filter((d) => d.bazaar);
+  const out = [];
+  for (const name of Object.keys(m.dungeons || {})) {
+    const d = state.dungeonByName.get(STORY_ALIASES[name] || name);
+    if (d) out.push(d);
+  }
+  return out;
 }
 
 // Rebuilds the dungeon dropdown for the current mode, keeping the previous
@@ -86,7 +123,7 @@ function rebuildDungeonOptions() {
   if (!d) return false;
   sel.value = d.name;
   state.dungeonName = d.name;
-  state.tableId = d.table;
+  state.folder = d.folder;
   return true;
 }
 
@@ -107,9 +144,9 @@ function applyTeamLock() {
 }
 
 function renderGrid(table) {
-  const inTable = new Set(table.items);
-  // In restricted modes, hide items that can't be obtained in this dungeon.
-  const ids = filterItemIds(table).filter((id) => inTable.has(id));
+  // Items that can never be drawn here are hidden (story item lists may
+  // reference items this dungeon's grab bag doesn't carry).
+  const ids = filterItemIds(table);
   // Drop quantities for items that are no longer selectable (mode/table change).
   const shown = new Set(ids);
   for (const id of [...state.qty.keys()]) {
@@ -147,12 +184,13 @@ function renderGrid(table) {
     qty.type = "number";
     qty.className = "qty";
     qty.min = "0";
-    qty.max = String(MAX_QTY);
     qty.step = "1";
     qty.value = String(state.qty.get(id) || 0);
     row.classList.toggle("qty-zero", parseInt(qty.value, 10) === 0);
+    // No upper cap: the solver bails out with a friendly error when the
+    // state space (positions × quantity combinations) gets too large.
     qty.addEventListener("input", () => {
-      const v = Math.max(0, Math.min(MAX_QTY, parseInt(qty.value, 10) || 0));
+      const v = Math.max(0, Math.trunc(Number(qty.value)) || 0);
       state.qty.set(id, v);
       row.classList.toggle("qty-zero", v === 0);
       queueSolve();
@@ -192,7 +230,7 @@ async function doSolve() {
 
   let table;
   try {
-    table = await ensureTable(state.tableId);
+    table = await ensureTable(state.folder);
   } catch (e) {
     if (token !== state.solveToken) return;
     resultsPanel.hidden = true;
@@ -203,18 +241,35 @@ async function doSolve() {
   if (token !== state.solveToken) return;
 
   const t0 = performance.now();
-  try {
-    const result = solve(table, state.team, reqs);
-    if (token !== state.solveToken) return;
-    errorPanel.hidden = true;
-    resultsPanel.hidden = false;
-    renderResults(result, table, performance.now() - t0);
-  } catch (e) {
-    if (token !== state.solveToken) return;
+  let result = null;
+  let lastError = null;
+  for (const window of WINDOW_STEPS) {
+    try {
+      if (window !== DEFAULT_WINDOW) {
+        table = await ensureTable(state.folder, window);
+      }
+      result = solve(table, state.team, reqs);
+      lastError = null;
+      break;
+    } catch (e) {
+      lastError = e;
+      // No path inside this window — retry with a longer simulated stretch
+      // before giving up (rare: every pool item is drawn constantly).
+      if (e.code !== "no-solution" || window === WINDOW_STEPS[WINDOW_STEPS.length - 1]) {
+        break;
+      }
+    }
+  }
+  if (token !== state.solveToken) return;
+  if (lastError) {
     resultsPanel.hidden = true;
     errorPanel.hidden = false;
-    renderError(e);
+    renderError(lastError);
+    return;
   }
+  errorPanel.hidden = true;
+  resultsPanel.hidden = false;
+  renderResults(result, table, performance.now() - t0);
 }
 
 function summaryText(result) {
@@ -270,7 +325,7 @@ function renderError(e) {
   let detail = e.message || String(e);
   switch (e.code) {
     case "missing-items":
-      title = "Item(s) never appear in this dungeon's table";
+      title = "Item(s) never appear in this dungeon's grab bag";
       detail = (e.missing || []).map((id) => `${itemName(id)} (#${id})`).join(", ");
       break;
     case "no-solution": {
@@ -321,12 +376,12 @@ function showFatal(msg) {
 
 function wireEvents() {
   $("dungeon").addEventListener("change", (e) => {
-    const d = state.registry.dungeons.find((x) => x.name === e.target.value);
+    const d = state.dungeonByName.get(e.target.value);
     if (!d) return;
     state.dungeonName = d.name;
-    state.tableId = d.table;
+    state.folder = d.folder;
     applyTeamLock();
-    void ensureTable(state.tableId).then((table) => {
+    void ensureTable(state.folder).then((table) => {
       renderGrid(table);
       return doSolve();
     });
@@ -339,7 +394,7 @@ function wireEvents() {
     state.mode = e.target.value;
     rebuildDungeonOptions();
     applyTeamLock();
-    void ensureTable(state.tableId).then((table) => {
+    void ensureTable(state.folder).then((table) => {
       renderGrid(table);
       return doSolve();
     });
@@ -349,24 +404,30 @@ function wireEvents() {
 async function init() {
   try { localStorage.removeItem(LEGACY_COSTS_KEY); } catch { /* ignore */ }
   try {
-    [state.registry, state.items, state.relevant] = await Promise.all([
-      loadJson("Data/registry.json"),
+    const [dungeonData, items, relevant] = await Promise.all([
+      loadJson("Data/dungeons.json"),
       loadJson("Data/items.json"),
       loadJson("Data/relevant.json"),
     ]);
+    state.dungeons = dungeonData.dungeons || [];
+    state.seed = parseInt(dungeonData.seed, 16) || DEFAULT_SEED;
+    state.items = items;
+    state.relevant = relevant;
+    state.dungeonByName = new Map(state.dungeons.map((d) => [d.name, d]));
   } catch (e) {
     showFatal(e.message);
     return;
   }
   state.mode = $("mode").value;
   if (!rebuildDungeonOptions()) {
-    showFatal("Data/registry.json contains no dungeons. Import a table with tools/import_table.py first.");
+    showFatal("No selectable dungeons. Run `python tools/export_dungeons.py` to (re)generate " +
+      "Data/dungeons.json from the dungeon_export XML dump.");
     return;
   }
   applyTeamLock();
   wireEvents();
   try {
-    const table = await ensureTable(state.tableId);
+    const table = await ensureTable(state.folder);
     renderGrid(table);
   } catch (e) {
     showFatal(e.message);
