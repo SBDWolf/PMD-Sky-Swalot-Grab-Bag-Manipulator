@@ -306,6 +306,15 @@ select:disabled {
   padding-bottom: 12px;
 }
 
+/* grab bag action column: buy vs eat-gummi */
+.manip-table td.act-buy {
+  color: var(--good);
+}
+
+.manip-table td.act-gummi {
+  color: var(--accent);
+}
+
 .total {
   margin: 14px 0 0;
   font-size: 1.05rem;

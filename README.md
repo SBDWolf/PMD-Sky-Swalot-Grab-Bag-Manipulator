@@ -34,10 +34,22 @@ Both tabs work from the same quicksave PRNG seed.
    Total time: 140  (100 passed turns, 1 partner talk × 40)
    ```
 
-   Each row is one item to collect: the raw number of partner talks, 4-tile
-   dashes (4 turns each) and failed attacks (1 turn each) to perform before
-   talking to Swalot — 0 means that action isn't used. The order of the
-   actions within a row doesn't matter; only the counts matter.
+Each row is one item to collect: the raw number of partner talks, 4-tile
+dashes (4 turns each) and failed attacks (1 turn each) to perform before
+talking to Swalot — 0 means that action isn't used. The order of the
+actions within a row doesn't matter; only the counts matter. Rows are
+grouped in blocks of four for readability.
+
+### Piggybacking gummies onto a bazaar run
+
+If you happen to carry gummies, set a quantity under **Gummies to feed**
+(and the stat / omniboost filter) and the solver interleaves gummi eats
+with the purchases on the same quicksave run — no extra setup. Eating
+consumes the gummi's rolls first, then advances the PRNG like any turn
+(+6/+7/+8/+9 by team size) and costs 1 turn. The results table gains an
+**Action** column (`Buy` in green, `Eat gummi` in gold) and the received
+column shows the item bought or the stat gained. Feeding only gummies (no
+items selected) works too.
 
 ### Gummi Stat Boost tab
 
@@ -216,6 +228,15 @@ python tools/reference_solve.py Data/tables/sky-peak.json --team 4 --items 89:3
 ```
 python tools/reference_gummi.py --count 3 --stat 0
 python tools/reference_gummi.py --count 2 --omni-only
+```
+
+`tools/gummi_positions.py` dumps the raw list of every advance count at which
+eating a gummi lands on a stat (or omniboost) — the raw "good eat" targets,
+not an optimal path:
+
+```
+python tools/gummi_positions.py --stat 0 --count 1000
+python tools/gummi_positions.py --omni-only --count 100
 ```
 
 ## Tests

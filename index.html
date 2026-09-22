@@ -46,6 +46,34 @@
             </select>
           </label>
         </div>
+        <div class="control-row">
+          <label class="control">
+            <span>Gummies to feed</span>
+            <input id="gb-gummies" type="number" min="0" step="1" value="0">
+          </label>
+          <label class="control">
+            <span>Gummi optimize for</span>
+            <select id="gb-stat">
+              <option value="0" selected>Attack</option>
+              <option value="1">Defense</option>
+              <option value="2">Sp. Attack</option>
+              <option value="3">Sp. Defense</option>
+            </select>
+          </label>
+          <label class="control control-check">
+            <span>&nbsp;</span>
+            <span class="checkbox-line">
+              <input type="checkbox" id="gb-omni-only">
+              Omniboost only
+            </span>
+          </label>
+        </div>
+        <p class="hint">
+          Happen to carry gummies? Set a quantity under <b>Gummies to feed</b> and the solver
+          piggybacks gummi eats onto the same quicksave run: between buying items it eats gummies
+          whose outcome matches your target stat (or omniboost). Eating consumes the gummi's rolls
+          first, then advances the PRNG like any turn (+6/+7/+8/+9 by team size).
+        </p>
       </section>
 
       <section class="panel">

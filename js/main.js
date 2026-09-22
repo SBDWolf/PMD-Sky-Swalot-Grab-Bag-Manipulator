@@ -220,13 +220,24 @@ function currentRequirements() {
     .map(([id, q]) => ({ id, qty: q }));
 }
 
+// Grab bag piggyback gummi options (0 gummies = items-only solve).
+function grabBagGummiOpts() {
+  const n = Math.trunc(Number($("gb-gummies").value));
+  return {
+    gummies: Number.isFinite(n) && n > 0 ? n : 0,
+    targetStat: parseInt($("gb-stat").value, 10) || 0,
+    omniOnly: $("gb-omni-only").checked,
+  };
+}
+
 async function doSolve() {
   const token = ++state.solveToken;
   const reqs = currentRequirements();
+  const gummiOpts = grabBagGummiOpts();
   const resultsPanel = $("results-panel");
   const errorPanel = $("error-panel");
 
-  if (reqs.length === 0) {
+  if (reqs.length === 0 && gummiOpts.gummies === 0) {
     resultsPanel.hidden = true;
     errorPanel.hidden = false;
     $("error-body").innerHTML =
@@ -254,7 +265,7 @@ async function doSolve() {
       if (window !== DEFAULT_WINDOW) {
         table = await ensureTable(state.folder, window);
       }
-      result = solve(table, state.team, reqs);
+      result = solve(table, state.team, reqs, gummiOpts);
       lastError = null;
       break;
     } catch (e) {
@@ -283,14 +294,18 @@ function summaryText(result) {
     const a = [];
     if (s.partner > 0) a.push(`P${s.partner}`);
     if (s.turn > 0) a.push(`T${s.turn}`);
-    return `${i + 1}.${a.join("") || "-"} [${s.itemId}@${s.pos}]`;
+    const label = s.action === "gummi"
+      ? `Gummi:${s.omni ? "Omni" : GUMMI_STATS[s.stat]}↑`
+      : s.itemId;
+    return `${i + 1}.${a.join("") || "-"} [${label}@${s.pos}]`;
   }).join(" ");
   return `${state.dungeonName} (team ${result.teamSize}): ${segs} | total ${result.cost}`;
 }
 
 function renderResults(result, table, ms) {
   $("results-title").textContent =
-    `${state.dungeonName}, Team of ${result.teamSize}`;
+    `${state.dungeonName}, Team of ${result.teamSize}` +
+    (result.gummies > 0 ? ` + ${result.gummies} gummi${result.gummies === 1 ? "" : "es"}` : "");
   const body = $("results-body");
   body.textContent = "";
 
@@ -298,7 +313,7 @@ function renderResults(result, table, ms) {
   manipTable.className = "manip-table";
   const thead = document.createElement("thead");
   const htr = document.createElement("tr");
-  for (const h of ["Partner talks", "4-tile dashes", "Attacks", "Item received"]) {
+  for (const h of ["Partner talks", "4-tile dashes", "Attacks", "Action", "Received"]) {
     const th = document.createElement("th");
     th.textContent = h;
     htr.appendChild(th);
@@ -308,10 +323,22 @@ function renderResults(result, table, ms) {
   const tbody = document.createElement("tbody");
   result.segments.forEach((s, i) => {
     const tr = document.createElement("tr");
-    for (const v of [s.partner, Math.floor(s.turn / 4), s.turn % 4, itemName(s.itemId)]) {
+    const isGummi = s.action === "gummi";
+    const received = isGummi
+      ? (s.omni ? "Omniboost" : `${GUMMI_STATS[s.stat]} ↑`)
+      : itemName(s.itemId);
+    const cells = [
+      [s.partner, null],
+      [Math.floor(s.turn / 4), null],
+      [s.turn % 4, null],
+      [isGummi ? "Eat gummi" : "Buy", isGummi ? "act-gummi" : "act-buy"],
+      [received, isGummi ? "act-gummi" : null],
+    ];
+    for (const [v, cls] of cells) {
       const td = document.createElement("td");
       td.textContent = String(v);
       if (typeof v === "number" && v === 0) td.classList.add("zero");
+      if (cls) td.classList.add(cls);
       tr.appendChild(td);
     }
     if ((i + 1) % 4 === 0) tr.classList.add("group-end"); // gap every 4 rows
@@ -319,6 +346,18 @@ function renderResults(result, table, ms) {
   });
   manipTable.appendChild(tbody);
   body.appendChild(manipTable);
+
+  const total = document.createElement("p");
+  total.className = "total";
+  const parts = [`${result.totalTurns} passed turns`];
+  if (result.totalPartners > 0) {
+    parts.push(`${result.totalPartners} partner talk${result.totalPartners === 1 ? "" : "s"} × 40`);
+  }
+  if (result.gummies > 0) {
+    parts.push(`${result.gummies} gummi${result.gummies === 1 ? "" : "es"} eaten × 1`);
+  }
+  total.textContent = `Total time: ${result.cost}  (${parts.join(", ")})`;
+  body.appendChild(total);
 }
 
 function gcd(a, b) {
@@ -405,6 +444,20 @@ function wireEvents() {
       renderGrid(table);
       return doSolve();
     });
+  });
+  // grab bag gummi piggyback controls
+  const syncStatLock = () => {
+    const n = Math.trunc(Number($("gb-gummies").value)) || 0;
+    $("gb-stat").disabled = n === 0 || $("gb-omni-only").checked;
+  };
+  $("gb-gummies").addEventListener("input", () => {
+    syncStatLock();
+    queueSolve();
+  });
+  $("gb-stat").addEventListener("change", queueSolve);
+  $("gb-omni-only").addEventListener("change", () => {
+    syncStatLock();
+    queueSolve();
   });
 }
 
