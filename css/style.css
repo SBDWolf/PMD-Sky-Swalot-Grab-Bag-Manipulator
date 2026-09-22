@@ -143,6 +143,11 @@ main {
   flex-wrap: wrap;
 }
 
+/* stacked control rows (e.g. dungeon row above the gummi row) */
+.control-row + .control-row {
+  margin-top: 16px;
+}
+
 .control {
   display: flex;
   flex-direction: column;
