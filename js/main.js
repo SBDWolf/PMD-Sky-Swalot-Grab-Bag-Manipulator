@@ -1,13 +1,19 @@
 // Secret Bazaar Manipulator — UI controller.
 //
-// Items are NOT read from precomputed tables: js/rng.js simulates the
-// dungeon PRNG on the fly from the floor XML's grab bag list
-// (dungeon_export/<folder>/floor_001.xml, ItemList type="Unk1"), so every
-// dungeon of the game is supported. Only dungeons whose floors can spawn a
-// Secret Bazaar (hidden_stairs != 0 with unk_hidden_stairs 0/255) are
-// selectable in Free Selection; Story Dungeons keeps its fixed list.
+// Two manipulation tabs share the same quicksave PRNG seed:
+//   * Grab Bag — items are NOT read from precomputed tables: js/rng.js
+//     simulates the dungeon PRNG on the fly from the floor XML's grab bag
+//     list (dungeon_export/<folder>/floor_001.xml, ItemList type="Unk1"), so
+//     every dungeon of the game is supported. Only dungeons whose floors can
+//     spawn a Secret Bazaar (hidden_stairs != 0 with unk_hidden_stairs
+//     0/255) are selectable in Free Selection; Story Dungeons keeps its
+//     fixed list.
+//   * Gummi Stat Boost — dungeon-independent (js/gummi.js): position the
+//     PRNG with partner moves (+3/+4/+5 steps) and feed gummies that must
+//     land on a stat boost / omniboost.
 import { solve } from "./solver.js";
 import { parseBazaarList, generateTable, DEFAULT_SEED, DEFAULT_WINDOW } from "./rng.js";
+import { solveGummi, GUMMI_STATS } from "./gummi.js";
 
 const $ = (id) => document.getElementById(id);
 
@@ -300,7 +306,7 @@ function renderResults(result, table, ms) {
   thead.appendChild(htr);
   manipTable.appendChild(thead);
   const tbody = document.createElement("tbody");
-  for (const s of result.segments) {
+  result.segments.forEach((s, i) => {
     const tr = document.createElement("tr");
     for (const v of [s.partner, Math.floor(s.turn / 4), s.turn % 4, itemName(s.itemId)]) {
       const td = document.createElement("td");
@@ -308,8 +314,9 @@ function renderResults(result, table, ms) {
       if (typeof v === "number" && v === 0) td.classList.add("zero");
       tr.appendChild(td);
     }
+    if ((i + 1) % 4 === 0) tr.classList.add("group-end"); // gap every 4 rows
     tbody.appendChild(tr);
-  }
+  });
   manipTable.appendChild(tbody);
   body.appendChild(manipTable);
 }
@@ -401,6 +408,165 @@ function wireEvents() {
   });
 }
 
+// ---- Tabs ---------------------------------------------------------------
+
+function wireTabs() {
+  const tabs = document.querySelectorAll("#tabs .tab");
+  for (const btn of tabs) {
+    btn.addEventListener("click", () => {
+      if (btn.classList.contains("is-active")) return;
+      for (const b of tabs) b.classList.toggle("is-active", b === btn);
+      for (const page of document.querySelectorAll(".tab-page")) {
+        page.hidden = page.id !== `page-${btn.dataset.tab}`;
+      }
+    });
+  }
+}
+
+// ---- Gummi Stat Boost tab ----------------------------------------------
+
+const gummi = { timer: null };
+
+function queueGummiSolve() {
+  clearTimeout(gummi.timer);
+  gummi.timer = setTimeout(() => { void doGummiSolve(); }, 250);
+}
+
+function wireGummiControls() {
+  $("gummi-count").addEventListener("input", queueGummiSolve);
+  $("gummi-start").addEventListener("input", queueGummiSolve);
+  $("gummi-partner").addEventListener("change", queueGummiSolve);
+  $("gummi-stat").addEventListener("change", queueGummiSolve);
+  $("gummi-omni-only").addEventListener("change", (e) => {
+    $("gummi-stat").disabled = e.target.checked;
+    queueGummiSolve();
+  });
+}
+
+async function doGummiSolve() {
+  const resultsPanel = $("gummi-results-panel");
+  const errorPanel = $("gummi-error-panel");
+  const count = Math.trunc(Number($("gummi-count").value));
+
+  if (!Number.isFinite(count) || count < 1) {
+    resultsPanel.hidden = true;
+    errorPanel.hidden = false;
+    $("gummi-error-body").innerHTML =
+      '<p class="hint">Set how many gummies you want to feed.</p>';
+    return;
+  }
+
+  const t0 = performance.now();
+  const startRaw = Math.trunc(Number($("gummi-start").value));
+  const opts = {
+    targetStat: parseInt($("gummi-stat").value, 10) || 0,
+    omniOnly: $("gummi-omni-only").checked,
+    seed: state.seed,
+    start: Number.isFinite(startRaw) && startRaw > 0 ? startRaw : 0,
+    partner: $("gummi-partner").value === "wait" ? "wait" : "together",
+  };
+  try {
+    let result;
+    try {
+      result = solveGummi(count, opts);
+    } catch (e) {
+      // Path didn't fit the default simulated window — retry once longer.
+      if (e.code !== "no-solution") throw e;
+      result = solveGummi(count, { ...opts, window: Math.min(60_000, (e.window || 16_000) * 4) });
+    }
+    resultsPanel.hidden = false;
+    errorPanel.hidden = true;
+    renderGummiResults(result, performance.now() - t0);
+  } catch (e) {
+    resultsPanel.hidden = true;
+    errorPanel.hidden = false;
+    renderGummiError(e);
+  }
+}
+
+function renderGummiResults(result, ms) {
+  const goal = result.omniOnly
+    ? "omniboost only"
+    : `${GUMMI_STATS[result.targetStat]} (or omniboost)`;
+  const wait = result.partner === "wait";
+  $("gummi-results-title").textContent =
+    `Feeding ${result.count} gummi${result.count === 1 ? "" : "es"} — ${goal}` +
+    (wait ? " (Wait there)" : "");
+  const body = $("gummi-results-body");
+  body.textContent = "";
+
+  const tbl = document.createElement("table");
+  tbl.className = "manip-table";
+  const thead = document.createElement("thead");
+  const htr = document.createElement("tr");
+  // Move columns depend on the partner mode; the two debug columns stay in
+  // the DOM (the data is kept) but hidden.
+  const moveHeads = wait ? ["Swaps", "Turn passes"] : ["Swaps", "Walk-aways", "Stands"];
+  for (const [h, hidden] of [
+    ...moveHeads.map((h) => [h, false]),
+    ["Boost", false],
+    ["Rand16Bit", true],
+    ["Advances", true],
+  ]) {
+    const th = document.createElement("th");
+    th.textContent = h;
+    th.hidden = hidden;
+    htr.appendChild(th);
+  }
+  thead.appendChild(htr);
+  tbl.appendChild(thead);
+  const tbody = document.createElement("tbody");
+  result.segments.forEach((s, i) => {
+    const tr = document.createElement("tr");
+    const moveCells = wait ? [s.n3, s.n4] : [s.n3, s.n4, s.n5];
+    [...moveCells,
+      s.omni ? "Omniboost" : `${GUMMI_STATS[s.stat]} ↑`,
+      s.firstRoll,
+      s.advances,
+    ].forEach((v, ci) => {
+      const td = document.createElement("td");
+      td.textContent = String(v);
+      if (typeof v === "number" && v === 0) td.classList.add("zero");
+      if (ci >= moveHeads.length + 1) td.hidden = true; // debug columns
+      tr.appendChild(td);
+    });
+    if ((i + 1) % 4 === 0) tr.classList.add("group-end"); // gap every 4 rows
+    tbody.appendChild(tr);
+  });
+  tbl.appendChild(tbody);
+  body.appendChild(tbl);
+
+  const total = document.createElement("p");
+  total.className = "total";
+  total.textContent =
+    `Total time: ${result.cost} turns ` +
+    `(${result.totalMoves} moves, ${result.count} gumm${result.count === 1 ? "y" : "ies"} eaten)`;
+  body.appendChild(total);
+}
+
+function renderGummiError(e) {
+  const body = $("gummi-error-body");
+  body.textContent = "";
+  const h = document.createElement("p");
+  h.className = "error-title";
+  const d = document.createElement("p");
+  d.className = "error-detail";
+  let title = "Something went wrong.";
+  let detail = e.message || String(e);
+  if (e.code === "too-large") {
+    title = "That many gummies is too large for the solver";
+    detail = "The state space is capped to keep solving fast. Feed fewer gummies.";
+  } else if (e.code === "no-solution") {
+    title = "No manipulation exists for this combination";
+    detail = "The PRNG never lands on an acceptable boost within the simulated window. " +
+      "Try fewer gummies or a different target stat.";
+  }
+  h.textContent = title;
+  d.textContent = detail;
+  body.appendChild(h);
+  body.appendChild(d);
+}
+
 async function init() {
   try { localStorage.removeItem(LEGACY_COSTS_KEY); } catch { /* ignore */ }
   try {
@@ -426,6 +592,9 @@ async function init() {
   }
   applyTeamLock();
   wireEvents();
+  wireTabs();
+  wireGummiControls();
+  void doGummiSolve();
   try {
     const table = await ensureTable(state.folder);
     renderGrid(table);

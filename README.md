@@ -4,10 +4,16 @@ The bulk of this web app has been AI-generated (by a local model). It has been t
 
 -----
 
-A small static web tool (no build step, no backend) that computes the **fastest
-Secret Bazaar (Swalot grab bag) RNG manipulations** from externally stored item
-tables. Pick a dungeon, pick the items you want, and it outputs the fastest
-sequence of dashing/attacking/partner talks that lands you on each item.
+A small static web tool (no build step, no backend) that computes **fastest
+quicksave RNG manipulations** for PMD: Explorers of Sky. It has two tabs:
+
+* **Grab Bag** — Secret Bazaar (Swalot) manipulations. Pick a dungeon, pick
+  the items you want, and it outputs the fastest sequence of
+  dashing/attacking/partner talks that lands you on each item.
+* **Gummi Stat Boost** — feed N gummies so every one lands on a stat boost
+  (or omniboost) of your choice, by positioning the PRNG with partner moves.
+
+Both tabs work from the same quicksave PRNG seed.
 
 ## How to use it
 
@@ -15,7 +21,7 @@ sequence of dashing/attacking/partner talks that lands you on each item.
 2. Pick a **mode**:
    * **Story Dungeons** (default) — only the story dungeons, only the story
      item list, and the team size is locked per dungeon (greyed out).
-   * **Free Selection** — all dungeons, all items, any team size.
+   * **Free Selection** — all bazaar-capable dungeons, all items, any team size.
 3. Set a quantity next to each item you want (0 = skip).
 4. The **Fastest manipulation** panel updates automatically:
 
@@ -32,9 +38,40 @@ sequence of dashing/attacking/partner talks that lands you on each item.
    dashes (4 turns each) and failed attacks (1 turn each) to perform before
    talking to Swalot — 0 means that action isn't used. The order of the
    actions within a row doesn't matter; only the counts matter.
-5. **Copy summary** puts a compact one-liner (e.g.
-   `Sky Peak (team 4): 1.T45 [89@406] 2.T8 [89@481] 3.T47P1 [89@910] | total 140`)
-   on your clipboard.
+
+### Gummi Stat Boost tab
+
+Pick how many gummies to feed and which stat to optimize for (or tick
+**Omniboost only**). Two partner modes change the available move primitives:
+**Let's go together** (the partner follows you) and **Wait there** (the
+partner stays put — swapping is still +3, and every other turn pass, eating
+included, is +4). If you have already performed some turns before starting,
+enter the PRNG advances they cost under **Advances before start**. The output
+lists, for every gummi, how many moves to perform before eating it:
+
+```
+Swaps | Walk-aways | Stands | Boost     | Rand16Bit | Advances
+1     | 0          | 3      | Omniboost | 1443      | 18
+0     | 0          | 2      | Attack ↑  | 1159      | 35
+Total time: 9 turns (6 moves, 3 gummies eaten)
+```
+
+Two debug columns come with each row: **Rand16Bit** is the raw 16-bit value
+(decimal) that gummi's first roll — the 25% outcome roll — returns, drawn one
+PRNG step after **Advances**, which counts the PRNG steps since the quicksave
+at the moment you eat that gummi. (They are hidden by default; the data is
+kept in the results.)
+
+Every action costs 1 turn and advances the dungeon PRNG by a fixed number of
+steps. **Let's go together** (the partner follows you): swapping places
+**+3**, walking away **+4**, standing still or walking next to them **+5** —
+and eating a gummi counts as a stand (**+5**). **Wait there** (the partner
+stays put): swapping is still **+3**, and every other turn pass — walking
+around, standing, eating — is **+4**. Either way the gummi's rolls happen
+first and the eat turn's own advance is applied after them. The order of
+moves within a row doesn't matter; only the counts matter. This manipulation
+is dungeon-independent — it only needs the quicksave and a partner next to
+you.
 
 ### Local run
 
@@ -95,6 +132,29 @@ in the browser; bigger combinations just get a friendly "too large" error. If
 no path exists within the simulated window the window is automatically
 extended (1500 → 6000 draws) before giving up.
 
+### Gummi roll model
+
+Eating a gummi rolls first, and the eat turn's own advance (it counts as a
+stand, **+5**) is applied after the rolls. The rolls consume 1–3 steps:
+
+1. `DungeonRandOutcome(25)` — a boost happens at all (25%)? A failed roll
+   stops here (1 roll total).
+2. `DungeonRandInt(16) == 10` → **omniboost**, all four stats (2 rolls total).
+3. Otherwise `DungeonRandInt(4)`: 0/1/2/3 = Attack / Defense / Sp. Attack /
+   Sp. Defense (3 rolls total).
+4. Then the eat turn's own advance: **+5** in Let's go together (a stand),
+   **+4** in Wait there (any non-swap turn pass).
+
+So a gummi eaten after `n` PRNG advances rolls from the state at advance
+`n` (its first roll reads the state at advance `n+1`), and the next action
+starts at advance `n + rolls + eat-advance`.
+
+The gummi solver is the same exact forward DP, over raw LCG steps:
+`(steps consumed, gummies fed)`, moves +3/+4/+5 (1 turn each) and eats that
+must land on an acceptable outcome. The simulated window scales with the
+number of gummies and extends automatically if the first attempt finds no
+path.
+
 ## Dungeons
 
 * **Story Dungeons** mode keeps its fixed list (`Data/relevant.json`), with
@@ -151,6 +211,13 @@ solver (useful for double-checking results without the browser):
 python tools/reference_solve.py Data/tables/sky-peak.json --team 4 --items 89:3
 ```
 
+`tools/reference_gummi.py` is the same kind of reference for the gummi tab:
+
+```
+python tools/reference_gummi.py --count 3 --stat 0
+python tools/reference_gummi.py --count 2 --omni-only
+```
+
 ## Tests
 
 * `test/solver-test.html` re-runs 13 fixed cases against the DP solver and
@@ -160,6 +227,8 @@ python tools/reference_solve.py Data/tables/sky-peak.json --team 4 --items 89:3
   expected values with the reference tool and update `test/solver-test.js`.
 * `test/rng-test.html` validates the on-the-fly PRNG simulation: it must
   reproduce all six precomputed tables exactly (items **and** PRNG states).
+* `test/gummi-test.html` validates the gummi solver against
+  `tools/reference_gummi.py` (6 cases + a full replay of every emitted path).
 
 ## Layout
 
@@ -168,7 +237,8 @@ index.html                  the tool
 css/style.css               styles
 js/solver.js                the DP solver (no dependencies)
 js/rng.js                   the on-the-fly grab bag PRNG simulation
-js/main.js                  UI controller
+js/gummi.js                 the gummi stat-boost solver
+js/main.js                  UI controller (both tabs)
 Data/dungeons.json          dungeon list + bazaar flags (generated)
 dungeon_export/             floor XML dump (grab bag lists read live)
 Data/tables/*.json          legacy precomputed tables (regression data)
@@ -181,7 +251,9 @@ tools/export_dungeons.py    dungeon_export scan → Data/dungeons.json (bazaar f
 tools/import_table.py       legacy .txt → JSON table importer
 tools/import_items.py       item-names.txt → items.json importer
 tools/reference_solve.py    Python reference DP solver
+tools/reference_gummi.py    Python reference gummi solver
 test/solver-test.html       in-browser solver self-test
 test/rng-test.html          in-browser PRNG simulation self-test
+test/gummi-test.html        in-browser gummi solver self-test
 Examples/                   original example script (kept for reference)
 ```
