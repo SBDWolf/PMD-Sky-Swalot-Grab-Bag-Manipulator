@@ -551,7 +551,7 @@ function renderGummiResults(result, ms) {
   const htr = document.createElement("tr");
   // Move columns depend on the partner mode; the two debug columns stay in
   // the DOM (the data is kept) but hidden.
-  const moveHeads = wait ? ["Swaps", "Turn passes"] : ["Swaps", "Walk-aways", "Stands"];
+  const moveHeads = wait ? ["Swaps", "Turn passes"] : ["Swaps", "Walk-aways", "Turn passes"];
   for (const [h, hidden] of [
     ...moveHeads.map((h) => [h, false]),
     ["Boost", false],
