@@ -536,11 +536,11 @@ async function doGummiSolve() {
 
 function renderGummiResults(result, ms) {
   const goal = result.omniOnly
-    ? "omniboost only"
-    : `${GUMMI_STATS[result.targetStat]} (or omniboost)`;
+    ? "Omniboost only"
+    : `optimizing ${GUMMI_STATS[result.targetStat]} (or Omniboost)`;
   const wait = result.partner === "wait";
   $("gummi-results-title").textContent =
-    `Feeding ${result.count} gummi${result.count === 1 ? "" : "es"} — ${goal}` +
+    `Feeding ${result.count} gummi${result.count === 1 ? "" : "es"}, ${goal}` +
     (wait ? " (Wait there)" : "");
   const body = $("gummi-results-body");
   body.textContent = "";
@@ -570,9 +570,9 @@ function renderGummiResults(result, ms) {
     const tr = document.createElement("tr");
     const moveCells = wait ? [s.n3, s.n4] : [s.n3, s.n4, s.n5];
     [...moveCells,
-      s.omni ? "Omniboost" : `${GUMMI_STATS[s.stat]} ↑`,
-      s.firstRoll,
-      s.advances,
+    s.omni ? "Omniboost" : `${GUMMI_STATS[s.stat]} ↑`,
+    s.firstRoll,
+    s.advances,
     ].forEach((v, ci) => {
       const td = document.createElement("td");
       td.textContent = String(v);
