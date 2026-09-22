@@ -27,6 +27,19 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from import_table import LINE_RE  # noqa: E402
 
+STATS_T = ("Attack", "Defense", "Sp. Attack", "Sp. Defense")
+
+MULT = 1566083941
+MASK32 = 0xFFFFFFFF
+
+
+def lcg(s: int) -> int:
+    return (MULT * s + 1) & MASK32
+
+
+def scaled(raw16: int, high: int) -> int:
+    return (raw16 * high) >> 16
+
 
 def load_table(path):
     """Load items (and rng sequence when available) from a .txt or .json table."""
@@ -48,16 +61,37 @@ def load_table(path):
     return items, rngs
 
 
-def solve(items, team, reqs, c_partner=40, c_turn=1, c_collect=0):
+def gummi_outcome(state):
+    """(boosted, omni, stat, rolls) for a gummi whose rolls start at `state`."""
+    s = lcg(state)
+    if scaled(s >> 16, 100) >= 25:
+        return (False, False, None, 1)
+    s = lcg(s)
+    if scaled(s >> 16, 16) == 10:
+        return (True, True, None, 2)
+    s = lcg(s)
+    return (True, False, scaled(s >> 16, 4), 3)
+
+
+def solve(items, team, reqs, c_partner=40, c_turn=1, c_collect=0,
+          c_gummi=0, gummies=0, target=0, omni_only=False, rngs=None):
     """
     Layered DP over (position, remaining-qty-vector). All transitions advance
     the position strictly, so one forward pass is an exact shortest path.
 
+    Gummies (fed between item purchases) join the requirement vector as a
+    pseudo item (id -1): eating at position i consumes rolls_i steps first
+    (1/2/3 by outcome), then the eat turn passes like any turn (+t).
+
     Returns (total_cost, segments, total_turns, total_partners) where each
     segment is (partner_count, turn_count, item_id, collected_position).
+    Gummi segments carry item_id None and (omni, stat) extras.
     """
     N = len(items)
     t = 5 + team  # turn advance: 6/7/8/9
+    reqs = list(reqs)
+    if gummies > 0:
+        reqs = reqs + [(-1, gummies)]
     S = 1
     for _, q in reqs:
         S *= q + 1
@@ -70,6 +104,19 @@ def solve(items, team, reqs, c_partner=40, c_turn=1, c_collect=0):
         acc *= q + 1
     qty = [q for _, q in reqs]
     req_index = {i: k for k, (i, _) in enumerate(reqs)}
+    gummi_dim = req_index.get(-1)
+    gummi_stride = stride[gummi_dim] if gummi_dim is not None else 0
+
+    rolls_at = [0] * N
+    gummi_ok_at = [0] * N
+    if gummies > 0:
+        if not rngs or len(rngs) < N:
+            raise SystemExit("ERROR: gummi feeding needs the table's PRNG states (rng).")
+        for i in range(N):
+            boosted, omni, stat, rolls = gummi_outcome(int(rngs[i], 16))
+            rolls_at[i] = rolls
+            ok = boosted and (omni if omni_only else (omni or stat == target))
+            gummi_ok_at[i] = 1 if ok else 0
 
     INF = float("inf")
     start_idx = sum(q * st for q, st in zip(qty, stride))  # full remaining vector
@@ -101,6 +148,9 @@ def solve(items, team, reqs, c_partner=40, c_turn=1, c_collect=0):
             k = req_index.get(items[i], -1)
             if k >= 0 and (idx // stride[k]) % (qty[k] + 1) > 0:
                 relax(i + 3, idx - stride[k], c + c_collect, key, 2)
+            if gummies > 0 and gummi_ok_at[i] and (idx // gummi_stride) % (gummies + 1) > 0:
+                # eat: gummi rolls first, then the eat turn's own advance (+t)
+                relax(i + rolls_at[i] + t, idx - gummi_stride, c + c_gummi, key, 3)
             relax(i + 3, idx, c + c_partner, key, 0)
             relax(i + t, idx, c + c_turn, key, 1)
 
@@ -132,10 +182,23 @@ def solve(items, team, reqs, c_partner=40, c_turn=1, c_collect=0):
         elif action == 1:
             cur_t += 1
         else:
-            segments.append((cur_p, cur_t, items[i], i + 1))
+            rng = rngs[i] if rngs and i < len(rngs) else None
+            if action == 3:  # eat gummi
+                boosted, omni, stat, _rolls = gummi_outcome(int(rng, 16))
+                segments.append({
+                    "partner": cur_p, "turn": cur_t, "action": "gummi",
+                    "item": None, "omni": omni, "stat": None if omni else stat,
+                    "pos": i + 1, "rng": rng,
+                })
+            else:  # collect
+                segments.append({
+                    "partner": cur_p, "turn": cur_t, "action": "collect",
+                    "item": items[i], "omni": False, "stat": None,
+                    "pos": i + 1, "rng": rng,
+                })
             cur_p = cur_t = 0
-    total_turns = sum(s[1] for s in segments)
-    total_partners = sum(s[0] for s in segments)
+    total_turns = sum(s["turn"] for s in segments)
+    total_partners = sum(s["partner"] for s in segments)
     return c, segments, total_turns, total_partners
 
 
@@ -143,11 +206,17 @@ def main():
     ap = argparse.ArgumentParser(description="Reference Secret Bazaar manip solver.")
     ap.add_argument("table", help="path to a .txt (original format) or .json (Data/tables) file")
     ap.add_argument("--team", type=int, required=True, choices=(1, 2, 3, 4))
-    ap.add_argument("--items", action="append", required=True, metavar="ID:QTY",
+    ap.add_argument("--items", action="append", default=[], metavar="ID:QTY",
                     help="required item (repeatable), e.g. --items 89:3")
+    ap.add_argument("--gummies", type=int, default=0,
+                    help="gummies to feed piggybacked onto the same run")
+    ap.add_argument("--stat", type=int, default=0, choices=(0, 1, 2, 3),
+                    help="gummi stat to optimize for (0 Atk, 1 Def, 2 SpA, 3 SpD)")
+    ap.add_argument("--omni-only", action="store_true")
     ap.add_argument("--partner-cost", type=int, default=40)
     ap.add_argument("--turn-cost", type=int, default=1)
     ap.add_argument("--collect-cost", type=int, default=0)
+    ap.add_argument("--gummi-cost", type=int, default=0)
     args = ap.parse_args()
 
     reqs = []
@@ -161,20 +230,36 @@ def main():
         reqs.append((i, q))
 
     items, rngs = load_table(args.table)
-    missing = sorted({i for i, _ in reqs} - set(items))
+    missing = sorted({i for i, _ in reqs if i >= 0} - set(items))
     if missing:
         raise SystemExit(f"ERROR: item(s) {missing} never appear in this table.")
+    if not reqs and args.gummies < 1:
+        raise SystemExit("ERROR: no requirements given (--items / --gummies).")
 
     c, segments, total_turns, total_partners = solve(
-        items, args.team, reqs, args.partner_cost, args.turn_cost, args.collect_cost
+        items, args.team, reqs, args.partner_cost, args.turn_cost, args.collect_cost,
+        args.gummi_cost, args.gummies, args.stat, args.omni_only, rngs,
     )
     print(f"table={Path(args.table).name} team={args.team} advance={5 + args.team}")
     print(f"requirements: " + ", ".join(f"{i}x{q}" for i, q in reqs))
     print(f"cost={c} (turns={total_turns}, partners={total_partners})")
-    for n, (p, t_, item, pos) in enumerate(segments, 1):
-        rng = rngs[pos - 1] if pos - 1 < len(rngs) else "?"
-        print(f"  {n}. partner x{p}, turn x{t_} -> collect {item} at position {pos} (PRNG {rng})")
-    seg_str = "|".join(f"{p}/{t_}/{item}/{pos}" for p, t_, item, pos in segments)
+    for n, s in enumerate(segments, 1):
+        if s["action"] == "gummi":
+            outcome = "Omniboost" if s["omni"] else STATS_T[s["stat"]]
+            print(f"  {n}. partner x{s['partner']}, turn x{s['turn']}"
+                  f" -> eat gummi -> {outcome} at position {s['pos']} (PRNG {s['rng']})")
+        else:
+            print(f"  {n}. partner x{s['partner']}, turn x{s['turn']}"
+                  f" -> collect {s['item']} at position {s['pos']} (PRNG {s['rng']})")
+    seg_str = "|".join(
+        (
+            f"{s['partner']}/{s['turn']}/"
+            + (f"G/{-1 if s['omni'] else s['stat']}" if s["action"] == "gummi"
+               else f"{s['item']}/0")
+            + f"/{s['pos']}"
+        )
+        for s in segments
+    )
     print(f"MACHINE cost={c} segs={seg_str}")
 
 

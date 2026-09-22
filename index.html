@@ -16,51 +16,140 @@
       if you need more information on how these work</p>
   </header>
 
+  <nav class="tabs" id="tabs">
+    <button type="button" class="tab is-active" data-tab="grabbag">Grab Bag</button>
+    <button type="button" class="tab" data-tab="gummi">Gummi Stat Boost</button>
+  </nav>
+
   <main>
-    <section class="panel controls-panel">
-      <div class="control-row">
-        <label class="control">
-          <span>Dungeon</span>
-          <select id="dungeon"></select>
-        </label>
-        <label class="control">
-          <span>Team size</span>
-          <select id="team">
-            <option value="1">1 member</option>
-            <option value="2">2 members</option>
-            <option value="3">3 members</option>
-            <option value="4" selected>4 members</option>
-          </select>
-        </label>
-        <label class="control">
-          <span>Mode</span>
-          <select id="mode">
-            <option value="story" selected>Story Dungeons</option>
-            <option value="free">Free Selection</option>
-          </select>
-        </label>
-      </div>
-    </section>
+    <div class="tab-page" id="page-grabbag">
+      <section class="panel controls-panel">
+        <div class="control-row">
+          <label class="control">
+            <span>Dungeon</span>
+            <select id="dungeon"></select>
+          </label>
+          <label class="control">
+            <span>Team size</span>
+            <select id="team">
+              <option value="1">1 member</option>
+              <option value="2">2 members</option>
+              <option value="3">3 members</option>
+              <option value="4" selected>4 members</option>
+            </select>
+          </label>
+          <label class="control">
+            <span>Mode</span>
+            <select id="mode">
+              <option value="story" selected>Story Dungeons</option>
+              <option value="free">Free Selection</option>
+            </select>
+          </label>
+        </div>
+        <div class="control-row">
+          <label class="control">
+            <span>Gummies to feed</span>
+            <input id="gb-gummies" type="number" min="0" step="1" value="0">
+          </label>
+          <label class="control">
+            <span>Gummi optimize for</span>
+            <select id="gb-stat">
+              <option value="0" selected>Attack</option>
+              <option value="1">Defense</option>
+              <option value="2">Sp. Attack</option>
+              <option value="3">Sp. Defense</option>
+            </select>
+          </label>
+          <label class="control control-check">
+            <span>&nbsp;</span>
+            <span class="checkbox-line">
+              <input type="checkbox" id="gb-omni-only">
+              Omniboost only
+            </span>
+          </label>
+        </div>
+        <p class="hint">
+          Happen to carry gummies? Set a quantity under <b>Gummies to feed</b> and the solver
+          piggybacks gummi eats onto the same quicksave run: between buying items it eats gummies
+          whose outcome matches your target stat (or omniboost).
+        </p>
+      </section>
 
-    <section class="panel">
-      <div class="panel-head">
-        <h2>Items</h2>
-        <span class="hint">set a quantity for each item you want</span>
-      </div>
-      <div id="item-grid" class="item-grid"></div>
-    </section>
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Items</h2>
+          <span class="hint">set a quantity for each item you want</span>
+        </div>
+        <div id="item-grid" class="item-grid"></div>
+      </section>
 
-    <section class="panel" id="results-panel" hidden>
-      <div class="panel-head">
-        <h2 id="results-title">Fastest manipulation</h2>
-      </div>
-      <div id="results-body"></div>
-    </section>
+      <section class="panel" id="results-panel" hidden>
+        <div class="panel-head">
+          <h2 id="results-title">Fastest manipulation</h2>
+        </div>
+        <div id="results-body"></div>
+      </section>
 
-    <section class="panel error-panel" id="error-panel" hidden>
-      <div id="error-body"></div>
-    </section>
+      <section class="panel error-panel" id="error-panel" hidden>
+        <div id="error-body"></div>
+      </section>
+    </div>
 
+    <div class="tab-page" id="page-gummi" hidden>
+      <section class="panel controls-panel">
+        <div class="control-row">
+          <label class="control">
+            <span>Gummies to feed</span>
+            <input id="gummi-count" type="number" min="1" step="1" value="1">
+          </label>
+          <label class="control">
+            <span>Advances before start</span>
+            <input id="gummi-start" type="number" min="0" step="1" value="0">
+          </label>
+          <label class="control">
+            <span>Partner</span>
+            <select id="gummi-partner">
+              <option value="together" selected>Let's go together</option>
+              <option value="wait">Wait there</option>
+            </select>
+          </label>
+          <label class="control">
+            <span>Optimize for</span>
+            <select id="gummi-stat">
+              <option value="0" selected>Attack</option>
+              <option value="1">Defense</option>
+              <option value="2">Sp. Attack</option>
+              <option value="3">Sp. Defense</option>
+            </select>
+          </label>
+          <label class="control control-check">
+            <span>&nbsp;</span>
+            <span class="checkbox-line">
+              <input type="checkbox" id="gummi-omni-only">
+              Omniboost only
+            </span>
+          </label>
+        </div>
+        <p class="hint">
+          Assumes that you are in a boss fight with one partner and the boss has been Stun Seeded.
+          Every action costs 1 turn. Each row lists the moves to perform before eating
+          that gummi. The order of moves within a row doesn't matter.<br>
+          Already performed some turns? Enter the PRNG advances they cost under <b>Advances before start</b>.
+          For example: throwing a Stun Seed from a quicksave with partner on wait there costs 5.
+        </p>
+      </section>
+
+      <section class="panel" id="gummi-results-panel" hidden>
+        <div class="panel-head">
+          <h2 id="gummi-results-title">Gummi manipulation</h2>
+        </div>
+        <div id="gummi-results-body"></div>
+      </section>
+
+      <section class="panel error-panel" id="gummi-error-panel" hidden>
+        <div id="gummi-error-body"></div>
+      </section>
+    </div>
   </main>
 
   <script type="module" src="js/main.js"></script>
