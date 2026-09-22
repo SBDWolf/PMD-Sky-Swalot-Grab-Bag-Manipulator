@@ -74,7 +74,7 @@ def gummi_outcome(state):
 
 
 def solve(items, team, reqs, c_partner=40, c_turn=1, c_collect=0,
-          c_gummi=1, gummies=0, target=0, omni_only=False, rngs=None):
+          c_gummi=0, gummies=0, target=0, omni_only=False, rngs=None):
     """
     Layered DP over (position, remaining-qty-vector). All transitions advance
     the position strictly, so one forward pass is an exact shortest path.
@@ -216,7 +216,7 @@ def main():
     ap.add_argument("--partner-cost", type=int, default=40)
     ap.add_argument("--turn-cost", type=int, default=1)
     ap.add_argument("--collect-cost", type=int, default=0)
-    ap.add_argument("--gummi-cost", type=int, default=1)
+    ap.add_argument("--gummi-cost", type=int, default=0)
     args = ap.parse_args()
 
     reqs = []

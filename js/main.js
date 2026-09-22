@@ -353,9 +353,6 @@ function renderResults(result, table, ms) {
   if (result.totalPartners > 0) {
     parts.push(`${result.totalPartners} partner talk${result.totalPartners === 1 ? "" : "s"} × 40`);
   }
-  if (result.gummies > 0) {
-    parts.push(`${result.gummies} gummi${result.gummies === 1 ? "" : "es"} eaten × 1`);
-  }
   total.textContent = `Total time: ${result.cost}  (${parts.join(", ")})`;
   body.appendChild(total);
 }

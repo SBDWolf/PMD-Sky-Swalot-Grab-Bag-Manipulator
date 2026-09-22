@@ -11,8 +11,7 @@
 //       collect (talk to Swalot at a wanted item) +3 positions, cost 0
 //       eat a gummi: the gummi's rolls run first — 1/2/3 positions
 //       depending on the outcome — then the eat turn passes like any turn
-//       (+t), cost 1. Only offered when the outcome is an acceptable boost
-//       and gummies are still wanted.
+//       (+t), cost 0 (a target action, like a collect)
 //   * Collects may be chained in one run; Swalot is never talked to for an
 //     unwanted item and gummies are never eaten for an unwanted outcome.
 //
@@ -24,7 +23,7 @@
 import { gummiOutcome } from "./gummi.js";
 
 export const TURN_ADVANCE = [6, 7, 8, 9]; // team size 1..4
-export const DEFAULT_COSTS = Object.freeze({ partner: 40, turn: 1, collect: 0, gummi: 1 });
+export const DEFAULT_COSTS = Object.freeze({ partner: 40, turn: 1, collect: 0, gummi: 0 });
 export const GUMMI_REQ_ID = -1; // pseudo requirement id for "feed a gummi"
 const STATE_CAP = 10_000_000; // safety cap on N * S (keeps solving well under ~0.5s)
 

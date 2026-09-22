@@ -46,7 +46,9 @@ If you happen to carry gummies, set a quantity under **Gummies to feed**
 (and the stat / omniboost filter) and the solver interleaves gummi eats
 with the purchases on the same quicksave run — no extra setup. Eating
 consumes the gummi's rolls first, then advances the PRNG like any turn
-(+6/+7/+8/+9 by team size) and costs 1 turn. The results table gains an
+(+6/+7/+8/+9 by team size). Like buying an item, eating is a *target*
+action and costs 0 turns (the eat turn's own advance is already counted
+in the positions it burns). The results table gains an
 **Action** column (`Buy` in green, `Eat gummi` in gold) and the received
 column shows the item bought or the stat gained. Feeding only gummies (no
 items selected) works too.
