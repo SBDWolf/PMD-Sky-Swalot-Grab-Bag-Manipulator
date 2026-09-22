@@ -590,7 +590,7 @@ function renderGummiResults(result, ms) {
   total.className = "total";
   total.textContent =
     `Total time: ${result.cost} turns ` +
-    `(${result.totalMoves} moves, ${result.count} gumm${result.count === 1 ? "y" : "ies"} eaten)`;
+    `(${result.totalMoves} moves, ${result.count} gumm${result.count === 1 ? "i" : "ies"} eaten)`;
   body.appendChild(total);
 }
 
