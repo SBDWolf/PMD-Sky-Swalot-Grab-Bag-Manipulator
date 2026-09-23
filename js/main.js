@@ -500,6 +500,8 @@ function wireTabs() {
       for (const page of document.querySelectorAll(".tab-page")) {
         page.hidden = page.id !== `page-${btn.dataset.tab}`;
       }
+      // Tables rendered while their tab was hidden were never fitted.
+      fitVisibleTables();
     });
   }
 }
@@ -512,10 +514,16 @@ const gummi = { timer: null };
  * Scale an overflowing table down to fit its container (shrink-to-fit).
  * Small screens first get tighter cell padding via CSS; if the table is
  * still too wide it is transformed down to a scale factor >= 0.55.
+ *
+ * No-op while the table is inside a hidden tab: hidden elements have no
+ * layout, so the measurement would be garbage. Tab switching calls
+ * fitVisibleTables() to (re)fit everything that just became visible.
  */
 function fitTable(tbl, wrap) {
   tbl.style.transform = "";
   tbl.style.width = "";
+  if (wrap.style.height) wrap.style.height = "";
+  if (!tbl.offsetParent) return; // hidden (display:none ancestor) — skip
   const container = wrap.parentElement ?? wrap;
   const available = container.clientWidth - 2; // panel padding/borders slack
   const needed = tbl.scrollWidth;
@@ -526,6 +534,14 @@ function fitTable(tbl, wrap) {
   tbl.style.transform = `scale(${scale})`;
   // scaled height shrinks; keep the layout from reserving unscaled height
   wrap.style.height = `${tbl.getBoundingClientRect().height}px`;
+}
+
+/** Re-fit every manip table that is currently rendered and visible. */
+function fitVisibleTables() {
+  for (const tbl of document.querySelectorAll(".manip-table")) {
+    const wrap = tbl.closest(".manip-table-wrap") ?? tbl.parentElement;
+    if (tbl.offsetParent) fitTable(tbl, wrap);
+  }
 }
 
 function queueGummiSolve() {
