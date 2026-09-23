@@ -285,11 +285,18 @@ select:disabled {
 }
 
 /* results */
+.manip-table-wrap {
+  /* shrink-to-fit transform target: the JS below scales overflowing
+     tables down to fit; overflow is hidden so no horizontal scrollbar */
+  overflow: hidden;
+}
+
 .manip-table {
   border-collapse: collapse;
   width: 100%;
   margin: 0;
   font-size: 0.95rem;
+  transform-origin: top left; /* used when scaled to fit */
 }
 
 .manip-table th,
@@ -297,6 +304,7 @@ select:disabled {
   border: 1px solid var(--border);
   padding: 6px 10px;
   text-align: center;
+  white-space: nowrap;
 }
 
 .manip-table thead th {
@@ -306,6 +314,8 @@ select:disabled {
 
 .manip-table td:last-child {
   text-align: left;
+  white-space: normal;
+  min-width: 8em; /* item names may wrap instead of squeezing columns */
 }
 
 .manip-table td.zero {
@@ -369,5 +379,11 @@ select:disabled {
 
   .control {
     flex-basis: 100%;
+  }
+
+  .manip-table th,
+  .manip-table td {
+    padding: 4px 4px;
+    font-size: 0.85rem;
   }
 }

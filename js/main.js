@@ -309,6 +309,8 @@ function renderResults(result, table, ms) {
   const body = $("results-body");
   body.textContent = "";
 
+  const wrap = document.createElement("div");
+  wrap.className = "manip-table-wrap";
   const manipTable = document.createElement("table");
   manipTable.className = "manip-table";
   const thead = document.createElement("thead");
@@ -345,7 +347,9 @@ function renderResults(result, table, ms) {
     tbody.appendChild(tr);
   });
   manipTable.appendChild(tbody);
-  body.appendChild(manipTable);
+  wrap.appendChild(manipTable);
+  body.appendChild(wrap);
+  fitTable(manipTable, wrap);
 
   const total = document.createElement("p");
   total.className = "total";
@@ -477,6 +481,26 @@ function wireTabs() {
 
 const gummi = { timer: null };
 
+/**
+ * Scale an overflowing table down to fit its container (shrink-to-fit).
+ * Small screens first get tighter cell padding via CSS; if the table is
+ * still too wide it is transformed down to a scale factor >= 0.55.
+ */
+function fitTable(tbl, wrap) {
+  tbl.style.transform = "";
+  tbl.style.width = "";
+  const container = wrap.parentElement ?? wrap;
+  const available = container.clientWidth - 2; // panel padding/borders slack
+  const needed = tbl.scrollWidth;
+  if (needed <= available) return;
+  const scale = Math.max(0.55, available / needed);
+  // width*100/scale% keeps the scaled table filling the container width
+  tbl.style.width = `${100 / scale}%`;
+  tbl.style.transform = `scale(${scale})`;
+  // scaled height shrinks; keep the layout from reserving unscaled height
+  wrap.style.height = `${tbl.getBoundingClientRect().height}px`;
+}
+
 function queueGummiSolve() {
   clearTimeout(gummi.timer);
   gummi.timer = setTimeout(() => { void doGummiSolve(); }, 250);
@@ -564,15 +588,16 @@ function renderGummiResults(result, ms) {
     htr.appendChild(th);
   }
   thead.appendChild(htr);
+thead.appendChild(htr);
   tbl.appendChild(thead);
   const tbody = document.createElement("tbody");
   result.segments.forEach((s, i) => {
     const tr = document.createElement("tr");
     const moveCells = wait ? [s.n3, s.n4] : [s.n3, s.n4, s.n5];
     [...moveCells,
-    s.omni ? "Omniboost" : `${GUMMI_STATS[s.stat]} ↑`,
-    s.firstRoll,
-    s.advances,
+      s.omni ? "Omniboost" : `${GUMMI_STATS[s.stat]} ↑`,
+      s.firstRoll,
+      s.advances,
     ].forEach((v, ci) => {
       const td = document.createElement("td");
       td.textContent = String(v);
@@ -585,6 +610,7 @@ function renderGummiResults(result, ms) {
   });
   tbl.appendChild(tbody);
   body.appendChild(tbl);
+  fitTable(tbl, body);
 
   const total = document.createElement("p");
   total.className = "total";
