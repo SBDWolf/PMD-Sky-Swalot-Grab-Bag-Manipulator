@@ -191,8 +191,16 @@ function renderGrid(table) {
     qty.className = "qty";
     qty.min = "0";
     qty.step = "1";
-    qty.value = String(state.qty.get(id) || 0);
-    row.classList.toggle("qty-zero", parseInt(qty.value, 10) === 0);
+    // Empty-when-zero paradigm: the box shows nothing when the quantity is
+    // 0, so typing starts fresh (no "10 instead of 1" trap). Focus selects
+    // whatever is there, and blurring an empty box falls back to showing 0.
+    const refresh = () => {
+      const v = state.qty.get(id) || 0;
+      qty.value = v === 0 ? "" : String(v);
+      qty.placeholder = "0";
+      row.classList.toggle("qty-zero", v === 0);
+    };
+    refresh();
     // No upper cap: the solver bails out with a friendly error when the
     // state space (positions × quantity combinations) gets too large.
     qty.addEventListener("input", () => {
@@ -201,6 +209,10 @@ function renderGrid(table) {
       row.classList.toggle("qty-zero", v === 0);
       queueSolve();
     });
+    qty.addEventListener("focus", () => {
+      if (qty.value) qty.select();
+    });
+    qty.addEventListener("blur", refresh);
 
     row.appendChild(icon);
     row.appendChild(name);
@@ -228,6 +240,20 @@ function grabBagGummiOpts() {
     targetStat: parseInt($("gb-stat").value, 10) || 0,
     omniOnly: $("gb-omni-only").checked,
   };
+}
+
+/** Empty-when-zero behavior for the gummy-count inputs (see renderGrid). */
+function zeroPlaceholder(input) {
+  const refresh = () => {
+    const v = Math.max(0, Math.trunc(Number(input.value)) || 0);
+    input.value = v === 0 ? "" : String(v);
+    input.placeholder = "0";
+  };
+  refresh();
+  input.addEventListener("focus", () => {
+    if (input.value) input.select();
+  });
+  input.addEventListener("blur", refresh);
 }
 
 async function doSolve() {
@@ -460,6 +486,7 @@ function wireEvents() {
     syncStatLock();
     queueSolve();
   });
+  zeroPlaceholder($("gb-gummies"));
 }
 
 // ---- Tabs ---------------------------------------------------------------
@@ -515,6 +542,7 @@ function wireGummiControls() {
     $("gummi-stat").disabled = e.target.checked;
     queueGummiSolve();
   });
+  zeroPlaceholder($("gummi-start"));
 }
 
 async function doGummiSolve() {

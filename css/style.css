@@ -229,8 +229,14 @@ select:disabled {
   padding: 8px 10px;
 }
 
+/* empty box = quantity 0 (placeholder shows the greyed-out 0) */
 .item-row.qty-zero .qty {
-  color: var(--bad);
+  color: var(--text-dim);
+}
+
+.qty::placeholder {
+  color: var(--text-dim);
+  opacity: 1;
 }
 
 .item-row.not-in-table {
