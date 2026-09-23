@@ -47,11 +47,11 @@ def main() -> None:
 
     seed = int(args.seed, 16)
     mode = "omniboost only" if args.omni_only else f"{STATS[args.stat]} or omniboost"
-    print(f"# gummi eat positions ({mode}, seed {args.seed})")
 
     state = seed
     j = 0  # advances since the quicksave at the moment of eating
     found = 0
+    rows = []  # (advances, omni)
     while found < args.count:
         s = lcg(state)  # the first roll draws from the state one step after j
         first = s >> 16
@@ -60,10 +60,15 @@ def main() -> None:
             omni = scaled(s2 >> 16, 16) == 10
             stat = None if omni else scaled(lcg(s2) >> 16, 4)
             if omni if args.omni_only else (omni or stat == args.stat):
-                print(j)
+                rows.append((j, omni))
                 found += 1
         state = lcg(state)
         j += 1
+
+    print(f"# gummi eat positions ({mode}, seed {args.seed})")
+    print("Advances | Boost")
+    for j, omni in rows:
+        print(f"{j} | {'Omniboost' if omni else STATS[args.stat]}")
 
 
 if __name__ == "__main__":
