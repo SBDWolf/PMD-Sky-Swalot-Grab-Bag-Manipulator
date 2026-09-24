@@ -121,7 +121,7 @@ def load_floor_list(folder: str, floor: int):
 
 
 def orb_outcome(state, cats, groups, target):
-    """(hit, item, first_roll, accuracy_roll) for a throw from `state`.
+    """(hit, item, first_roll, accuracy_roll) for a use from `state`.
 
     The three rolls run first: accuracy (state+1), category (state+2),
     item (state+3).
@@ -214,7 +214,7 @@ def main():
     cost, seg = solve(args.folder, args.floor, args.target, seed, args.window)
     print(f"folder={args.folder} floor={args.floor} target={args.target} cost={cost}")
     print(f"  swap x{seg['n17']}, turn pass x{seg['n18']}"
-          f" -> throw orb at advance {seg['advances']} (PRNG {seg['rng']},"
+          f" -> use orb at advance {seg['advances']} (PRNG {seg['rng']},"
           f" 1st roll {seg['first_roll']}, accuracy {seg['accuracy_roll']}/100)")
     seg_str = f"{seg['n17']}/{seg['n18']}/{seg['pos']}/{seg['first_roll']}/{seg['accuracy_roll']}"
     print(f"MACHINE cost={cost} seg={seg_str}")

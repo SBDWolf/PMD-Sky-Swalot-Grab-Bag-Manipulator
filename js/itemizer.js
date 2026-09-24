@@ -6,21 +6,21 @@
 // Oran gate: accuracy check, category roll, item roll.
 //
 // The three orb rolls happen FIRST, from the PRNG state at the moment of
-// the throw (confirmed in game — the turn's own advance comes after and is
-// irrelevant since the manip ends with the throw):
+// the use (confirmed in game — the turn's own advance comes after and is
+// irrelevant since the manip ends with the use):
 //   1. +1  accuracy check: DungeonRandInt(100) < 65 must hold
 //   2. +1  category: DungeonRandInt(10000)
 //   3. +1  item:     DungeonRandInt(10000)
 //
-// Positioning moves between quicksave and orb throw (1 turn each):
+// Positioning moves between quicksave and orb use (1 turn each):
 //   swap places with the partner   +17 steps
 //   any other turn pass            +18 steps
 //
 // The solver is the same exact forward DP as the gummi one, over raw LCG
-// steps: moves +17/+18 (1 turn each) and a final orb throw that must land
+// steps: moves +17/+18 (1 turn each) and a final orb use that must land
 // on the requested item. Chaining multiple orbs is impossible, so the plan
-// is always exactly one throw: n17 swaps and/or n18 turn passes, then the
-// throw.
+// is always exactly one use: n17 swaps and/or n18 turn passes, then the
+// use.
 
 import { lcgNext, scaleDraw, DEFAULT_SEED } from "./rng.js";
 
@@ -45,7 +45,7 @@ function pickIndex(cums, roll) {
 }
 
 /**
- * Simulate one orb throw from the PRNG state at the moment of the throw.
+ * Simulate one orb use from the PRNG state at the moment of the use.
  *
  * The three rolls run FIRST, in order (accuracy, category, item); an
  * accuracy miss ends the sequence after roll 1. `targetItem` (optional)
@@ -94,9 +94,9 @@ export function orbOutcome(state, list, targetItem = null) {
  *            totalMoves: number}}
  *
  * Segment fields: pos/advances = PRNG advance count at the moment of the
- * throw (counted from the quicksave); rng = the PRNG state at throw time;
+ * use (counted from the quicksave); rng = the PRNG state at use time;
  * firstRoll = raw 16-bit value of the accuracy-check draw (the first roll
- * the throw consumes); accuracyRoll = the scaled DungeonRandInt(100)
+ * the use consumes); accuracyRoll = the scaled DungeonRandInt(100)
  * result of the accuracy check.
  */
 export function solveItemizer(list, targetItem, opts = {}) {
@@ -115,14 +115,14 @@ export function solveItemizer(list, targetItem, opts = {}) {
   const LIMIT = window;
 
   // states[j] = PRNG state after j LCG steps from the quicksave seed. The
-  // throw at position i reads states[i+1..i+3], so the table extends a few
+  // use at position i reads states[i+1..i+3], so the table extends a few
   // steps past LIMIT.
   const tableLen = LIMIT + SWAP_ADVANCE + 4;
   const states = new Uint32Array(tableLen);
   states[0] = seed;
   for (let j = 1; j < tableLen; j++) states[j] = lcgNext(states[j - 1]);
 
-  // Per step j: does an orb thrown there produce the target item?
+  // Per step j: does an orb used there produce the target item?
   const okAt = new Uint8Array(tableLen);
   const info = new Array(tableLen);
   for (let j = 0; j < tableLen; j++) {
@@ -133,7 +133,7 @@ export function solveItemizer(list, targetItem, opts = {}) {
 
   // DP over (advance count i): cost[i] = fewest turns to reach advance i
   // with positioning moves only. parent[i] = fromI * 4 + code, code 0 =
-  // swap (+17), 1 = turn pass (+18). Throwing the orb from position i is
+  // swap (+17), 1 = turn pass (+18). Using the orb from position i is
   // the final action and is scored separately.
   const INF = 0x3fffffff;
   const cost = new Int32Array(LIMIT + 1).fill(INF);
@@ -155,7 +155,7 @@ export function solveItemizer(list, targetItem, opts = {}) {
     }
   }
 
-  // Best throw position: an orb thrown there must hit, and reaching it via
+  // Best use position: an orb used there must hit, and reaching it via
   // moves must be possible.
   let bestI = -1;
   let bestC = INF;
@@ -171,7 +171,7 @@ export function solveItemizer(list, targetItem, opts = {}) {
       { window });
   }
 
-  // Walk the move chain backwards from the throw position.
+  // Walk the move chain backwards from the use position.
   const actions = [];
   {
     let i = bestI;
@@ -186,7 +186,7 @@ export function solveItemizer(list, targetItem, opts = {}) {
     actions.reverse();
   }
 
-  // Count the moves before the orb throw.
+  // Count the moves before the orb use.
   const counts = [0, 0]; // n17, n18
   for (const code of actions) counts[code]++;
   const totalMoves = counts[0] + counts[1];

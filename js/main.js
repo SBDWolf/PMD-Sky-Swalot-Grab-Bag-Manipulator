@@ -890,7 +890,7 @@ function renderItemizerResults(result, ms) {
   total.className = "total";
   total.textContent =
     `Total time: ${result.cost} turns ` +
-    `(${result.totalMoves} moves, orb thrown at advance ${s.advances})`;
+    `(${result.totalMoves} moves, orb used at advance ${s.advances})`;
   body.appendChild(total);
 }
 
