@@ -14,6 +14,8 @@
 import { solve } from "./solver.js";
 import { parseBazaarList, generateTable, DEFAULT_SEED, DEFAULT_WINDOW } from "./rng.js";
 import { solveGummi, GUMMI_STATS } from "./gummi.js";
+import { solveItemizer } from "./itemizer.js";
+import { parseFloorList } from "./rng.js";
 
 const $ = (id) => document.getElementById(id);
 
@@ -33,6 +35,7 @@ const state = {
   relevant: { modes: {} },
   lists: new Map(), // folder -> parsed grab bag list (from floor_001.xml)
   tables: new Map(), // `${folder}|${window}` -> generated table
+  floorLists: new Map(), // `${folder}|${floor}` -> parsed Floor item list
   dungeonName: null,
   folder: null,
   team: 4,
@@ -56,6 +59,19 @@ async function loadBazaarList(folder) {
     state.lists.set(folder, parseBazaarList(await res.text()));
   }
   return state.lists.get(folder);
+}
+
+// The Floor item list of a specific floor (for the Itemizer Orb tab).
+async function loadFloorList(folder, floor) {
+  const key = `${folder}|${floor}`;
+  if (!state.floorLists.has(key)) {
+    const pad = String(floor).padStart(3, "0");
+    const res = await fetch(
+      `dungeon_export/${encodeURIComponent(folder)}/floor_${pad}.xml`);
+    if (!res.ok) throw new Error(`could not load floor XML for ${folder} F${floor} (HTTP ${res.status})`);
+    state.floorLists.set(key, parseFloorList(await res.text()));
+  }
+  return state.floorLists.get(key);
 }
 
 // Generates the draw sequence for a dungeon by simulating the PRNG on the
@@ -328,6 +344,51 @@ function summaryText(result) {
   return `${state.dungeonName} (team ${result.teamSize}): ${segs} | total ${result.cost}`;
 }
 
+// Result tables use table-layout: fixed with a <colgroup> built from the
+// widths below, so every column keeps the same share of the table however
+// the text changes (different item name, "Attack ↑" vs "Sp. Defense ↑").
+// Each entry is max(px, %): the percentage is the steady wide-screen
+// share; the px floor keeps the widest word readable on narrow screens,
+// where the table then overflows and fitTable() scales it down as before.
+// Hidden debug columns get no <col> (they create no column while hidden).
+const GRABBAG_COL_WIDTHS = [
+  "max(56px, 15%)", // Partner talks
+  "max(56px, 15%)", // 4-tile dashes
+  "max(56px, 15%)", // Attacks
+  "max(66px, 25%)", // Action ("Eat gummi" fits on one line even scaled)
+  "30%",            // Received
+];
+const GUMMI_COL_WIDTHS_TOGETHER = [
+  "max(46px, 20%)", // Swaps
+  "max(74px, 22%)", // Walk-aways
+  "max(50px, 26%)", // Turn passes
+  "32%",            // Boost
+];
+const GUMMI_COL_WIDTHS_WAIT = [
+  "max(46px, 26%)", // Swaps
+  "max(50px, 30%)", // Turn passes
+  "44%",            // Boost
+];
+const ITEMIZER_COL_WIDTHS = [
+  "max(46px, 22%)", // Swaps
+  "max(50px, 26%)", // Turn passes
+  "52%",            // Item
+];
+
+/**
+ * Apply constant column widths to a result table. Call right after table
+ * creation, before the thead goes in (colgroup must precede thead).
+ */
+function appendColGroup(tbl, widths) {
+  const cg = document.createElement("colgroup");
+  for (const w of widths) {
+    const col = document.createElement("col");
+    col.style.width = w;
+    cg.appendChild(col);
+  }
+  tbl.appendChild(cg);
+}
+
 function renderResults(result, table, ms) {
   $("results-title").textContent =
     `${state.dungeonName}, Team of ${result.teamSize}` +
@@ -339,6 +400,7 @@ function renderResults(result, table, ms) {
   wrap.className = "manip-table-wrap";
   const manipTable = document.createElement("table");
   manipTable.className = "manip-table";
+  appendColGroup(manipTable, GRABBAG_COL_WIDTHS);
   const thead = document.createElement("thead");
   const htr = document.createElement("tr");
   for (const h of ["Partner talks", "4-tile dashes", "Attacks", "Action", "Received"]) {
@@ -402,7 +464,9 @@ function renderError(e) {
       detail = (e.missing || []).map((id) => `${itemName(id)} (#${id})`).join(", ");
       break;
     case "no-solution": {
-      const g = gcd(3, 5 + state.team);
+      // Team 1 has no partner talk: the only always-available advance is the
+      // +6 turn pass (Swalot's own +3 happens only when buying a wanted item).
+      const g = state.team === 1 ? 6 : gcd(3, 5 + state.team);
       title = "No manipulation exists for this combination";
       detail = g > 1
         ? `With a team of ${state.team}, every PRNG advance is a multiple of ${g}, so only ` +
@@ -615,6 +679,7 @@ function renderGummiResults(result, ms) {
 
   const tbl = document.createElement("table");
   tbl.className = "manip-table";
+  appendColGroup(tbl, wait ? GUMMI_COL_WIDTHS_WAIT : GUMMI_COL_WIDTHS_TOGETHER);
   const thead = document.createElement("thead");
   const htr = document.createElement("tr");
   // Move columns depend on the partner mode; the two debug columns stay in
@@ -632,16 +697,16 @@ function renderGummiResults(result, ms) {
     htr.appendChild(th);
   }
   thead.appendChild(htr);
-thead.appendChild(htr);
+  thead.appendChild(htr);
   tbl.appendChild(thead);
   const tbody = document.createElement("tbody");
   result.segments.forEach((s, i) => {
     const tr = document.createElement("tr");
     const moveCells = wait ? [s.n3, s.n4] : [s.n3, s.n4, s.n5];
     [...moveCells,
-      s.omni ? "Omniboost" : `${GUMMI_STATS[s.stat]} ↑`,
-      s.firstRoll,
-      s.advances,
+    s.omni ? "Omniboost" : `${GUMMI_STATS[s.stat]} ↑`,
+    s.firstRoll,
+    s.advances,
     ].forEach((v, ci) => {
       const td = document.createElement("td");
       td.textContent = String(v);
@@ -664,8 +729,173 @@ thead.appendChild(htr);
   body.appendChild(total);
 }
 
-function renderGummiError(e) {
-  const body = $("gummi-error-body");
+// ---- Itemizer Orb tab ---------------------------------------------------
+
+const itemizer = { timer: null, dungeonName: null, folder: null, floor: 1 };
+
+function queueItemizerSolve() {
+  clearTimeout(itemizer.timer);
+  itemizer.timer = setTimeout(() => { void doItemizerSolve(); }, 250);
+}
+
+// Dungeon dropdown for the Itemizer tab: all dungeons (they all have floors).
+function rebuildItemizerDungeons() {
+  const sel = $("it-dungeon");
+  sel.textContent = "";
+  for (const d of state.dungeons) {
+    const o = document.createElement("option");
+    o.value = d.name;
+    o.textContent = d.name;
+    sel.appendChild(o);
+  }
+  const first = state.dungeons[0];
+  if (!first) return false;
+  sel.value = first.name;
+  itemizer.dungeonName = first.name;
+  itemizer.folder = first.folder;
+  return true;
+}
+
+function rebuildItemizerFloors() {
+  const sel = $("it-floor");
+  sel.textContent = "";
+  const d = state.dungeonByName.get(itemizer.dungeonName);
+  const floors = d ? Math.max(1, d.floors || 1) : 1;
+  for (let f = 1; f <= floors; f++) {
+    const o = document.createElement("option");
+    o.value = String(f);
+    o.textContent = f === floors ? `${f}` : `${f}`;
+    sel.appendChild(o);
+  }
+  sel.value = String(Math.min(itemizer.floor, floors));
+  itemizer.floor = parseInt(sel.value, 10);
+}
+
+function rebuildItemizerItems(list) {
+  const sel = $("it-item");
+  const prev = sel.value; // keep the user's selection across re-renders
+  sel.textContent = "";
+  const head = document.createElement("option");
+  head.value = "";
+  head.textContent = "— pick an item —";
+  sel.appendChild(head);
+  for (const id of list.pool) {
+    const o = document.createElement("option");
+    o.value = String(id);
+    o.textContent = `${itemName(id)} (#${id})`;
+    sel.appendChild(o);
+  }
+  // Restore the previously selected item when it still exists in this pool.
+  if (prev && [...sel.options].some((o) => o.value === prev)) {
+    sel.value = prev;
+  }
+}
+
+function wireItemizerControls() {
+  $("it-dungeon").addEventListener("change", (e) => {
+    itemizer.dungeonName = e.target.value;
+    const d = state.dungeonByName.get(e.target.value);
+    itemizer.folder = d ? d.folder : null;
+    itemizer.floor = 1;
+    rebuildItemizerFloors();
+    queueItemizerSolve();
+  });
+  $("it-floor").addEventListener("change", (e) => {
+    itemizer.floor = parseInt(e.target.value, 10) || 1;
+    queueItemizerSolve();
+  });
+  $("it-item").addEventListener("change", queueItemizerSolve);
+}
+
+async function doItemizerSolve() {
+  const resultsPanel = $("it-results-panel");
+  const errorPanel = $("it-error-panel");
+  const target = parseInt($("it-item").value, 10);
+
+  // Load the floor's item list first: it feeds both the item dropdown and
+  // the solve, so the dropdown stays populated even with no item picked.
+  try {
+    const list = await loadFloorList(itemizer.folder, itemizer.floor);
+    rebuildItemizerItems(list);
+    if (!Number.isInteger(target)) {
+      resultsPanel.hidden = true;
+      errorPanel.hidden = false;
+      $("it-error-body").innerHTML =
+        '<p class="hint">Pick the item the orb should produce.</p>';
+      return;
+    }
+    const t0 = performance.now();
+    let result;
+    try {
+      result = solveItemizer(list, target, { seed: state.seed });
+    } catch (e) {
+      if (e.code !== "no-solution") throw e;
+      result = solveItemizer(list, target,
+        { seed: state.seed, window: Math.min(200_000, (e.window || 4_000) * 8) });
+    }
+    resultsPanel.hidden = false;
+    errorPanel.hidden = true;
+    renderItemizerResults(result, performance.now() - t0);
+  } catch (e) {
+    resultsPanel.hidden = true;
+    errorPanel.hidden = false;
+    renderItemizerError(e);
+  }
+}
+
+function renderItemizerResults(result, ms) {
+  $("it-results-title").textContent =
+    `Itemizing ${itemName(result.targetItem)}`;
+  const body = $("it-results-body");
+  body.textContent = "";
+
+  const s = result.segment;
+  const tbl = document.createElement("table");
+  tbl.className = "manip-table";
+  appendColGroup(tbl, ITEMIZER_COL_WIDTHS);
+  const thead = document.createElement("thead");
+  const htr = document.createElement("tr");
+  // Debug columns stay in the DOM (the data is kept) but hidden.
+  for (const [h, hidden] of [
+    ["Swaps", false],
+    ["Turn passes", false],
+    ["Item", false],
+    ["Rand16Bit", true],
+    ["Accuracy", true],
+    ["Advances", true],
+  ]) {
+    const th = document.createElement("th");
+    th.textContent = h;
+    th.hidden = hidden;
+    htr.appendChild(th);
+  }
+  thead.appendChild(htr);
+  tbl.appendChild(thead);
+  const tbody = document.createElement("tbody");
+  const tr = document.createElement("tr");
+  [s.n17, s.n18, itemName(result.targetItem), s.firstRoll, s.accuracyRoll, s.advances]
+    .forEach((v, ci) => {
+      const td = document.createElement("td");
+      td.textContent = String(v);
+      if (typeof v === "number" && v === 0) td.classList.add("zero");
+      if (ci >= 3) td.hidden = true; // debug columns
+      tr.appendChild(td);
+    });
+  tbody.appendChild(tr);
+  tbl.appendChild(tbody);
+  body.appendChild(tbl);
+  fitTable(tbl, body);
+
+  const total = document.createElement("p");
+  total.className = "total";
+  total.textContent =
+    `Total time: ${result.cost} turns ` +
+    `(${result.totalMoves} moves, orb thrown at advance ${s.advances})`;
+  body.appendChild(total);
+}
+
+function renderItemizerError(e) {
+  const body = $("it-error-body");
   body.textContent = "";
   const h = document.createElement("p");
   h.className = "error-title";
@@ -673,13 +903,13 @@ function renderGummiError(e) {
   d.className = "error-detail";
   let title = "Something went wrong.";
   let detail = e.message || String(e);
-  if (e.code === "too-large") {
-    title = "That many gummies is too large for the solver";
-    detail = "The state space is capped to keep solving fast. Feed fewer gummies.";
-  } else if (e.code === "no-solution") {
+  if (e.code === "no-solution") {
     title = "No manipulation exists for this combination";
-    detail = "The PRNG never lands on an acceptable boost within the simulated window. " +
-      "Try fewer gummies or a different target stat.";
+    detail = "The PRNG never lands on this item (with a passing accuracy roll) within " +
+      "the simulated window. Try another floor or another item.";
+  } else if (e.code === "too-large") {
+    title = "That combination is too large for the solver";
+    detail = "The simulated window is capped to keep solving fast.";
   }
   h.textContent = title;
   d.textContent = detail;
@@ -715,6 +945,11 @@ async function init() {
   wireTabs();
   wireGummiControls();
   void doGummiSolve();
+  if (rebuildItemizerDungeons()) {
+    rebuildItemizerFloors();
+    wireItemizerControls();
+    void doItemizerSolve();
+  }
   try {
     const table = await ensureTable(state.folder);
     renderGrid(table);

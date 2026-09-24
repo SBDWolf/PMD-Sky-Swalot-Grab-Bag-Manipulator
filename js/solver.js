@@ -7,6 +7,9 @@
 //   * Actions (all strictly advance the position, so one forward DP pass is
 //     an exact shortest path):
 //       partner talk          +3 positions, cost 40  (10x a 4-turn dash)
+//                             — only with a partner (team size 2+); at
+//                             team size 1 you are alone, so this move does
+//                             not exist and the solver never uses it
 //       pass one turn         +t positions, cost 1   (t = 6/7/8/9 for team 1-4)
 //       collect (talk to Swalot at a wanted item) +3 positions, cost 0
 //       eat a gummi: the gummi's rolls run first — 1/2/3 positions
@@ -95,6 +98,7 @@ export function solve(table, teamSize, requirements, options = {}) {
   const items = table.items;
   const N = items.length;
   const t = TURN_ADVANCE[teamSize - 1];
+  const hasPartner = teamSize > 1; // alone (team of 1): no partner talk move
   const hasGummies = gummies > 0;
 
   // Item existence is judged against the pool (every id the dungeon's grab
@@ -183,7 +187,7 @@ export function solve(table, teamSize, requirements, options = {}) {
         // eat turn passes like any turn (+t)
         relax(i + rollsAt[i] + t, idx - gummiStride, c + cGummi, key, 3);
       }
-      relax(i + 3, idx, c + cPartner, key, 0); // partner talk
+      if (hasPartner) relax(i + 3, idx, c + cPartner, key, 0); // partner talk
       relax(i + t, idx, c + cTurn, key, 1); // pass one turn
     }
   }
