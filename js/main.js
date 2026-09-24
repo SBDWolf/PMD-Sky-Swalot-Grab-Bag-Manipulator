@@ -344,6 +344,51 @@ function summaryText(result) {
   return `${state.dungeonName} (team ${result.teamSize}): ${segs} | total ${result.cost}`;
 }
 
+// Result tables use table-layout: fixed with a <colgroup> built from the
+// widths below, so every column keeps the same share of the table however
+// the text changes (different item name, "Attack ↑" vs "Sp. Defense ↑").
+// Each entry is max(px, %): the percentage is the steady wide-screen
+// share; the px floor keeps the widest word readable on narrow screens,
+// where the table then overflows and fitTable() scales it down as before.
+// Hidden debug columns get no <col> (they create no column while hidden).
+const GRABBAG_COL_WIDTHS = [
+  "max(56px, 15%)", // Partner talks
+  "max(56px, 15%)", // 4-tile dashes
+  "max(56px, 15%)", // Attacks
+  "max(66px, 25%)", // Action ("Eat gummi" fits on one line even scaled)
+  "30%",            // Received
+];
+const GUMMI_COL_WIDTHS_TOGETHER = [
+  "max(46px, 20%)", // Swaps
+  "max(74px, 22%)", // Walk-aways
+  "max(50px, 26%)", // Turn passes
+  "32%",            // Boost
+];
+const GUMMI_COL_WIDTHS_WAIT = [
+  "max(46px, 26%)", // Swaps
+  "max(50px, 30%)", // Turn passes
+  "44%",            // Boost
+];
+const ITEMIZER_COL_WIDTHS = [
+  "max(46px, 22%)", // Swaps
+  "max(50px, 26%)", // Turn passes
+  "52%",            // Item
+];
+
+/**
+ * Apply constant column widths to a result table. Call right after table
+ * creation, before the thead goes in (colgroup must precede thead).
+ */
+function appendColGroup(tbl, widths) {
+  const cg = document.createElement("colgroup");
+  for (const w of widths) {
+    const col = document.createElement("col");
+    col.style.width = w;
+    cg.appendChild(col);
+  }
+  tbl.appendChild(cg);
+}
+
 function renderResults(result, table, ms) {
   $("results-title").textContent =
     `${state.dungeonName}, Team of ${result.teamSize}` +
@@ -355,6 +400,7 @@ function renderResults(result, table, ms) {
   wrap.className = "manip-table-wrap";
   const manipTable = document.createElement("table");
   manipTable.className = "manip-table";
+  appendColGroup(manipTable, GRABBAG_COL_WIDTHS);
   const thead = document.createElement("thead");
   const htr = document.createElement("tr");
   for (const h of ["Partner talks", "4-tile dashes", "Attacks", "Action", "Received"]) {
@@ -633,6 +679,7 @@ function renderGummiResults(result, ms) {
 
   const tbl = document.createElement("table");
   tbl.className = "manip-table";
+  appendColGroup(tbl, wait ? GUMMI_COL_WIDTHS_WAIT : GUMMI_COL_WIDTHS_TOGETHER);
   const thead = document.createElement("thead");
   const htr = document.createElement("tr");
   // Move columns depend on the partner mode; the two debug columns stay in
@@ -805,6 +852,7 @@ function renderItemizerResults(result, ms) {
   const s = result.segment;
   const tbl = document.createElement("table");
   tbl.className = "manip-table";
+  appendColGroup(tbl, ITEMIZER_COL_WIDTHS);
   const thead = document.createElement("thead");
   const htr = document.createElement("tr");
   // Debug columns stay in the DOM (the data is kept) but hidden.

@@ -300,6 +300,10 @@ select:disabled {
 .manip-table {
   border-collapse: collapse;
   width: 100%;
+  /* fixed layout: widths come from the per-table <colgroup> the JS
+     builds, so changing the result text (item name, stat label) can
+     never resize or shift the other columns */
+  table-layout: fixed;
   margin: 0;
   font-size: 0.95rem;
   transform-origin: top left; /* used when scaled to fit */
@@ -310,7 +314,8 @@ select:disabled {
   border: 1px solid var(--border);
   padding: 6px 10px;
   text-align: center;
-  white-space: nowrap;
+  /* no white-space: nowrap — under a fixed layout a too-long value must
+     wrap inside its own column instead of squeezing the others */
 }
 
 .manip-table thead th {
@@ -320,8 +325,6 @@ select:disabled {
 
 .manip-table td:last-child {
   text-align: left;
-  white-space: normal;
-  min-width: 8em; /* item names may wrap instead of squeezing columns */
 }
 
 .manip-table td.zero {
