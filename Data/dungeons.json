@@ -5,1153 +5,1345 @@
       "id": 0,
       "name": "Test Dungeon",
       "folder": "000_Test Dungeon",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 3
     },
     {
       "id": 1,
       "name": "Beach Cave",
       "folder": "001_Beach Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 4
     },
     {
       "id": 2,
       "name": "Beach Cave Pit",
       "folder": "002_Beach Cave Pit",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 3,
       "name": "Drenched Bluff",
       "folder": "003_Drenched Bluff",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 6
     },
     {
       "id": 4,
       "name": "Mt. Bristle",
       "folder": "004_Mt. Bristle",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 9
     },
     {
       "id": 5,
       "name": "Mt. Bristle Peak",
       "folder": "005_Mt. Bristle Peak",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 6,
       "name": "Waterfall Cave",
       "folder": "006_Waterfall Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 8
     },
     {
       "id": 7,
       "name": "Apple Woods",
       "folder": "007_Apple Woods",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 12
     },
     {
       "id": 8,
       "name": "Craggy Coast",
       "folder": "008_Craggy Coast",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 9
     },
     {
       "id": 9,
       "name": "Side Path",
       "folder": "009_Side Path",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 10,
       "name": "Mt. Horn",
       "folder": "010_Mt. Horn",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 14
     },
     {
       "id": 11,
       "name": "Rock Path",
       "folder": "011_Rock Path",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 12,
       "name": "Foggy Forest",
       "folder": "012_Foggy Forest",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 11
     },
     {
       "id": 13,
       "name": "Forest Path",
       "folder": "013_Forest Path",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 14,
       "name": "Steam Cave",
       "folder": "014_Steam Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 8
     },
     {
       "id": 15,
       "name": "Upper Steam Cave",
       "folder": "015_Upper Steam Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 7
     },
     {
       "id": 16,
       "name": "Steam Cave Peak",
       "folder": "016_Steam Cave Peak",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 17,
       "name": "Amp Plains",
       "folder": "017_Amp Plains",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 10
     },
     {
       "id": 18,
       "name": "Far Amp Plains",
       "folder": "018_Far Amp Plains",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 9
     },
     {
       "id": 19,
       "name": "Amp Clearing",
       "folder": "019_Amp Clearing",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 1
     },
     {
       "id": 20,
       "name": "Northern Desert",
       "folder": "020_Northern Desert",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 15
     },
     {
       "id": 21,
       "name": "Quicksand Cave",
       "folder": "021_Quicksand Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 10
     },
     {
       "id": 22,
       "name": "Quicksand Pit",
       "folder": "022_Quicksand Pit",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 10
     },
     {
       "id": 23,
       "name": "Underground Lake",
       "folder": "023_Underground Lake",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 24,
       "name": "Crystal Cave",
       "folder": "024_Crystal Cave",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 11
     },
     {
       "id": 25,
       "name": "Crystal Crossing",
       "folder": "025_Crystal Crossing",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 13
     },
     {
       "id": 26,
       "name": "Shining Lake",
       "folder": "026_Shining Lake",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 27,
       "name": "Chasm Cave",
       "folder": "027_Chasm Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 8
     },
     {
       "id": 28,
       "name": "Dark Hill",
       "folder": "028_Dark Hill",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 15
     },
     {
       "id": 29,
       "name": "Sealed Ruin",
       "folder": "029_Sealed Ruin",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 8
     },
     {
       "id": 30,
       "name": "Deep Sealed Ruin",
       "folder": "030_Deep Sealed Ruin",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 6
     },
     {
       "id": 31,
       "name": "Sealed Ruin Pit",
       "folder": "031_Sealed Ruin Pit",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 32,
       "name": "Dusk Forest",
       "folder": "032_Dusk Forest",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 8
     },
     {
       "id": 33,
       "name": "Deep Dusk Forest",
       "folder": "033_Deep Dusk Forest",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 12
     },
     {
       "id": 34,
       "name": "Treeshroud Forest",
       "folder": "034_Treeshroud Forest",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 20
     },
     {
       "id": 35,
       "name": "Brine Cave",
       "folder": "035_Brine Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 9
     },
     {
       "id": 36,
       "name": "Lower Brine Cave",
       "folder": "036_Lower Brine Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 37,
       "name": "Brine Cave Pit",
       "folder": "037_Brine Cave Pit",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 38,
       "name": "Hidden Land",
       "folder": "038_Hidden Land",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 15
     },
     {
       "id": 39,
       "name": "Hidden Highland",
       "folder": "039_Hidden Highland",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 8
     },
     {
       "id": 40,
       "name": "Old Ruins",
       "folder": "040_Old Ruins",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 41,
       "name": "Temporal Tower",
       "folder": "041_Temporal Tower",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 13
     },
     {
       "id": 42,
       "name": "Temporal Spire",
       "folder": "042_Temporal Spire",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 10
     },
     {
       "id": 43,
       "name": "Temporal Pinnacle",
       "folder": "043_Temporal Pinnacle",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 44,
       "name": "Mystifying Forest",
       "folder": "044_Mystifying Forest",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 13
     },
     {
       "id": 45,
       "name": "Mystifying Forest Clearing",
       "folder": "045_Mystifying Forest Clearing",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 1
     },
     {
       "id": 46,
       "name": "Blizzard Island",
       "folder": "046_Blizzard Island",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 20
     },
     {
       "id": 47,
       "name": "Crevice Cave",
       "folder": "047_Crevice Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 10
     },
     {
       "id": 48,
       "name": "Lower Crevice Cave",
       "folder": "048_Lower Crevice Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 4
     },
     {
       "id": 49,
       "name": "Crevice Cave Pit",
       "folder": "049_Crevice Cave Pit",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 50,
       "name": "Surrounded Sea",
       "folder": "050_Surrounded Sea",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 20
     },
     {
       "id": 51,
       "name": "Miracle Sea",
       "folder": "051_Miracle Sea",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 18
     },
     {
       "id": 52,
       "name": "Deep Miracle Sea",
       "folder": "052_Deep Miracle Sea",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 4
     },
     {
       "id": 53,
       "name": "Miracle Seabed",
       "folder": "053_Miracle Seabed",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 54,
       "name": "Ice Aegis Cave",
       "folder": "054_Ice Aegis Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 3
     },
     {
       "id": 55,
       "name": "Regice Chamber",
       "folder": "055_Regice Chamber",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 56,
       "name": "Rock Aegis Cave",
       "folder": "056_Rock Aegis Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 3
     },
     {
       "id": 57,
       "name": "Regirock Chamber",
       "folder": "057_Regirock Chamber",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 58,
       "name": "Steel Aegis Cave",
       "folder": "058_Steel Aegis Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 4
     },
     {
       "id": 59,
       "name": "Registeel Chamber",
       "folder": "059_Registeel Chamber",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 60,
       "name": "Aegis Cave Pit",
       "folder": "060_Aegis Cave Pit",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 61,
       "name": "Regigigas Chamber",
       "folder": "061_Regigigas Chamber",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 62,
       "name": "Mt. Travail",
       "folder": "062_Mt. Travail",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 19
     },
     {
       "id": 63,
       "name": "The Nightmare",
       "folder": "063_The Nightmare",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 17
     },
     {
       "id": 64,
       "name": "Spacial Rift",
       "folder": "064_Spacial Rift",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 15
     },
     {
       "id": 65,
       "name": "Deep Spacial Rift",
       "folder": "065_Deep Spacial Rift",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 9
     },
     {
       "id": 66,
       "name": "Spacial Rift Bottom",
       "folder": "066_Spacial Rift Bottom",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 67,
       "name": "Dark Crater",
       "folder": "067_Dark Crater",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 15
     },
     {
       "id": 68,
       "name": "Deep Dark Crater",
       "folder": "068_Deep Dark Crater",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 14
     },
     {
       "id": 69,
       "name": "Dark Crater Pit",
       "folder": "069_Dark Crater Pit",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 70,
       "name": "Concealed Ruins",
       "folder": "070_Concealed Ruins",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 30
     },
     {
       "id": 71,
       "name": "Deep Concealed Ruins",
       "folder": "071_Deep Concealed Ruins",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 72,
       "name": "Marine Resort",
       "folder": "072_Marine Resort",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 19
     },
     {
       "id": 73,
       "name": "Bottomless Sea",
       "folder": "073_Bottomless Sea",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 49
     },
     {
       "id": 74,
       "name": "Bottomless Sea Depths",
       "folder": "074_Bottomless Sea Depths",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 75,
       "name": "Shimmer Desert",
       "folder": "075_Shimmer Desert",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 9
     },
     {
       "id": 76,
       "name": "Shimmer Desert Pit",
       "folder": "076_Shimmer Desert Pit",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 77,
       "name": "Mt. Avalanche",
       "folder": "077_Mt. Avalanche",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 19
     },
     {
       "id": 78,
       "name": "Mt. Avalanche Peak",
       "folder": "078_Mt. Avalanche Peak",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 79,
       "name": "Giant Volcano",
       "folder": "079_Giant Volcano",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 19
     },
     {
       "id": 80,
       "name": "Giant Volcano Peak",
       "folder": "080_Giant Volcano Peak",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 81,
       "name": "World Abyss",
       "folder": "081_World Abyss",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 29
     },
     {
       "id": 82,
       "name": "World Abyss Pit",
       "folder": "082_World Abyss Pit",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 83,
       "name": "Sky Stairway",
       "folder": "083_Sky Stairway",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 49
     },
     {
       "id": 84,
       "name": "Sky Stairway Apex",
       "folder": "084_Sky Stairway Apex",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 85,
       "name": "Mystery Jungle",
       "folder": "085_Mystery Jungle",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 29
     },
     {
       "id": 86,
       "name": "Deep Mystery Jungle",
       "folder": "086_Deep Mystery Jungle",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 87,
       "name": "Serenity River",
       "folder": "087_Serenity River",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 8
     },
     {
       "id": 88,
       "name": "Landslide Cave",
       "folder": "088_Landslide Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 13
     },
     {
       "id": 89,
       "name": "Lush Prairie",
       "folder": "089_Lush Prairie",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 6
     },
     {
       "id": 90,
       "name": "Tiny Meadow",
       "folder": "090_Tiny Meadow",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 91,
       "name": "Labyrinth Cave",
       "folder": "091_Labyrinth Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 10
     },
     {
       "id": 92,
       "name": "Oran Forest",
       "folder": "092_Oran Forest",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 93,
       "name": "Lake Afar",
       "folder": "093_Lake Afar",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 25
     },
     {
       "id": 94,
       "name": "Happy Outlook",
       "folder": "094_Happy Outlook",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 20
     },
     {
       "id": 95,
       "name": "Mt. Mistral",
       "folder": "095_Mt. Mistral",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 20
     },
     {
       "id": 96,
       "name": "Shimmer Hill",
       "folder": "096_Shimmer Hill",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 18
     },
     {
       "id": 97,
       "name": "Lost Wilderness",
       "folder": "097_Lost Wilderness",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 18
     },
     {
       "id": 98,
       "name": "Midnight Forest",
       "folder": "098_Midnight Forest",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 25
     },
     {
       "id": 99,
       "name": "Zero Isle North",
       "folder": "099_Zero Isle North",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 75
     },
     {
       "id": 100,
       "name": "Zero Isle East",
       "folder": "100_Zero Isle East",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 40
     },
     {
       "id": 101,
       "name": "Zero Isle West",
       "folder": "101_Zero Isle West",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 40
     },
     {
       "id": 102,
       "name": "Zero Isle South",
       "folder": "102_Zero Isle South",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 99
     },
     {
       "id": 103,
       "name": "Zero Isle Center",
       "folder": "103_Zero Isle Center",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 50
     },
     {
       "id": 104,
       "name": "Destiny Tower",
       "folder": "104_Destiny Tower",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 99
     },
     {
       "id": 105,
       "name": "[M:D1]Dummy",
       "folder": "105_[MD1]Dummy",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 10
     },
     {
       "id": 106,
       "name": "[M:D1]Dummy",
       "folder": "106_[MD1]Dummy",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 107,
       "name": "Oblivion Forest",
       "folder": "107_Oblivion Forest",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 15
     },
     {
       "id": 108,
       "name": "Treacherous Waters",
       "folder": "108_Treacherous Waters",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 20
     },
     {
       "id": 109,
       "name": "Southeastern Islands",
       "folder": "109_Southeastern Islands",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 25
     },
     {
       "id": 110,
       "name": "Inferno Cave",
       "folder": "110_Inferno Cave",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 30
     },
     {
       "id": 111,
       "name": "1st Station Pass",
       "folder": "111_1st Station Pass",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 3
     },
     {
       "id": 112,
       "name": "2nd Station Pass",
       "folder": "112_2nd Station Pass",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 3
     },
     {
       "id": 113,
       "name": "3rd Station Pass",
       "folder": "113_3rd Station Pass",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 3
     },
     {
       "id": 114,
       "name": "4th Station Pass",
       "folder": "114_4th Station Pass",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 3
     },
     {
       "id": 115,
       "name": "5th Station Pass",
       "folder": "115_5th Station Pass",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 4
     },
     {
       "id": 116,
       "name": "6th Station Pass",
       "folder": "116_6th Station Pass",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 4
     },
     {
       "id": 117,
       "name": "7th Station Pass",
       "folder": "117_7th Station Pass",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 4
     },
     {
       "id": 118,
       "name": "8th Station Pass",
       "folder": "118_8th Station Pass",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 4
     },
     {
       "id": 119,
       "name": "9th Station Pass",
       "folder": "119_9th Station Pass",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 5
     },
     {
       "id": 120,
       "name": "Sky Peak Summit Pass",
       "folder": "120_Sky Peak Summit Pass",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 5
     },
     {
       "id": 121,
       "name": "5th Station Clearing",
       "folder": "121_5th Station Clearing",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 1
     },
     {
       "id": 122,
       "name": "Sky Peak Summit",
       "folder": "122_Sky Peak Summit",
-      "bazaar": true
+      "bazaar": true,
+      "floors": 1
     },
     {
       "id": 123,
       "name": "Star Cave",
       "folder": "123_Star Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 7
     },
     {
       "id": 124,
       "name": "Deep Star Cave",
       "folder": "124_Deep Star Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 4
     },
     {
       "id": 125,
       "name": "Deep Star Cave",
       "folder": "125_Deep Star Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 126,
       "name": "Star Cave Depths",
       "folder": "126_Star Cave Depths",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 4
     },
     {
       "id": 127,
       "name": "Star Cave Pit",
       "folder": "127_Star Cave Pit",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 128,
       "name": "Murky Forest",
       "folder": "128_Murky Forest",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 7
     },
     {
       "id": 129,
       "name": "Eastern Cave",
       "folder": "129_Eastern Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 10
     },
     {
       "id": 130,
       "name": "Fortune Ravine",
       "folder": "130_Fortune Ravine",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 8
     },
     {
       "id": 131,
       "name": "Fortune Ravine Depths",
       "folder": "131_Fortune Ravine Depths",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 6
     },
     {
       "id": 132,
       "name": "Fortune Ravine Pit",
       "folder": "132_Fortune Ravine Pit",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 133,
       "name": "Barren Valley",
       "folder": "133_Barren Valley",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 134,
       "name": "Deep Barren Valley",
       "folder": "134_Deep Barren Valley",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 135,
       "name": "Barren Valley Clearing",
       "folder": "135_Barren Valley Clearing",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 136,
       "name": "Dark Wasteland",
       "folder": "136_Dark Wasteland",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 4
     },
     {
       "id": 137,
       "name": "Temporal Tower",
       "folder": "137_Temporal Tower",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 10
     },
     {
       "id": 138,
       "name": "Temporal Spire",
       "folder": "138_Temporal Spire",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 10
     },
     {
       "id": 139,
       "name": "Dusk Forest",
       "folder": "139_Dusk Forest",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 7
     },
     {
       "id": 140,
       "name": "Black Swamp",
       "folder": "140_Black Swamp",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 141,
       "name": "Spacial Cliffs",
       "folder": "141_Spacial Cliffs",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 10
     },
     {
       "id": 142,
       "name": "Dark Ice Mountain",
       "folder": "142_Dark Ice Mountain",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 10
     },
     {
       "id": 143,
       "name": "Dark Ice Mountain Peak",
       "folder": "143_Dark Ice Mountain Peak",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 4
     },
     {
       "id": 144,
       "name": "Dark Ice Mountain Pinnacle",
       "folder": "144_Dark Ice Mountain Pinnacle",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 145,
       "name": "Icicle Forest",
       "folder": "145_Icicle Forest",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 10
     },
     {
       "id": 146,
       "name": "Vast Ice Mountain",
       "folder": "146_Vast Ice Mountain",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 9
     },
     {
       "id": 147,
       "name": "Vast Ice Mountain Peak",
       "folder": "147_Vast Ice Mountain Peak",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 8
     },
     {
       "id": 148,
       "name": "Vast Ice Mountain Pinnacle",
       "folder": "148_Vast Ice Mountain Pinnacle",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 149,
       "name": "Southern Jungle",
       "folder": "149_Southern Jungle",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 10
     },
     {
       "id": 150,
       "name": "Boulder Quarry",
       "folder": "150_Boulder Quarry",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 151,
       "name": "Deep Boulder Quarry",
       "folder": "151_Deep Boulder Quarry",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 152,
       "name": "Boulder Quarry Clearing",
       "folder": "152_Boulder Quarry Clearing",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 153,
       "name": "Right Cave Path",
       "folder": "153_Right Cave Path",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 154,
       "name": "Left Cave Path",
       "folder": "154_Left Cave Path",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 155,
       "name": "Limestone Cavern",
       "folder": "155_Limestone Cavern",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 156,
       "name": "Deep Limestone Cavern",
       "folder": "156_Deep Limestone Cavern",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 157,
       "name": "Limestone Cavern Depths",
       "folder": "157_Limestone Cavern Depths",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 158,
       "name": "Spring Cave",
       "folder": "158_Spring Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 4
     },
     {
       "id": 159,
       "name": "Upper Spring Cave",
       "folder": "159_Upper Spring Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 160,
       "name": "Upper Spring Cave",
       "folder": "160_Upper Spring Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 4
     },
     {
       "id": 161,
       "name": "Middle Spring Cave",
       "folder": "161_Middle Spring Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 162,
       "name": "Lower Spring Cave",
       "folder": "162_Lower Spring Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 4
     },
     {
       "id": 163,
       "name": "Spring Cave Depths",
       "folder": "163_Spring Cave Depths",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 4
     },
     {
       "id": 164,
       "name": "Spring Cave Pit",
       "folder": "164_Spring Cave Pit",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 165,
       "name": "[M:D1]Dummy",
       "folder": "165_[MD1]Dummy",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 166,
       "name": "[M:D1]Dummy",
       "folder": "166_[MD1]Dummy",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 6
     },
     {
       "id": 167,
       "name": "[M:D1]Dummy",
       "folder": "167_[MD1]Dummy",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 7
     },
     {
       "id": 168,
       "name": "[M:D1]Dummy",
       "folder": "168_[MD1]Dummy",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 6
     },
     {
       "id": 169,
       "name": "[M:D1]Dummy",
       "folder": "169_[MD1]Dummy",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 170,
       "name": "[M:D1]Dummy",
       "folder": "170_[MD1]Dummy",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 171,
       "name": "[M:D1]Dummy",
       "folder": "171_[MD1]Dummy",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 172,
       "name": "[M:D1]Dummy",
       "folder": "172_[MD1]Dummy",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 173,
       "name": "[M:D1]Dummy",
       "folder": "173_[MD1]Dummy",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 174,
       "name": "Star Cave",
       "folder": "174_Star Cave",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 16
     },
     {
       "id": 175,
       "name": "Shaymin Village",
       "folder": "175_Shaymin Village",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 3
     },
     {
       "id": 176,
       "name": "Armaldo's Shelter",
       "folder": "176_Armaldo's Shelter",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 3
     },
     {
       "id": 177,
       "name": "Luminous Spring",
       "folder": "177_Luminous Spring",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 3
     },
     {
       "id": 178,
       "name": "Hot Spring",
       "folder": "178_Hot Spring",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 6
     },
     {
       "id": 179,
       "name": "Rescue",
       "folder": "179_Rescue",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 180,
       "name": "Normal/Fly Maze",
       "folder": "180_NormalFly Maze",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 181,
       "name": "Dark/Fire Maze",
       "folder": "181_DarkFire Maze",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 182,
       "name": "Rock/Water Maze",
       "folder": "182_RockWater Maze",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 183,
       "name": "Grass Maze",
       "folder": "183_Grass Maze",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 184,
       "name": "Elec/Steel Maze",
       "folder": "184_ElecSteel Maze",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 185,
       "name": "Ice/Ground Maze",
       "folder": "185_IceGround Maze",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 186,
       "name": "Fight/Psych Maze",
       "folder": "186_FightPsych Maze",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 187,
       "name": "Poison/Bug Maze",
       "folder": "187_PoisonBug Maze",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 188,
       "name": "Dragon Maze",
       "folder": "188_Dragon Maze",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 189,
       "name": "Ghost Maze",
       "folder": "189_Ghost Maze",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 5
     },
     {
       "id": 190,
       "name": "Explorer Maze",
       "folder": "190_Explorer Maze",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 1
     },
     {
       "id": 191,
       "name": "Final Maze",
       "folder": "191_Final Maze",
-      "bazaar": false
+      "bazaar": false,
+      "floors": 48
     }
   ]
 }

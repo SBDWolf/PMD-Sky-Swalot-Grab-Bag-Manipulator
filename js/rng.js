@@ -26,7 +26,8 @@
 // match the category list — the pools are paired with their categories via
 // these ranges instead.
 const CATEGORY_RANGES = [
-  ["Thrown - Rock", 1, 12],
+  ["Thrown - Pierce", 1, 6], // Stick..Corsola Twig (Floor lists only)
+  ["Thrown - Rock", 7, 12],
   ["Hold", 13, 68],
   ["Berries, Seeds, Vitamins", 69, 108],
   ["Foods, Gummies", 109, 136],
@@ -36,18 +37,30 @@ const CATEGORY_RANGES = [
   ["Link Box", 360, 362],
 ];
 
+// Floor-item-list categories that don't appear in grab bag lists, plus the
+// Floor-specific spans (Berries 69–118, Foods 119–137). "Other" (166–186,
+// excl. 183 = Poké) only exists in Floor lists.
+const FLOOR_EXTRA_RANGES = [
+  ...CATEGORY_RANGES.filter(([n]) => n !== "Berries, Seeds, Vitamins" && n !== "Foods, Gummies"),
+  ["Berries, Seeds, Vitamins", 69, 118], // Floor lists treat 109–118 as berries
+  ["Foods, Gummies", 119, 137],
+  ["Other", 166, 182], // Gone Pebble, tickets, Mystery Part, Wonder Egg…
+  ["Other", 184, 186], // Sky Gift, Key, Lost Loot (183 = Poké)
+];
+
+function categoryOf(id, ranges = null) {
+  if (ranges === null) ranges = CATEGORY_RANGES;
+  for (const [name, lo, hi] of ranges) {
+    if (id >= lo && id <= hi) return name;
+  }
+  return null;
+}
+
 const COMMON_PULL_ITEM = 70; // Oran Berry
 const FAILURE_ITEM = 183; // ITEM_POKE — mirrors the game's corrupted-list fallback
 
 export const DEFAULT_SEED = 0xa61564cd;
 export const DEFAULT_WINDOW = 1500; // draw positions generated per solve attempt
-
-function categoryOf(id) {
-  for (const [name, lo, hi] of CATEGORY_RANGES) {
-    if (id >= lo && id <= hi) return name;
-  }
-  return null;
-}
 
 /** One LCG step. */
 export function lcgNext(state) {
@@ -66,6 +79,17 @@ function pickIndex(cums, roll) {
     if (cums[i] >= roll) return i;
   }
   return cums.length - 1;
+}
+
+/**
+ * Sort a pool's entries by cumulative weight. The XML dumps items in item-id
+ * order, but the cums come from the game's own draw order — e.g. Mystifying
+ * Forest F1's berry pool lists item 109 (Apple) at cum 3676 right after item
+ * 107 at 9815. An unsorted "first cum >= roll" scan can then never pick the
+ * out-of-order entries, so sort before drawing.
+ */
+function sortPool(pool) {
+  return [...pool].sort((a, b) => a.cum - b.cum);
 }
 
 /**
@@ -104,22 +128,23 @@ export function parseBazaarList(xmlText) {
       cur.push({ id, cum });
       if (cum >= 10000) {
         // cumulative weights restart at 0 for each category's pool
-        rawGroups.push(cur);
+        rawGroups.push(sortPool(cur));
         cur = [];
       }
     }
   }
-  if (cur.length > 0) rawGroups.push(cur);
+  if (cur.length > 0) rawGroups.push(sortPool(cur));
 
   return { categories, groups: pairGroups(categories, rawGroups) };
 }
 
 /**
  * Pair category weights with their item pools. Each category takes the
- * unused pool with the most items belonging to it; anything unresolved
- * falls back to pairing the leftovers in listed order.
+ * unused pool with the most items belonging to it (floorRanges selects the
+ * Floor-list flavour of the id ranges); anything unresolved falls back to
+ * pairing the leftovers in listed order.
  */
-function pairGroups(categories, rawGroups) {
+function pairGroups(categories, rawGroups, floorRanges = false) {
   const used = new Array(rawGroups.length).fill(false);
   const out = new Array(categories.length).fill(null);
   const unresolved = [];
@@ -130,7 +155,7 @@ function pairGroups(categories, rawGroups) {
       if (used[gi]) return;
       let score = 0;
       for (const it of g) {
-        if (categoryOf(it.id) === cat.name) score++;
+        if (categoryOf(it.id, floorRanges ? FLOOR_EXTRA_RANGES : null) === cat.name) score++;
       }
       if (score > bestScore) {
         best = gi;
@@ -154,6 +179,65 @@ function pairGroups(categories, rawGroups) {
     });
   }
   return out;
+}
+
+/**
+ * Parse a floor ItemList (type="Floor") — the pool Itemizer Orb draws from.
+ *
+ * Like the grab bag list, the item pools are NOT in category-list order
+ * (e.g. Mystifying Forest lists Hold's pool 3rd while Berries is 3rd in the
+ * category list) — the pools are paired with their categories via item-id
+ * ranges, same mechanism as Unk1. Each category takes the unused pool with
+ * the most items belonging to it.
+ *
+ * Returns {categories: [{name, cum}], groups: [[{id, cum}] | null],
+ *          pool: number[]}.
+ */
+export function parseFloorList(xmlText) {
+  const doc = new DOMParser().parseFromString(xmlText, "text/xml");
+  if (doc.getElementsByTagName("parsererror").length > 0) {
+    throw new Error("The floor XML could not be parsed.");
+  }
+  let list = null;
+  for (const el of doc.getElementsByTagName("ItemList")) {
+    if (el.getAttribute("type") === "Floor") {
+      list = el;
+      break;
+    }
+  }
+  if (!list) {
+    throw new Error("This dungeon's floor XML has no Floor item list.");
+  }
+
+  const categories = [];
+  const rawGroups = [];
+  let cur = [];
+  for (const el of list.children) {
+    if (el.tagName === "Category") {
+      const cum = parseInt(el.getAttribute("weight"), 10);
+      if (!Number.isFinite(cum)) continue;
+      categories.push({ name: el.getAttribute("name"), cum });
+    } else if (el.tagName === "Item") {
+      const id = parseInt(el.getAttribute("id"), 10);
+      const cum = parseInt(el.getAttribute("weight"), 10);
+      if (!Number.isFinite(id) || !Number.isFinite(cum)) continue; // e.g. id="GUARANTEED"
+      cur.push({ id, cum });
+      if (cur.length > 0 && cur[cur.length - 1].cum >= 10000) {
+        rawGroups.push(sortPool(cur));
+        cur = [];
+      }
+    }
+  }
+  if (cur.length > 0) rawGroups.push(sortPool(cur));
+
+  // Pad to full length: a category whose pool is absent (or empty) gets
+  // null and can never be drawn into an item.
+  const paired = pairGroups(categories, rawGroups, true);
+  const pool = new Set();
+  for (const g of rawGroups) {
+    for (const it of g) pool.add(it.id);
+  }
+  return { categories, groups: paired, pool: [...pool].sort((a, b) => a - b) };
 }
 
 /**

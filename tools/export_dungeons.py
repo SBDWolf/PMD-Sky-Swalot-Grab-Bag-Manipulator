@@ -15,7 +15,7 @@ Output shape:
     {
       "seed": "a61564cd",             // dungeon PRNG working value after a quicksave
       "dungeons": [
-        {"id": 8, "name": "Craggy Coast", "folder": "008_Craggy Coast", "bazaar": true},
+        {"id": 8, "name": "Craggy Coast", "folder": "008_Craggy Coast", "bazaar": true, "floors": 9},
         ...
       ]
     }
@@ -92,6 +92,7 @@ def main() -> None:
                 "name": row["dungeon_name"],
                 "folder": folder,
                 "bazaar": bazaar,
+                "floors": floors,
             })
 
     dungeons.sort(key=lambda d: d["id"])

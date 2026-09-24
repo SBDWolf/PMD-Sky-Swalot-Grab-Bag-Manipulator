@@ -19,6 +19,7 @@
   <nav class="tabs" id="tabs">
     <button type="button" class="tab is-active" data-tab="grabbag">Grab Bag</button>
     <button type="button" class="tab" data-tab="gummi">Gummi Stat Boost</button>
+    <button type="button" class="tab" data-tab="itemizer">Itemizer Orb</button>
   </nav>
 
   <main>
@@ -150,6 +151,46 @@
 
       <section class="panel error-panel" id="gummi-error-panel" hidden>
         <div id="gummi-error-body"></div>
+      </section>
+    </div>
+
+    <div class="tab-page" id="page-itemizer" hidden>
+      <section class="panel controls-panel">
+        <div class="control-row">
+          <label class="control">
+            <span>Dungeon</span>
+            <select id="it-dungeon"></select>
+          </label>
+          <label class="control">
+            <span>Floor</span>
+            <select id="it-floor"></select>
+          </label>
+          <label class="control">
+            <span>Item to itemize</span>
+            <select id="it-item">
+              <option value="">— pick an item —</option>
+            </select>
+          </label>
+        </div>
+        <p class="hint">
+          An Itemizer Orb turns the enemy into an item drawn from the floor's normal item pool.
+          Pick the dungeon, the floor, and the item you want the orb to produce. The plan lists
+          the moves to perform before throwing the orb: each row is one turn — <b>Swaps</b> advance
+          the PRNG by 17, any other <b>Turn pass</b> by 18. The throw itself rolls first (player
+          turn, a 65% accuracy check, then the category + item draws) and the turn's remaining
+          advance follows. Only the first orb can be used per quicksave.
+        </p>
+      </section>
+
+      <section class="panel" id="it-results-panel" hidden>
+        <div class="panel-head">
+          <h2 id="it-results-title">Itemizer manipulation</h2>
+        </div>
+        <div id="it-results-body"></div>
+      </section>
+
+      <section class="panel error-panel" id="it-error-panel" hidden>
+        <div id="it-error-body"></div>
       </section>
     </div>
   </main>
