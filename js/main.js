@@ -697,16 +697,16 @@ function renderGummiResults(result, ms) {
     htr.appendChild(th);
   }
   thead.appendChild(htr);
-thead.appendChild(htr);
+  thead.appendChild(htr);
   tbl.appendChild(thead);
   const tbody = document.createElement("tbody");
   result.segments.forEach((s, i) => {
     const tr = document.createElement("tr");
     const moveCells = wait ? [s.n3, s.n4] : [s.n3, s.n4, s.n5];
     [...moveCells,
-      s.omni ? "Omniboost" : `${GUMMI_STATS[s.stat]} ↑`,
-      s.firstRoll,
-      s.advances,
+    s.omni ? "Omniboost" : `${GUMMI_STATS[s.stat]} ↑`,
+    s.firstRoll,
+    s.advances,
     ].forEach((v, ci) => {
       const td = document.createElement("td");
       td.textContent = String(v);
@@ -845,7 +845,7 @@ async function doItemizerSolve() {
 
 function renderItemizerResults(result, ms) {
   $("it-results-title").textContent =
-    `Itemizing — ${itemName(result.targetItem)}`;
+    `Itemizing ${itemName(result.targetItem)}`;
   const body = $("it-results-body");
   body.textContent = "";
 
