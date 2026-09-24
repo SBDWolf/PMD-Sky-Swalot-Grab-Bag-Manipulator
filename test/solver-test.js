@@ -56,6 +56,15 @@ const CASES = [
   { name: "Crystal Cave · team 1 · item 27 ×1 (unreachable)", table: "crystal-cave", team: 1,
     items: { 27: 1 },
     expect: { error: "no-solution" } },
+  // Team 1 has no partner to talk to: the solver must not use partner talks.
+  // The pre-change solver did this with 1 partner talk (cost 40).
+  { name: "Mystifying Forest · team 1 · item 135 ×1 (no partner talks)", table: "mystifying-forest", team: 1,
+    items: { 135: 1 },
+    expect: { cost: 71, segs: [[0, 71, 135, 0, 427]], rng: ["e5d82ca3"] } },
+  // Only reachable with a +3 partner talk (old cost 129) — impossible alone.
+  { name: "Crystal Cave · team 1 · item 82 ×1 (needs a partner)", table: "crystal-cave", team: 1,
+    items: { 82: 1 },
+    expect: { error: "no-solution" } },
   { name: "Sky Peak · team 4 · ten items ×2 (state-space cap)", table: "sky-peak", team: 4,
     items: { 17: 2, 19: 2, 25: 2, 26: 2, 27: 2, 28: 2, 29: 2, 32: 2, 36: 2, 38: 2 },
     expect: { error: "too-large" } },

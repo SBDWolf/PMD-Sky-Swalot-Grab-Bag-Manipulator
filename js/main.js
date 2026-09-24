@@ -418,7 +418,9 @@ function renderError(e) {
       detail = (e.missing || []).map((id) => `${itemName(id)} (#${id})`).join(", ");
       break;
     case "no-solution": {
-      const g = gcd(3, 5 + state.team);
+      // Team 1 has no partner talk: the only always-available advance is the
+      // +6 turn pass (Swalot's own +3 happens only when buying a wanted item).
+      const g = state.team === 1 ? 6 : gcd(3, 5 + state.team);
       title = "No manipulation exists for this combination";
       detail = g > 1
         ? `With a team of ${state.team}, every PRNG advance is a multiple of ${g}, so only ` +

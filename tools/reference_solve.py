@@ -11,7 +11,8 @@ Usage:
 
 Model:
     * table position p (1-indexed): talking to Swalot yields item table[p]
-    * partner talk: +3 positions, cost 40 (10x a 4-turn dash)
+    * partner talk: +3 positions, cost 40 (10x a 4-turn dash) — needs a
+      partner, so it is unavailable (and never used) at team size 1
     * pass 1 turn (1 dash tile or 1 attack): +t positions, cost 1
       (t = 6/7/8/9 for team sizes 1/2/3/4)
     * collecting a requested item (talking to Swalot): +3 positions, cost 0
@@ -89,6 +90,7 @@ def solve(items, team, reqs, c_partner=40, c_turn=1, c_collect=0,
     """
     N = len(items)
     t = 5 + team  # turn advance: 6/7/8/9
+    has_partner = team > 1  # alone (team 1): no partner talk move
     reqs = list(reqs)
     if gummies > 0:
         reqs = reqs + [(-1, gummies)]
@@ -151,7 +153,8 @@ def solve(items, team, reqs, c_partner=40, c_turn=1, c_collect=0,
             if gummies > 0 and gummi_ok_at[i] and (idx // gummi_stride) % (gummies + 1) > 0:
                 # eat: gummi rolls first, then the eat turn's own advance (+t)
                 relax(i + rolls_at[i] + t, idx - gummi_stride, c + c_gummi, key, 3)
-            relax(i + 3, idx, c + c_partner, key, 0)
+            if has_partner:
+                relax(i + 3, idx, c + c_partner, key, 0)
             relax(i + t, idx, c + c_turn, key, 1)
 
     best = None  # (cost, key, final_action_or_None)

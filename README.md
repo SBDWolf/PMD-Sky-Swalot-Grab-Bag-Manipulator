@@ -38,7 +38,9 @@ Each row is one item to collect: the raw number of partner talks, 4-tile
 dashes (4 turns each) and failed attacks (1 turn each) to perform before
 talking to Swalot — 0 means that action isn't used. The order of the
 actions within a row doesn't matter; only the counts matter. Rows are
-grouped in blocks of four for readability.
+grouped in blocks of four for readability. With a **team of 1** you have no
+partner, so no partner talks are ever suggested — every advance is made by
+passing turns (and Swalot's own +3 at the purchases).
 
 ### Piggybacking gummies onto a bazaar run
 
@@ -132,7 +134,9 @@ exactly (validated against all the old precomputed tables in
 * Advancing positions (all strictly advance, so the DP stays exact):
   * pass one turn (dash one tile, or one failed attack): **+6 / +7 / +8 / +9**
     positions for team sizes 1–4, time cost **1**;
-  * talk to a partner: **+3** positions, time cost **40** (≈10 dash cycles);
+    * talk to a partner (swap places with them): **+3** positions, time cost
+      **40** (≈10 dash cycles) — only possible when you actually have a
+      partner, so the solver never uses it at **team size 1** (you are alone);
   * talk to Swalot (collect): **+3** positions, time cost **0**.
 * You may collect several wanted items in one run (the PRNG keeps advancing),
   and the solver **never** talks to Swalot for an item you didn't ask for.
